@@ -2728,7 +2728,7 @@
     "kind": "manual",
     "longname": "/home/eosapien/Software/pop-api-scraper/CHANGELOG.md",
     "name": "./CHANGELOG.md",
-    "content": "",
+    "content": "# Change Log\n\nAll notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.\n\n<a name=\"0.2.0\"></a>\n# 0.2.0 (2017-12-27)\n\n\n### Features\n\n* **initial-release:** Initial relase for npm registery ([e8deafd](https://github.com/popcorn-official/pop-api-scraper/commit/e8deafd))\n\n\n\n<a name=\"0.2.0\"></a>\n# 0.2.0 (2017-12-27)\n\n\n### Features\n\n* **initial-release:** Initial relase for npm registery ([e8deafd](https://github.com/popcorn-official/pop-api-scraper/commit/e8deafd))\n",
     "static": true,
     "access": "public"
   },
