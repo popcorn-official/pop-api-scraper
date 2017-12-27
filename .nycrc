@@ -1,0 +1,10 @@
+{
+  "require": [
+    "babel-register"
+  ],
+  "include": [
+    "src"
+    ],
+  "sourceMap": false,
+  "instrument": false
+}

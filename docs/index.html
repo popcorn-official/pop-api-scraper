@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">Home | pop-api-scraper</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="The base modules for the popcorn-api scraper"><meta property="og:type" content="website"><meta property="og:url" content="https://popcorntime.sh"><meta property="og:site_name" content="pop-api-scraper"><meta property="og:title" content="pop-api-scraper"><meta property="og:image" content="https://avatars2.githubusercontent.com/u/7267937"><meta property="og:description" content="The base modules for the popcorn-api scraper"><meta property="og:author" content="https://twitter.com/popcorntimetv"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="pop-api-scraper"><meta property="twitter:description" content="The base modules for the popcorn-api scraper"><meta property="twitter:image" content="https://avatars2.githubusercontent.com/u/7267937"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/popcorn-official/pop-api-scraper"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Context.js~Context.html">Context</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Cron.js~Cron.html">Cron</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PopApiScraper.js~PopApiScraper.html">PopApiScraper</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://github.com/ChrisAlderson/pop-api">PopApi</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#http">http</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/http/AbstractHttpService.js~AbstractHttpService.html">AbstractHttpService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/http/HttpService.js~HttpService.html">HttpService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/src/http/IHttpService.js~IHttpService.html">IHttpService</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#providers">providers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/providers/AbstractProvider.js~AbstractProvider.html">AbstractProvider</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/src/providers/IProvider.js~IProvider.html">IProvider</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="pop-api-scraper">pop-api-scraper</h1><p><a href="https://travis-ci.org/popcorn-official/pop-api-scraper"><img src="https://travis-ci.org/popcorn-official/pop-api-scraper.svg?branch=master" alt="Build Status"></a>
+<a href="https://ci.appveyor.com/project/ChrisAlderson/pop-api-scraper"><img src="https://img.shields.io/appveyor/ci/ChrisAlderson/pop-api-scraper/master.svg?label=windows" alt="Windows Build"></a>
+<a href="https://coveralls.io/github/popcorn-official/pop-api-scraper?branch=master"><img src="https://coveralls.io/repos/github/popcorn-official/pop-api-scraper/badge.svg?branch=master" alt="Coverage Status"></a>
+<a href="https://david-dm.org/popcorn-official/pop-api-scraper"><img src="https://david-dm.org/popcorn-official/pop-api-scraper.svg" alt="Dependency Status"></a>
+<a href="https://david-dm.org/popcorn-official/pop-api-scraper?type=dev"><img src="https://david-dm.org/popcorn-official/pop-api-scraper/dev-status.svg" alt="devDependencies Status"></a></p>
+<h2 id="features">Features</h2><p>The pop-api-scraper project aims to provide the core modules for the
+<a href="https://github.com/popcorn-official/popcorn-api"><code>popcorn-api</code></a> scraper, but
+can also be used for other purposes by using middleware.</p>
+<ul>
+<li>Strategy pattern with providers</li>
+<li>Cronjobs</li>
+<li>Scraper wrapper class</li>
+<li>HttpService with <a href="https://github.com/sindresorhus/got"><code>got</code></a></li>
+</ul>
+<h2 id="installation">Installation</h2><pre><code><code class="source-code prettyprint"> $ npm install --save pop-api-scraper pop-api</code>
+</code></pre><h2 id="documentation">Documentation</h2><ul>
+<li><a href="https://popcorn-official.github.io/pop-api-scraper/manual/index.html">General documentation</a></li>
+<li><a href="https://popcorn-official.github.io/pop-api-scraper/identifiers.html">Api docs</a></li>
+<li><a href="https://popcorn-official.github.io/pop-api-scraper/manual/usage.html">Usage</a></li>
+<li><a href="https://popcorn-official.github.io/pop-api-scraper/manual/middleware.html">Middleware</a></li>
+</ul>
+<h2 id="usage">Usage</h2><p>For the basic setup you need to create a <code>Provider</code> (strategy) the
+<code>PopApiScraper</code> instance can use. The <code>PopApiScraper</code> implements the strategy
+pattern, where the providers are the strategies.</p>
+<p>The example below makes a HTTP GET request to a web service or website. from
+there on you are free to implement how and what data you want to get from it.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">// ./ExampleProvider.js
+import { AbstractProvider, HttpService } from &apos;pop-api-scraper&apos;
+
+// Extend from the internal AbstractProvider.
+export default class ExampleProvider extends AbstractProvider {
+
+  constructor(PopApiScraper, {name, configs, maxWebRequests = 2}) {
+    super(PopApiScraper, {name, configs, maxWebRequests})
+  }
+
+  // Override the `scrapeConfig` method to get the content from one
+  // configuration.
+  scrapeConfig(config) {
+    // A HTTP service to send HTTP requests.
+    this.httpService = new HttpService({
+      baseUrl: config.baseUrl
+    })
+
+    // HTTP  GET request to: https://jsonplaceholder.typicode.com/posts?foo=bar
+    return this.httpService.get(&apos;/posts&apos;, config.httpOptions)
+      .then(res =&gt; res.data)
+  }
+
+}</code>
+</code></pre>
+<p>Bundle it all up together with
+<a href="https://github.com/popcorn-official/pop-api"><code>pop-api</code></a>:</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">// ./index.js
+import os from &apos;os&apos;
+import { PopApi } from &apos;pop-api&apos;
+import { join } from &apos;path&apos;
+import { Cron, PopApiScraper } from &apos;pop-api-scraper&apos;
+
+import ExampleProvider from &apos;./ExampleProvider&apos;
+
+(async () =&gt; {
+  try {
+    // Let the PopApiScraper use the ExampleProvider o scrape data.
+    PopApiScraper.use(ExampleProvider, {
+      name: &apos;example-provider&apos;,
+      configs: [{
+        baseUrl: &apos;https://jsonplaceholder.typicode.com&apos;,
+        httpOptions: {
+          query: {
+            foo: &apos;bar&apos;
+          }
+        }
+      }],
+      maxWebRequests: 2
+    })
+
+    // Register the PopApiScraper middleware to the pop-api instance.
+    PopApi.use(PopApiScraper, {
+      statusPath: join(...[os.tmpdir(), &apos;status.json&apos;]),
+      updatedPath: join(...[os.tmpdir(), &apos;updated.json&apos;])
+    })
+    // Optionally you can use the Cron middleware to scrape for content on a
+    // regulat basis.
+    PopApi.use(Cron, {
+      cronTime: &apos;0 0 */6 * * *&apos;,
+      start: false
+    })
+
+    // PopApi now has a `scraper` instance.
+    const res = await PopApi.scraper.scrape()
+    console.info(res[0])
+  } catch (err) {
+    console.error(err)
+  }
+})()</code>
+</code></pre>
+<h2 id="license">License</h2><p>MIT License</p>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

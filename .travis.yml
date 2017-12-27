@@ -1,0 +1,51 @@
+sudo: required
+
+dist: trusty
+
+language: node_js
+
+cache:
+  directories:
+  - node_modules
+  - flow-typed
+
+env:
+  matrix:
+  - NODE_ENV=test
+
+git:
+  submodules: false
+
+jobs:
+  include:
+  - stage: prepare cache
+    node_js: '9'
+    before_script:
+    - npm i -g flow-typed
+    - npm i --no-save pop-api
+    - flow-typed install
+    script:
+    - npm run lint
+    - npm run flow
+  - stage: test
+    node_js: '7'
+    script: npm run test
+  - stage: test
+    node_js: '8'
+    script: npm run test
+    after_success: npm run coveralls
+  - stage: test
+    node_js: '9'
+    script: npm run test
+  - stage: build
+    node_js: '9'
+    script: npm run build
+  - stage: docs
+    node_js: '9'
+    script: npm run docs
+
+notifications:
+  email:
+    recipients:
+    - chrisalderson@protonmail.com
+    on_failure: always

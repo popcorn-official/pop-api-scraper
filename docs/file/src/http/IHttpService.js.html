@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/http/IHttpService.js | pop-api-scraper</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="The base modules for the popcorn-api scraper"><meta property="og:type" content="website"><meta property="og:url" content="https://popcorntime.sh"><meta property="og:site_name" content="pop-api-scraper"><meta property="og:title" content="pop-api-scraper"><meta property="og:image" content="https://avatars2.githubusercontent.com/u/7267937"><meta property="og:description" content="The base modules for the popcorn-api scraper"><meta property="og:author" content="https://twitter.com/popcorntimetv"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="pop-api-scraper"><meta property="twitter:description" content="The base modules for the popcorn-api scraper"><meta property="twitter:image" content="https://avatars2.githubusercontent.com/u/7267937"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/popcorn-official/pop-api-scraper"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Context.js~Context.html">Context</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Cron.js~Cron.html">Cron</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PopApiScraper.js~PopApiScraper.html">PopApiScraper</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://github.com/ChrisAlderson/pop-api">PopApi</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#http">http</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/http/AbstractHttpService.js~AbstractHttpService.html">AbstractHttpService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/http/HttpService.js~HttpService.html">HttpService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/src/http/IHttpService.js~IHttpService.html">IHttpService</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#providers">providers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/providers/AbstractProvider.js~AbstractProvider.html">AbstractProvider</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/src/providers/IProvider.js~IProvider.html">IProvider</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/http/IHttpService.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// @flow
+
+/**
+ * Interface to send HTTP requests.
+ * @interface
+ * @type {IHttpService}
+ */
+export default class IHttpService {
+
+  /**
+   * Make a GET request.
+   * @param {!string} [endpoint] - The endpoint to make the GET request to.
+   * @param {?Object} [opts={}] - The options for the HTTP GET
+   * request.
+   * @param {?boolean} [raw=false] - Return json object.
+   * @throws {Error} - Using default method: &apos;get&apos;
+   * @returns {Promise&lt;Object, Error&gt;} - Promise with the HTML loaded in
+   * cheerio.
+   */
+  get(
+    endpoint: string,
+    opts?: Object = {},
+    raw?: boolean = false
+  ): Promise&lt;any | Error&gt; {
+    throw new Error(&apos;Using default method: \&apos;get\&apos;&apos;)
+  }
+
+  /**
+   * Make a POST request.
+   * @param {!string} [endpoint] - The endpoint to make the POST request to.
+   * @param {?Object} [opts={}] - The options for the HTTP POST
+   * request.
+   * @throws {Error} - Using default method: &apos;post&apos;
+   * @returns {Promise&lt;Object, Error&gt;} - Promise with the HTML loaded in
+   * cheerio.
+   */
+  post(
+    endpoint: string,
+    opts?: Object = {}
+  ): Promise&lt;any | Error&gt; {
+    throw new Error(&apos;Using default method: \&apos;post\&apos;&apos;)
+  }
+
+  /**
+   * Make a PUT request.
+   * @param {!string} [endpoint] - The endpoint to make the PUT request to.
+   * @param {?Object} [opts={}] - The options for the HTTP PUT
+   * request.
+   * @throws {Error} - Using default method: &apos;put&apos;
+   * @returns {Promise&lt;Object, Error&gt;} - Promise with the HTML loaded in
+   * cheerio.
+   */
+  put(
+    endpoint: string,
+    opts?: Object = {}
+  ): Promise&lt;any | Error&gt; {
+    throw new Error(&apos;Using default method: \&apos;put\&apos;&apos;)
+  }
+
+  /**
+   * Make a DELETE request.
+   * @param {!string} [endpoint] - The endpoint to make the DELETE request to.
+   * @param {?Object} [opts={}] - The options for the HTTP DELETE
+   * request.
+   * @throws {Error} - Using default method: &apos;delete&apos;
+   * @returns {Promise&lt;Object, Error&gt;} - Promise with the HTML loaded in
+   * cheerio.
+   */
+  delete(
+    endpoint: string,
+    opts?: Object = {}
+  ): Promise&lt;any | Error&gt; {
+    throw new Error(&apos;Using default method: \&apos;delete\&apos;&apos;)
+  }
+
+  /**
+   * Request to download an item.
+   * @param {!string} endpoint - The uri to the item.
+   * @param {!string} filePath - The name of the file to save the item.
+   * @throws {Error} - Using default method: &apos;download&apos;
+   * @returns {Promise&lt;string, Error&gt;} - Message when it&apos;s finally downloaded.
+   */
+  download(endpoint: string, filePath: string): Promise&lt;string | Error&gt; {
+    throw new Error(&apos;Using default method: \&apos;download\&apos;&apos;)
+  }
+
+  /**
+   * Print the debug message.
+   * @param {!string} method - The method of the HTTP request.
+   * @param {!string} uri - The uri of the HTTP request.
+   * @param {?Object} opts=this._opts - The options for the HTTP request.
+   * @throws {Error} - Using default method: &apos;printDebug&apos;
+   * @returns {undefined}
+   */
+  printDebug(method: string, uri: string, opts?: Object): void {
+    throw new Error(&apos;Using default method: \&apos;printDebug\&apos;&apos;)
+  }
+
+  /**
+   * Make a HTTP request.
+   * @param {!string} method - The method of the HTTP request.
+   * @param {!string} [endpoint] - The endpoint to make the HTTP request to.
+   * @param {?Object} [opts] - The options for the HTTP request.
+   * @param {?boolean} [raw] - Return the raw body.
+   * @throws {Error} - Using default method: &apos;request&apos;
+   * @returns {Promise&lt;Object, Error&gt;} - Promise with the HTML loaded in
+   * cheerio.
+   */
+  request(
+    method: string,
+    endpoint: string,
+    opts?: Object,
+    raw?: boolean
+  ): Promise&lt;any | Error&gt; {
+    throw new Error(&apos;Using default method: \&apos;request\&apos;&apos;)
+  }
+
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

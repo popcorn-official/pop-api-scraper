@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | pop-api-scraper</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="The base modules for the popcorn-api scraper"><meta property="og:type" content="website"><meta property="og:url" content="https://popcorntime.sh"><meta property="og:site_name" content="pop-api-scraper"><meta property="og:title" content="pop-api-scraper"><meta property="og:image" content="https://avatars2.githubusercontent.com/u/7267937"><meta property="og:description" content="The base modules for the popcorn-api scraper"><meta property="og:author" content="https://twitter.com/popcorntimetv"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="pop-api-scraper"><meta property="twitter:description" content="The base modules for the popcorn-api scraper"><meta property="twitter:image" content="https://avatars2.githubusercontent.com/u/7267937"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/popcorn-official/pop-api-scraper"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/usage.html"><a href="manual/usage.html" data-ice="link">Usage</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/middleware.html"><a href="manual/middleware.html" data-ice="link">Middleware</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/middleware.html"><a href="manual/middleware.html#scraper" data-ice="link">Scraper</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/middleware.html"><a href="manual/middleware.html#cron" data-ice="link">Cron</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    </ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html" data-ice="link">Contributing</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#raising-issues" data-ice="link">Raising Issues</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#report-a-bug" data-ice="link">Report A Bug</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#feature-requests" data-ice="link">Feature Requests</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#pull-requests" data-ice="link">Pull Requests</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#commit-messages" data-ice="link">Commit Messages</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#styleguides" data-ice="link">Styleguides</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#javascript-styleguide" data-ice="link">JavaScript Styleguide</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#tests-styleguide" data-ice="link">Tests Styleguide</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#documentation-styleguide" data-ice="link">Documentation Styleguide</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#setting-up-for-development" data-ice="link">Setting up for development</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#npm-scripts" data-ice="link">npm scripts</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#git-hooks" data-ice="link">Git hooks</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html" data-ice="link">Contributor Covenant Code of Conduct</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#our-pledge" data-ice="link">Our Pledge</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#our-standards" data-ice="link">Our Standards</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#our-responsibilities" data-ice="link">Our Responsibilities</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#scope" data-ice="link">Scope</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#enforcement" data-ice="link">Enforcement</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#attribution" data-ice="link">Attribution</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="contributing">Contributing</h1><p>So you&apos;re interested in giving us a hand? That&apos;s awesome! We&apos;ve put together
+some brief guidelines that should help you get started quickly and easily.</p>
+<p>There are lots and lots of ways to get involved, this document covers:</p>
+<ul>
+<li><a href="#raising-issues">Raising Issues</a><ul>
+<li><a href="#report-a-bug">Report  A Bug</a></li>
+<li><a href="#feature-requests">Feature Requests</a></li>
+<li><a href="#pull-requests">Pull Requests</a></li>
+</ul>
+</li>
+<li><a href="#commit-messages">Commit Messages</a></li>
+<li><a href="#styleguides">Styleguides</a><ul>
+<li><a href="#javascript-styleguide">JavaScript Styleguide</a></li>
+<li><a href="#tests-styleguide">Tests Styleguide</a></li>
+<li><a href="#documentation-styleguide">Documentation Styleguide</a></li>
+</ul>
+</li>
+<li><a href="#setting-up-for-development">Setting up for development</a><ul>
+<li><a href="#npm-scripts">npm scripts</a></li>
+<li><a href="#git-hooks">Git hooks</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="raising-issues">Raising Issues</h2><p>If you&apos;re about to raise an issue because you think that you&apos;ve found a problem
+with the application, or you&apos;d like to make a request for a new feature in the
+codebase, or any other reason&#x2026; please read this first.</p>
+<p>The GitHub issue tracker is the preferred channel for
+<a href="#report-a-bug">bug reports</a>, <a href="#feature-requests">feature requests</a>, and
+<a href="#pull-requests">pull requests</a> but respect the following restrictions:</p>
+<ul>
+<li>Please <strong>do not</strong> use the issue tracker for personal support requests.</li>
+<li>Please <strong>do not</strong> derail or troll issues. Keep the discussion on topic and
+respect the opinions of others.</li>
+</ul>
+<h3 id="report-a-bug">Report A Bug</h3><p>A bug is a <em>demonstrable problem</em> that is caused by the code in the repository.
+Good bug reports are extremely helpful - thank you!</p>
+<p>Guidelines for bug reports:</p>
+<ol>
+<li><strong>Use the GitHub issue search</strong> &#x2014; check if the issue has already been
+reported.</li>
+<li><strong>Check if the issue has been fixed</strong> &#x2014; try to reproduce it using the
+latest <code>master</code> or look for <a href="https://github.com/popcorn-official/pop-api-scraper/issues?q=is%3Aissue+is%3Aclosed">closed issues</a>.</li>
+<li><strong>Include a screencast if relevant</strong> - Is your issue about a design or front
+end feature or bug? The most helpful thing in the world is if we can <em>see</em> what
+you&apos;re talking about. Just drop the picture after writing your issue, it&apos;ll be
+uploaded and shown to the developers.</li>
+<li>Use the Issue tab on GitHub to start <a href="https://github.com/popcorn-official/pop-api-scraper/issues/new">creating a bug report</a>.
+A good bug report shouldn&apos;t leave others needing to chase you up for more
+information. Be sure to include all the possible required details and the steps
+to take to reproduce the issue.</li>
+</ol>
+<h3 id="feature-requests">Feature Requests</h3><p>Feature requests are welcome. Before you submit one be sure to:</p>
+<ol>
+<li><strong>Use the <a href="https://github.com/popcorn-official/pop-api-scraper/issues">GitHub Issues search</a></strong>
+and check the feature hasn&apos;t already been requested.</li>
+<li>Take a moment to think about whether your idea fits with the scope and aims
+of the project, or if it might better fit being an app/plugin.</li>
+<li>Remember, it&apos;s up to <em>you</em> to make a strong case to convince the project&apos;s
+leaders of the merits of this feature. Please provide as much detail and
+context as possible, this means explaining the use case and why it is likely to
+be common.</li>
+<li>Clearly indicate whether this is a feature request for the application
+itself, or for packages like Providers, Metadatas, or other.</li>
+</ol>
+<h3 id="pull-requests">Pull Requests</h3><p>Pull requests are awesome. If you&apos;re looking to raise a PR for something which
+doesn&apos;t have an open issue, please think carefully about
+<a href="#report-a-bug">raising an issue</a> which your PR can close, especially if you&apos;re
+fixing a bug. This makes it more likely that there will be enough information
+available for your PR to be properly tested and merged. To make sure your PR is
+accepted as quickly as possible, you should be sure to have read all the
+guidelines on:</p>
+<ul>
+<li><a href="#commit-messages">Commit Messages</a></li>
+<li><a href="#styleguides">Stylesguides</a></li>
+</ul>
+<h2 id="commit-messages">Commit Messages</h2><p>This project uses the <a href="https://conventionalcommits.org/">Conventional Commits</a>
+convention. If you are not familiar with this convention please read about it
+first before creating a commit message or a PR.</p>
+<h2 id="styleguides">Styleguides</h2><h3 id="javascript-styleguide">JavaScript Styleguide</h3><p>All JavaScript must adhere to <a href="http://standardjs.com/">JavaScript Standard Style</a>.</p>
+<ul>
+<li><p>Inline <code>export</code>s with expressions whenever possible</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">// Use this:
+export default class ClassName {
+
+}
+
+// Instead of:
+class ClassName {
+
+}
+export default ClassName</code>
+</code></pre>
+</li>
+</ul>
+<h3 id="tests-styleguide">Tests Styleguide</h3><ul>
+<li>Include thoughtfully-worded, well-structured <a href="https://mochajs.org/">Mocha</a> tests in the <code>./test</code> folder.</li>
+<li>Treat <code>describe</code> as a noun or situation.</li>
+<li>Treat <code>it</code> as a statement about state or how an operation changes state.</li>
+</ul>
+<h3 id="documentation-styleguide">Documentation Styleguide</h3><ul>
+<li>Use <a href="https://daringfireball.net/projects/markdown">Markdown</a>.</li>
+<li>Reference methods and classes in markdown with the custom <code>{}</code> notation:<ul>
+<li>Reference classes with <code>{ClassName}</code></li>
+<li>Reference instance methods with <code>{ClassName.methodName}</code></li>
+<li>Reference class methods with <code>{ClassName#methodName}</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="setting-up-for-development">Setting up for development</h2><p>To setup your local machine to start working on the project you can follow these
+steps:</p>
+<ol>
+<li>Install <a href="https://nodejs.org/">NodeJS</a> (at least Node v7.10.1 or greater)</li>
+<li>Clone the repository with: <code>git clone https://github.com/popcorn-official/pop-api-scraper.git</code></li>
+<li>Install dependencies <code>npm i</code></li>
+<li>Install the flow-typed libraries with <code>npm run flow-typed</code></li>
+</ol>
+<h3 id="npm-scripts">npm scripts</h3><p>The following <a href="https://docs.npmjs.com/misc/scripts"><code>npm-scripts</code></a> are available in order to help you with the
+development of the project.</p>
+<pre><code><code class="source-code prettyprint"> $ npm run build    # Transform the code with &apos;babel&apos;
+ $ npm run docs     # Generate the documentation with &apos;esdoc&apos;
+ $ npm run debug    # Run the applicaiton in debug mode
+ $ npm run dev      # Run the application in development mode
+ $ npm run flow     # Check flow typings
+ $ npm run lint     # Check javascript style
+ $ npm run test     # Run unit tests</code>
+</code></pre><h3 id="git-hooks">Git hooks</h3><p>The following <code>git</code> hooks are available to ensure the changes you are about to
+make follow the <a href="#styleguides">styleguides</a> and make sure your changes pass the
+tests.</p>
+<pre><code><code class="source-code prettyprint">pre-commit          # npm run lint &amp;&amp; npm run flow
+pre-push            # npm run test</code>
+</code></pre></div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

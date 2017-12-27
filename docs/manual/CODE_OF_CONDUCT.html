@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | pop-api-scraper</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="The base modules for the popcorn-api scraper"><meta property="og:type" content="website"><meta property="og:url" content="https://popcorntime.sh"><meta property="og:site_name" content="pop-api-scraper"><meta property="og:title" content="pop-api-scraper"><meta property="og:image" content="https://avatars2.githubusercontent.com/u/7267937"><meta property="og:description" content="The base modules for the popcorn-api scraper"><meta property="og:author" content="https://twitter.com/popcorntimetv"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="pop-api-scraper"><meta property="twitter:description" content="The base modules for the popcorn-api scraper"><meta property="twitter:image" content="https://avatars2.githubusercontent.com/u/7267937"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/popcorn-official/pop-api-scraper"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/usage.html"><a href="manual/usage.html" data-ice="link">Usage</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/middleware.html"><a href="manual/middleware.html" data-ice="link">Middleware</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/middleware.html"><a href="manual/middleware.html#scraper" data-ice="link">Scraper</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/middleware.html"><a href="manual/middleware.html#cron" data-ice="link">Cron</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    </ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html" data-ice="link">Contributing</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#raising-issues" data-ice="link">Raising Issues</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#report-a-bug" data-ice="link">Report A Bug</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#feature-requests" data-ice="link">Feature Requests</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#pull-requests" data-ice="link">Pull Requests</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#commit-messages" data-ice="link">Commit Messages</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#styleguides" data-ice="link">Styleguides</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#javascript-styleguide" data-ice="link">JavaScript Styleguide</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#tests-styleguide" data-ice="link">Tests Styleguide</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#documentation-styleguide" data-ice="link">Documentation Styleguide</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#setting-up-for-development" data-ice="link">Setting up for development</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#npm-scripts" data-ice="link">npm scripts</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#git-hooks" data-ice="link">Git hooks</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html" data-ice="link">Contributor Covenant Code of Conduct</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#our-pledge" data-ice="link">Our Pledge</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#our-standards" data-ice="link">Our Standards</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#our-responsibilities" data-ice="link">Our Responsibilities</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#scope" data-ice="link">Scope</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#enforcement" data-ice="link">Enforcement</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#attribution" data-ice="link">Attribution</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="contributor-covenant-code-of-conduct">Contributor Covenant Code of Conduct</h1><ul>
+<li><a href="#our-pledge">Our Pledge</a></li>
+<li><a href="#our-standards">Our Standards</a></li>
+<li><a href="#our-responsibilities">Our Responsibilities</a></li>
+<li><a href="#scope">Scope</a></li>
+<li><a href="#enforcement">Enforcement</a></li>
+<li><a href="#attribution">Attribution</a></li>
+</ul>
+<h2 id="our-pledge">Our Pledge</h2><p>In the interest of fostering an open and welcoming environment, we as
+contributors and maintainers pledge to making participation in our project and
+our community a harassment-free experience for everyone, regardless of age,
+body size, disability, ethnicity, gender identity and expression, level of
+experience, nationality, personal appearance, race, religion, or sexual
+identity and orientation.</p>
+<h2 id="our-standards">Our Standards</h2><p>Examples of behavior that contributes to creating a positive environment
+include:</p>
+<ul>
+<li>Using welcoming and inclusive language</li>
+<li>Being respectful of differing viewpoints and experiences</li>
+<li>Gracefully accepting constructive criticism</li>
+<li>Focusing on what is best for the community</li>
+<li>Showing empathy towards other community members</li>
+</ul>
+<p>Examples of unacceptable behavior by participants include:</p>
+<ul>
+<li>The use of sexualized language or imagery and unwelcome sexual attention or advances</li>
+<li>Trolling, insulting/derogatory comments, and personal or political attacks</li>
+<li>Public or private harassment</li>
+<li>Publishing others&apos; private information, such as a physical or electronic address, without explicit permission</li>
+<li>Other conduct which could reasonably be considered inappropriate in a professional setting</li>
+</ul>
+<h2 id="our-responsibilities">Our Responsibilities</h2><p>Project maintainers are responsible for clarifying the standards of acceptable
+behavior and are expected to take appropriate and fair corrective action in
+response to any instances of unacceptable behavior.</p>
+<p>Project maintainers have the right and responsibility to remove, edit, or
+reject comments, commits, code, wiki edits, issues, and other contributions
+that are not aligned to this Code of Conduct, or to ban temporarily or
+permanently any contributor for other behaviors that they deem inappropriate,
+threatening, offensive, or harmful.</p>
+<h2 id="scope">Scope</h2><p>This Code of Conduct applies both within project spaces and in public spaces
+when an individual is representing the project or its community. Examples of
+representing a project or community include using an official project e-mail
+address, posting via an official social media account, or acting as an
+appointed representative at an online or offline event. Representation of a
+project may be further defined and clarified by project maintainers.</p>
+<h2 id="enforcement">Enforcement</h2><p>Instances of abusive, harassing, or otherwise unacceptable behavior may be
+reported by contacting the project team at <code>hello@popcorntime.sh</code>. The
+project team will review and investigate all complaints, and will respond in a
+way that it deems appropriate to the circumstances. The project team is
+obligated to maintain confidentiality with regard to the reporter of an
+incident. Further details of specific enforcement policies may be posted
+separately.</p>
+<p>Project maintainers who do not follow or enforce the Code of Conduct in good
+faith may face temporary or permanent repercussions as determined by other
+members of the project&apos;s leadership.</p>
+<h2 id="attribution">Attribution</h2><p>This Code of Conduct is adapted from the Contributor Covenant, version 1.4,
+available at <a href="http://contributor-covenant.org/version/1/4">http://contributor-covenant.org/version/1/4</a></p>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

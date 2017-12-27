@@ -1,0 +1,22 @@
+[ignore]
+<PROJECT_ROOT>/build/.*
+<PROJECT_ROOT>/coverage/.*
+<PROJECT_ROOT>/docs/.*
+<PROJECT_ROOT>/flow-typed/.*
+<PROJECT_ROOT>/manual/.*
+<PROJECT_ROOT>/node_modules/.*
+
+[include]
+./coverage.js
+./examples/.*
+./src/.*
+./test/.*
+
+[libs]
+
+[options]
+experimental.const_params=true
+include_warnings=true
+munge_underscores=true
+unsafe.enable_getters_and_setters=true
+suppress_comment= \\(.\\|\n\\)*\\flow-ignore

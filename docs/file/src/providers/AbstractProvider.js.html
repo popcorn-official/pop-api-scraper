@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/providers/AbstractProvider.js | pop-api-scraper</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="The base modules for the popcorn-api scraper"><meta property="og:type" content="website"><meta property="og:url" content="https://popcorntime.sh"><meta property="og:site_name" content="pop-api-scraper"><meta property="og:title" content="pop-api-scraper"><meta property="og:image" content="https://avatars2.githubusercontent.com/u/7267937"><meta property="og:description" content="The base modules for the popcorn-api scraper"><meta property="og:author" content="https://twitter.com/popcorntimetv"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="pop-api-scraper"><meta property="twitter:description" content="The base modules for the popcorn-api scraper"><meta property="twitter:image" content="https://avatars2.githubusercontent.com/u/7267937"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/popcorn-official/pop-api-scraper"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Context.js~Context.html">Context</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Cron.js~Cron.html">Cron</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PopApiScraper.js~PopApiScraper.html">PopApiScraper</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-external">E</span><span data-ice="name"><span><a href="https://github.com/ChrisAlderson/pop-api">PopApi</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#http">http</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/http/AbstractHttpService.js~AbstractHttpService.html">AbstractHttpService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/http/HttpService.js~HttpService.html">HttpService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/src/http/IHttpService.js~IHttpService.html">IHttpService</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#providers">providers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/providers/AbstractProvider.js~AbstractProvider.html">AbstractProvider</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/src/providers/IProvider.js~IProvider.html">IProvider</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/providers/AbstractProvider.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// Import the necessary.
+// @flow
+import pMap from &apos;p-map&apos;
+
+import IProvider from &apos;./IProvider&apos;
+
+/**
+ * The abstract provider for the strategy pattern.
+ * @implements {IProvider}
+ * @type {AbstractProvider}
+ */
+export default class AbstractProvider extends IProvider {
+
+  /**
+   * The name of the abstract provider.
+   * @type {string}
+   */
+  name: string
+
+  /**
+   * The max allowed concurrent web requests.
+   * @type {number}
+   */
+  maxWebRequests: number
+
+  /**
+   * The configs fro the abstract provider.
+   * @type {Array&lt;Object&gt;}
+   */
+  configs: Array&lt;Object&gt;
+
+  /**
+   * Create a nwe AbstractProvider object.
+   * @param {!PopApiScraper} PopApiScraper - The PopApScraper instance.
+   * @param {!Object} options - The options for the AbstractProvider.
+   * @param {!string} name - The name of the AbstractProvider.
+   * @param {!Array&lt;Object&gt;} options.configs - The configurations of the
+   * provider.
+   * @param {!number} [maxWebRequests=2] - The max allowed concurrent web
+   * requests.
+   */
+  constructor(PopApiScraper: any, {
+    name,
+    configs,
+    maxWebRequests = 2
+  }: Object): void {
+    super()
+
+    /**
+     * The name of the abstract provider.
+     * @type {string}
+     */
+    this.name = name || this.constructor.name
+    /**
+     * The max allowed concurrent web requests.
+     * @type {number}
+     */
+    this.maxWebRequests = maxWebRequests
+    /**
+     * The configs for the abstract provider.
+     * @type {Array&lt;Object&gt;}
+     */
+    this.configs = configs
+  }
+
+  /**
+   * Get the contents for the configurations.
+   * @override
+   * @returns {Promise&lt;Array&lt;Object&gt;, Error&gt;} - The results of the scraped
+   * configurations.
+   */
+  scrapeConfigs(): Promise&lt;Array&lt;Object&gt; | Error&gt; {
+    return pMap(this.configs, config =&gt; {
+      return this.scrapeConfig(config)
+    }, {
+      concurrency: 1
+    })
+  }
+
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

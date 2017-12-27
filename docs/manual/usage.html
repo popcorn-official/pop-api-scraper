@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | pop-api-scraper</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="The base modules for the popcorn-api scraper"><meta property="og:type" content="website"><meta property="og:url" content="https://popcorntime.sh"><meta property="og:site_name" content="pop-api-scraper"><meta property="og:title" content="pop-api-scraper"><meta property="og:image" content="https://avatars2.githubusercontent.com/u/7267937"><meta property="og:description" content="The base modules for the popcorn-api scraper"><meta property="og:author" content="https://twitter.com/popcorntimetv"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="pop-api-scraper"><meta property="twitter:description" content="The base modules for the popcorn-api scraper"><meta property="twitter:image" content="https://avatars2.githubusercontent.com/u/7267937"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/popcorn-official/pop-api-scraper"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/usage.html"><a href="manual/usage.html" data-ice="link">Usage</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/middleware.html"><a href="manual/middleware.html" data-ice="link">Middleware</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/middleware.html"><a href="manual/middleware.html#scraper" data-ice="link">Scraper</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/middleware.html"><a href="manual/middleware.html#cron" data-ice="link">Cron</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    </ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html" data-ice="link">Contributing</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#raising-issues" data-ice="link">Raising Issues</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#report-a-bug" data-ice="link">Report A Bug</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#feature-requests" data-ice="link">Feature Requests</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#pull-requests" data-ice="link">Pull Requests</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#commit-messages" data-ice="link">Commit Messages</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#styleguides" data-ice="link">Styleguides</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#javascript-styleguide" data-ice="link">JavaScript Styleguide</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#tests-styleguide" data-ice="link">Tests Styleguide</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#documentation-styleguide" data-ice="link">Documentation Styleguide</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#setting-up-for-development" data-ice="link">Setting up for development</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#npm-scripts" data-ice="link">npm scripts</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#git-hooks" data-ice="link">Git hooks</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html" data-ice="link">Contributor Covenant Code of Conduct</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#our-pledge" data-ice="link">Our Pledge</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#our-standards" data-ice="link">Our Standards</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#our-responsibilities" data-ice="link">Our Responsibilities</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#scope" data-ice="link">Scope</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#enforcement" data-ice="link">Enforcement</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CODE_OF_CONDUCT.html"><a href="manual/CODE_OF_CONDUCT.html#attribution" data-ice="link">Attribution</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="usage">Usage</h1><p>For the basic setup you need to create a <code>Provider</code> (strategy) the
+<code>PopApiScraper</code> instance can use. The <code>PopApiScraper</code> implements the strategy
+pattern, where the providers are the strategies.</p>
+<p>The example below makes a HTTP GET request to a web service or website. from
+there on you are free to implement how and what data you want to get from it.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">// ./ExampleProvider.js
+import { AbstractProvider, HttpService } from &apos;pop-api-scraper&apos;
+
+// Extend from the internal AbstractProvider.
+export default class ExampleProvider extends AbstractProvider {
+
+  constructor(PopApiScraper, {name, configs, maxWebRequests = 2}) {
+    super(PopApiScraper, {name, configs, maxWebRequests})
+  }
+
+  // Override the `scrapeConfig` method to get the content from one
+  // configuration.
+  scrapeConfig(config) {
+    // A HTTP service to send HTTP requests.
+    this.httpService = new HttpService({
+      baseUrl: config.baseUrl
+    })
+
+    // HTTP  GET request to: https://jsonplaceholder.typicode.com/posts?foo=bar
+    return this.httpService.get(&apos;/posts&apos;, config.httpOptions)
+      .then(res =&gt; res.data)
+  }
+
+}</code>
+</code></pre>
+<p>Bundle it all up together with
+<a href="https://github.com/popcorn-official/pop-api"><code>pop-api</code></a>:</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">// ./index.js
+import os from &apos;os&apos;
+import { PopApi } from &apos;pop-api&apos;
+import { join } from &apos;path&apos;
+import { Cron, PopApiScraper } from &apos;pop-api-scraper&apos;
+
+import ExampleProvider from &apos;./ExampleProvider&apos;
+
+(async () =&gt; {
+  try {
+    // Let the PopApiScraper use the ExampleProvider o scrape data.
+    PopApiScraper.use(ExampleProvider, {
+      name: &apos;example-provider&apos;,
+      configs: [{
+        baseUrl: &apos;https://jsonplaceholder.typicode.com&apos;,
+        httpOptions: {
+          query: {
+            foo: &apos;bar&apos;
+          }
+        }
+      }],
+      maxWebRequests: 2
+    })
+
+    // Register the PopApiScraper middleware to the pop-api instance.
+    PopApi.use(PopApiScraper, {
+      statusPath: join(...[os.tmpdir(), &apos;status.json&apos;]),
+      updatedPath: join(...[os.tmpdir(), &apos;updated.json&apos;])
+    })
+    // Optionally you can use the Cron middleware to scrape for content on a
+    // regulat basis.
+    PopApi.use(Cron, {
+      cronTime: &apos;0 0 */6 * * *&apos;,
+      start: false
+    })
+
+    // PopApi now has a `scraper` instance.
+    const res = await PopApi.scraper.scrape()
+    console.info(res[0])
+  } catch (err) {
+    console.error(err)
+  }
+})()</code>
+</code></pre>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

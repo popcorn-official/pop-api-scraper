@@ -1,0 +1,49 @@
+{
+  "source": "./src",
+  "destination": "./docs",
+  "includes": [".js$"],
+  "excludes": ["(node_modules|docs|coverage)"],
+  "package": "./package.json",
+  "plugins": [{
+    "name": "esdoc-standard-plugin",
+    "option": {
+      "brand": {
+        "logo": "./logo.png",
+        "title": "pop-api-scraper",
+        "description": "The base modules for the popcorn-api scraper",
+        "repository": "https://github.com/popcorn-official/pop-api-scraper",
+        "site": "https://popcorntime.sh",
+        "author": "https://twitter.com/popcorntimetv",
+        "image": "https://avatars2.githubusercontent.com/u/7267937"
+      },
+      "manual": {
+        "index": "./README.md",
+        "globalIndex": false,
+        "coverage": true,
+        "files": [
+          "./manual/usage.md",
+          "./manual/middleware.md",
+          "./CHANGELOG.md",
+          "./CONTRIBUTING.md",
+          "./CODE_OF_CONDUCT.md"
+        ]
+      },
+      "test": {
+        "source": "./test/",
+        "interfaces": ["describe", "it", "context", "suite", "test"],
+        "includes": ["(spec|Spec|test|Test)\\.js$"],
+        "excludes": ["\\.config\\.js$"]
+      }
+    }
+  }, {
+    "name": "esdoc-ecmascript-proposal-plugin",
+    "option": {
+      "all": true
+    }
+  }, {
+    "name": "esdoc-flow-type-plugin",
+    "option": {
+      "enable": true
+    }
+  }]
+}

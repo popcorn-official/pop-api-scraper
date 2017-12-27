@@ -1,0 +1,3542 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/Context.js",
+    "content": "// Import the necessary modules.\n// @flow\nimport { IProvider } from './providers'\n\n/**\n * Base context for the strategy pattern.\n * @type {Context}\n */\nexport default class Context {\n\n  /**\n   * The provider of the context to execute.\n   * @type {IProvider}\n   */\n  provider: IProvider\n\n  /**\n   * Create a new Context object.\n   * @param {?IProvider} [provider=new IProvider()] - The provider of the\n   * context to execute.\n   */\n  constructor(provider: IProvider = new IProvider()): void {\n    /**\n     * The provider of the context to execute.\n     * @type {IProvider}\n     */\n    this.provider = provider\n  }\n\n  /**\n   * Execute the set provider.\n   * @returns {Promise<Array<Object>, Error>} - A list of scraped content.\n   */\n  execute(): Promise<Array<Object> | Error> {\n    return this.provider.scrapeConfigs()\n  }\n\n}\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/src/Context.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "Context",
+    "memberof": "src/Context.js",
+    "static": true,
+    "longname": "src/Context.js~Context",
+    "access": "public",
+    "export": true,
+    "importPath": "pop-api-scraper/src/Context.js",
+    "importStyle": "Context",
+    "description": "Base context for the strategy pattern.",
+    "lineNumber": 9,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Context"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "interface": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "member",
+    "name": "provider",
+    "memberof": "src/Context.js~Context",
+    "static": false,
+    "longname": "src/Context.js~Context#provider",
+    "access": "public",
+    "description": "The provider of the context to execute. ",
+    "lineNumber": 15,
+    "type": {
+      "nullable": null,
+      "types": [
+        "IProvider"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 51,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Context.js~Context",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Context.js~Context#constructor",
+    "access": "public",
+    "description": "Create a new Context object.",
+    "lineNumber": 22,
+    "params": [
+      {
+        "nullable": true,
+        "types": [
+          "IProvider"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "new IProvider()",
+        "defaultRaw": "new IProvider()",
+        "name": "provider",
+        "description": "The provider of the\ncontext to execute."
+      }
+    ]
+  },
+  {
+    "__docId__": 53,
+    "kind": "method",
+    "name": "execute",
+    "memberof": "src/Context.js~Context",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Context.js~Context#execute",
+    "access": "public",
+    "description": "Execute the set provider.  ",
+    "lineNumber": 34,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Array<Object>, Error>} - A list of scraped content.  "
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Array<Object>, Error>"
+      ],
+      "spread": false,
+      "description": "A list of scraped content."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 54,
+    "kind": "file",
+    "name": "src/Cron.js",
+    "content": "// Import the necessary modules.\n// @flow\nimport cron from 'node-cron'\n\n/**\n * Cron class for executing the scraper periodically.\n * @type {Cron}\n */\nexport default class Cron {\n\n  /**\n   * The cron time for scraping audios. Default is `0 0 *\\/6 * * *`.\n   * @type {string}\n   */\n  cronTime: string\n\n  /**\n   * Create a new Cron object.\n   * @param {!PopApi} PopApi - The PopApi instance.\n   * @param {!Object} [options={}] - The options for the Cron middleware.\n   * @param {!string} [options.cronTime=0 0 *\\/6 * * *] - The cron tab to\n   * execute the scraper.\n   * @param {?boolean} [options.start=false] - Start the cronjob on creation.\n   */\n  constructor(PopApi: any, {\n    cronTime = '0 0 */6 * * *',\n    start = false\n  }: Object = {}): void {\n    const { name } = this.constructor\n    PopApi.debug(`Registering ${name} with options: %o`, {\n      cronTime,\n      start\n    })\n\n    /**\n     * The cron time for scraping audios. Default is `0 0 *\\/6 * * *`.\n     * @type {string}\n     */\n    this.cronTime = cronTime\n    PopApi.cron = this.getCron(PopApi, start)\n  }\n\n  /**\n   * Get the cron job to run.\n   * @param {!PopApi} PopApi - The PopApi instance.\n   * @param {?boolean} [start] - Start the cron job.\n   * @returns {Object} - A configured cron job.\n   */\n  getCron(PopApi: any, start?: boolean): Object {\n    return cron.schedule(this.cronTime, PopApi.scraper.scrape, start)\n  }\n\n}\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/src/Cron.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 55,
+    "kind": "class",
+    "name": "Cron",
+    "memberof": "src/Cron.js",
+    "static": true,
+    "longname": "src/Cron.js~Cron",
+    "access": "public",
+    "export": true,
+    "importPath": "pop-api-scraper/src/Cron.js",
+    "importStyle": "Cron",
+    "description": "Cron class for executing the scraper periodically.",
+    "lineNumber": 9,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Cron"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "interface": false
+  },
+  {
+    "__docId__": 56,
+    "kind": "member",
+    "name": "cronTime",
+    "memberof": "src/Cron.js~Cron",
+    "static": false,
+    "longname": "src/Cron.js~Cron#cronTime",
+    "access": "public",
+    "description": "The cron time for scraping audios. Default is `0 0 *\\/6 * * *`. ",
+    "lineNumber": 15,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Cron.js~Cron",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Cron.js~Cron#constructor",
+    "access": "public",
+    "description": "Create a new Cron object.",
+    "lineNumber": 25,
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "PopApi"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "PopApi",
+        "description": "The PopApi instance."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "options",
+        "description": "The options for the Cron middleware."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "0 0 *\\/6 * * *",
+        "defaultRaw": "0 0 *\\/6 * * *",
+        "name": "options.cronTime",
+        "description": "The cron tab to\nexecute the scraper."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "options.start",
+        "description": "Start the cronjob on creation."
+      }
+    ]
+  },
+  {
+    "__docId__": 59,
+    "kind": "method",
+    "name": "getCron",
+    "memberof": "src/Cron.js~Cron",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Cron.js~Cron#getCron",
+    "access": "public",
+    "description": "Get the cron job to run.  ",
+    "lineNumber": 49,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Object} - A configured cron job.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "PopApi"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "PopApi",
+        "description": "The PopApi instance."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "start",
+        "description": "Start the cron job."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "A configured cron job."
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "file",
+    "name": "src/PopApiScraper.js",
+    "content": "// Import the necessary modules.\n// @flow\nimport fs from 'fs-extra'\nimport pMap from 'p-map'\n\nimport Context from './Context'\n\n/** @external {PopApi} https://github.com/ChrisAlderson/pop-api */\n\n/**\n * Class for Initiating the scraping process.\n * @type {PopApiScraper}\n */\nexport default class PopApiScraper {\n\n  /**\n   * The context to execute the providers in.\n   * @type {Context}\n   */\n  context: Context\n\n  /**\n   * The path of the status file. Default is `./tmp/status.json`.\n   * @type {string}\n   */\n  statusPath: string\n\n  /**\n   * The path of the updated file. Default is `./tmp/updated.json`.\n   * @type {string}\n   */\n  updatedPath: string\n\n  /**\n   * A map of the installed plugins.\n   * @type {Map<any>}\n   */\n  static _installedPlugins: Map<string, any> = new Map()\n\n  /**\n   * Create a new BaseScraper object.\n   * The base modules for popcorn-api\n   * @param {!PopApi} PopApi - The PopApiScraper instance.\n   * @param {!Object} options - The options for the BaseScraper middleware.\n   * @param {!string} options.statusPath = - The path of the status file.\n   * @param {!string} options.updatedPath - The path of the updated file.\n   */\n  constructor(PopApi: any, {\n    statusPath,\n    updatedPath\n  }: Object): void {\n    const { name } = this.constructor\n    PopApi.debug(`Registering ${name} with options: %o`, {\n      statusPath,\n      updatedPath\n    })\n\n    if (!statusPath || !updatedPath) {\n      throw new TypeError('\\'statusPath\\' and \\'updatedPath\\' are required options for the PopApiScraper middleware!')\n    }\n\n    /**\n     * The context to execute the providers in.\n     * @type {Context}\n     */\n    this.context = new Context()\n    /**\n     * The path of the status file. Default is `./tmp/status.json`.\n     * @type {string}\n     */\n    this.statusPath = statusPath\n    /**\n     * The path of the updated file. Default is `./tmp/updated.json`.\n     * @type {string}\n     */\n    this.updatedPath = updatedPath\n\n    fs.createWriteStream(this.statusPath).end()\n    fs.createWriteStream(this.updatedPath).end()\n\n    PopApi.scraper = this\n  }\n\n  /**\n   * Get the status object.\n   * @returns {Promise<string, Error>} - The status of the scraping process.\n   */\n  getStatus(): Promise<string | Error> {\n    return fs.readFile(this.statusPath, 'utf8')\n  }\n\n  /**\n   * Updates the `status.json` file.\n   * @param {!string} status - The status which will be set to in the\n   * `status.json` file.\n   * @returns {Promise<undefined, Error>} - 'ok' if saved, or the error is there\n   * is one.\n   */\n  setStatus(status: string): Promise<string | Error> {\n    return fs.writeFile(this.statusPath, status, 'utf8')\n  }\n\n  /**\n   * Get the updated object.\n   * @returns {Promise<number, Error>} - The status of the scraping process.\n   */\n  getUpdated(): Promise<number | Error> {\n    return fs.readFile(this.updatedPath, 'utf8')\n      .then(res => Number(res))\n  }\n\n  /**\n   * Updates the `updated.json` file.\n   * @param {!number} updated - The epoch time when the API last started\n   * scraping.\n   * @returns {Promise<undefined, Error>} - 'ok' if saved, or the error is there\n   * is one.\n   */\n  setUpdated(updated: number): Promise<string | Error> {\n    return fs.writeFile(this.updatedPath, String(updated), 'utf8')\n  }\n\n  /**\n   * Register middleware for the PopApi framework.\n   * @param {!Function} Plugin - The plugin to use.\n   * @param {!Object} args - The arguments passed down to the constructor of\n   * the plugin.\n   * @returns {Promise<PopApiScraper>} - The PopApi instance with the installed\n   * plugins.\n   */\n  static use(Plugin: any, ...args: any): any {\n    if (PopApiScraper._installedPlugins.has(Plugin)) {\n      return this\n    }\n\n    const plugin = typeof Plugin === 'function'\n      ? new Plugin(this, ...args)\n      : null\n\n    if (plugin) {\n      PopApiScraper._installedPlugins.set(Plugin, plugin)\n    }\n\n    return this\n  }\n  /**\n   * Initiate the scraping.\n   * @param {!number} [concurrency=1] - How many providers to scrape\n   * concurrently.\n   * @returns {Promise<Array<Object>, Error>} - The array of the scraped\n   * content.\n   */\n  async scrape(concurrency?: number = 1): Promise<Array<Object> | Error> {\n    await this.setUpdated(Math.floor(new Date().getTime() / 1000))\n    const providers = PopApiScraper._installedPlugins.values()\n\n    const res = await pMap(providers, async provider => {\n      this.context.provider = provider\n      await this.setStatus(`Scraping: ${provider.name}`)\n\n      return this.context.execute()\n    }, { concurrency })\n    await this.setStatus('idle')\n\n    return res\n  }\n\n}\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/src/PopApiScraper.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 61,
+    "kind": "external",
+    "name": "PopApi",
+    "externalLink": "https://github.com/ChrisAlderson/pop-api",
+    "memberof": "src/PopApiScraper.js",
+    "static": true,
+    "longname": "src/PopApiScraper.js~PopApi",
+    "access": "public",
+    "description": null
+  },
+  {
+    "__docId__": 62,
+    "kind": "class",
+    "name": "PopApiScraper",
+    "memberof": "src/PopApiScraper.js",
+    "static": true,
+    "longname": "src/PopApiScraper.js~PopApiScraper",
+    "access": "public",
+    "export": true,
+    "importPath": "pop-api-scraper/src/PopApiScraper.js",
+    "importStyle": "PopApiScraper",
+    "description": "Class for Initiating the scraping process.",
+    "lineNumber": 14,
+    "type": {
+      "nullable": null,
+      "types": [
+        "PopApiScraper"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "interface": false
+  },
+  {
+    "__docId__": 63,
+    "kind": "member",
+    "name": "context",
+    "memberof": "src/PopApiScraper.js~PopApiScraper",
+    "static": false,
+    "longname": "src/PopApiScraper.js~PopApiScraper#context",
+    "access": "public",
+    "description": "The context to execute the providers in. ",
+    "lineNumber": 20,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Context"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "member",
+    "name": "statusPath",
+    "memberof": "src/PopApiScraper.js~PopApiScraper",
+    "static": false,
+    "longname": "src/PopApiScraper.js~PopApiScraper#statusPath",
+    "access": "public",
+    "description": "The path of the status file. Default is `./tmp/status.json`. ",
+    "lineNumber": 26,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "member",
+    "name": "updatedPath",
+    "memberof": "src/PopApiScraper.js~PopApiScraper",
+    "static": false,
+    "longname": "src/PopApiScraper.js~PopApiScraper#updatedPath",
+    "access": "public",
+    "description": "The path of the updated file. Default is `./tmp/updated.json`. ",
+    "lineNumber": 32,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "member",
+    "name": "_installedPlugins",
+    "memberof": "src/PopApiScraper.js~PopApiScraper",
+    "static": true,
+    "longname": "src/PopApiScraper.js~PopApiScraper._installedPlugins",
+    "access": "private",
+    "description": "A map of the installed plugins. ",
+    "lineNumber": 38,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Map"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/PopApiScraper.js~PopApiScraper",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/PopApiScraper.js~PopApiScraper#constructor",
+    "access": "public",
+    "description": "Create a new BaseScraper object.\nThe base modules for popcorn-api",
+    "lineNumber": 48,
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "PopApi"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "PopApi",
+        "description": "The PopApiScraper instance."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": "The options for the BaseScraper middleware."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.statusPath",
+        "description": "= - The path of the status file."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.updatedPath",
+        "description": "The path of the updated file."
+      }
+    ]
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "getStatus",
+    "memberof": "src/PopApiScraper.js~PopApiScraper",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/PopApiScraper.js~PopApiScraper#getStatus",
+    "access": "public",
+    "description": "Get the status object.  ",
+    "lineNumber": 88,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<string, Error>} - The status of the scraping process.  "
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<string, Error>"
+      ],
+      "spread": false,
+      "description": "The status of the scraping process."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 72,
+    "kind": "method",
+    "name": "setStatus",
+    "memberof": "src/PopApiScraper.js~PopApiScraper",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/PopApiScraper.js~PopApiScraper#setStatus",
+    "access": "public",
+    "description": "Updates the `status.json` file.  ",
+    "lineNumber": 99,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<undefined, Error>} - 'ok' if saved, or the error is there\nis one.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "status",
+        "description": "The status which will be set to in the\n`status.json` file."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<undefined, Error>"
+      ],
+      "spread": false,
+      "description": "'ok' if saved, or the error is there\nis one."
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "method",
+    "name": "getUpdated",
+    "memberof": "src/PopApiScraper.js~PopApiScraper",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/PopApiScraper.js~PopApiScraper#getUpdated",
+    "access": "public",
+    "description": "Get the updated object.  ",
+    "lineNumber": 107,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<number, Error>} - The status of the scraping process.  "
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<number, Error>"
+      ],
+      "spread": false,
+      "description": "The status of the scraping process."
+    },
+    "params": []
+  },
+  {
+    "__docId__": 74,
+    "kind": "method",
+    "name": "setUpdated",
+    "memberof": "src/PopApiScraper.js~PopApiScraper",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/PopApiScraper.js~PopApiScraper#setUpdated",
+    "access": "public",
+    "description": "Updates the `updated.json` file.  ",
+    "lineNumber": 119,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<undefined, Error>} - 'ok' if saved, or the error is there\nis one.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "updated",
+        "description": "The epoch time when the API last started\nscraping."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<undefined, Error>"
+      ],
+      "spread": false,
+      "description": "'ok' if saved, or the error is there\nis one."
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "method",
+    "name": "use",
+    "memberof": "src/PopApiScraper.js~PopApiScraper",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/PopApiScraper.js~PopApiScraper.use",
+    "access": "public",
+    "description": "Register middleware for the PopApi framework.  ",
+    "lineNumber": 131,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<PopApiScraper>} - The PopApi instance with the installed\nplugins.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "Plugin",
+        "description": "The plugin to use."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "args",
+        "description": "The arguments passed down to the constructor of\nthe plugin."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<PopApiScraper>"
+      ],
+      "spread": false,
+      "description": "The PopApi instance with the installed\nplugins."
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "method",
+    "name": "scrape",
+    "memberof": "src/PopApiScraper.js~PopApiScraper",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/PopApiScraper.js~PopApiScraper#scrape",
+    "access": "public",
+    "description": "Initiate the scraping.  ",
+    "lineNumber": 153,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Array<Object>, Error>} - The array of the scraped\ncontent.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "1",
+        "defaultRaw": 1,
+        "name": "concurrency",
+        "description": "How many providers to scrape\nconcurrently."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Array<Object>, Error>"
+      ],
+      "spread": false,
+      "description": "The array of the scraped\ncontent."
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "file",
+    "name": "src/http/AbstractHttpService.js",
+    "content": "// Import the necessary modules.\n// @flow\nimport cheerio from 'cheerio'\nimport debug from 'debug'\nimport { stringify } from 'querystring'\n\nimport IHttpService from './IHttpService'\nimport { name } from '../../package.json'\n\n/**\n * Class for making HTTP calls.\n * @abstract\n * @implements {IHttpService}\n * @type {AbstractHttpService}\n */\nexport default class AbstractHttpService extends IHttpService {\n\n  /**\n   * The base url of the website to scrape.\n   * @type {string}\n   */\n  baseUrl: string\n\n  /**\n   * The default options for the HTTP requests.\n   * @type {Object}\n   */\n  options: Object\n\n  /**\n   * The debug function for extra output.\n   * @type {Function}\n   */\n  _debug: Function\n\n  /**\n   * Create a new Request object.\n   * @param {!string} baseUrl - The base url of the website to scrape.\n   * @param {?Object} options={} - The default options for the HTTP requests.\n   */\n  constructor({baseUrl, options = {}}: Object): void {\n    super()\n\n    /**\n     * The the base url of hte website to scrape.\n     * @type {string}\n     */\n    this.baseUrl = baseUrl\n    /**\n     * The default options for the HTTP requests.\n     * @type {Object}\n     */\n    this.options = options\n    /**\n     * The debug function for extra output.\n     * @type {Function}\n     */\n    this._debug = debug(`${name}:Http`)\n  }\n\n  /**\n   * Make a GET request.\n   * @param {!string} [endpoint=''] - The endpoint to make the GET request to.\n   * @param {?Object} [opts={}] - The options for the HTTP GET\n   * request.\n   * @param {?boolean} [raw=false] - Return json object.\n   * @returns {Promise<Object, Error>} - Promise with the HTML loaded in\n   * cheerio.\n   */\n  get(\n    endpoint?: string = '',\n    opts?: Object = {},\n    raw?: boolean = false\n  ): Promise<any | Error> {\n    return this.request('GET', endpoint, opts, raw)\n  }\n\n  /**\n   * Make a POST request.\n   * @param {!string} [endpoint] - The endpoint to make the POST request to.\n   * @param {?Object} [opts={}] - The options for the HTTP POST\n   * request.\n   * @returns {Promise<Object, Error>} - Promise with the HTML loaded in\n   * cheerio.\n   */\n  post(\n    endpoint: string,\n    opts?: Object = {}\n  ): Promise<any | Error> {\n    return this.request('POST', endpoint, opts)\n  }\n\n  /**\n   * Make a PUT request.\n   * @param {!string} [endpoint] - The endpoint to make the PUT request to.\n   * @param {?Object} [opts={}] - The options for the HTTP PUT\n   * request.\n   * @returns {Promise<Object, Error>} - Promise with the HTML loaded in\n   * cheerio.\n   */\n  put(\n    endpoint: string,\n    opts?: Object = {}\n  ): Promise<any | Error> {\n    return this.request('PUT', endpoint, opts)\n  }\n\n  /**\n   * Make a DELETE request.\n   * @param {!string} [endpoint] - The endpoint to make the DELETE request to.\n   * @param {?Object} [opts={}] - The options for the HTTP DELETE\n   * request.\n   * @returns {Promise<Object, Error>} - Promise with the HTML loaded in\n   * cheerio.\n   */\n  delete(\n    endpoint: string,\n    opts?: Object = {}\n  ): Promise<any | Error> {\n    return this.request('DELETE', endpoint, opts)\n  }\n\n  /**\n   * Handle the body response string.\n   * @param {!string} body - The body to parse.\n   * @param {?boolean} raw - Return the raw body.\n   * @returns {Function|string} -  The raw body or the body parsed by\n   * cheerio.\n   */\n  handleBody(body: string, raw?: boolean): Function | string {\n    if (raw) {\n      return body\n    }\n\n    return cheerio.load(body)\n  }\n\n  /**\n   * Print the debug message.\n   * @param {!string} method - The method of the HTTP request.\n   * @param {!string} uri - The uri of the HTTP request.\n   * @param {?Object} opts=this._opts - The options for the HTTP request.\n   * @returns {undefined}\n   */\n  printDebug(method: string, uri: string, opts?: Object): void {\n    let msg = `Making ${method} request to: ${uri}`\n    if (opts) {\n      const { body, query, form } = opts\n      const s = {\n        ...body,\n        ...query,\n        ...form\n      }\n      msg += `?${stringify(s)}`\n    }\n\n    this._debug(msg)\n  }\n\n}\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/src/http/AbstractHttpService.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 78,
+    "kind": "class",
+    "name": "AbstractHttpService",
+    "memberof": "src/http/AbstractHttpService.js",
+    "static": true,
+    "longname": "src/http/AbstractHttpService.js~AbstractHttpService",
+    "access": "public",
+    "export": true,
+    "importPath": "pop-api-scraper/src/http/AbstractHttpService.js",
+    "importStyle": "AbstractHttpService",
+    "description": "Class for making HTTP calls.",
+    "lineNumber": 16,
+    "type": {
+      "nullable": null,
+      "types": [
+        "AbstractHttpService"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "abstract": true,
+    "interface": false,
+    "extends": [
+      "src/http/IHttpService.js~IHttpService"
+    ],
+    "implements": [
+      "IHttpService"
+    ]
+  },
+  {
+    "__docId__": 79,
+    "kind": "member",
+    "name": "baseUrl",
+    "memberof": "src/http/AbstractHttpService.js~AbstractHttpService",
+    "static": false,
+    "longname": "src/http/AbstractHttpService.js~AbstractHttpService#baseUrl",
+    "access": "public",
+    "description": "The base url of the website to scrape. ",
+    "lineNumber": 22,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "member",
+    "name": "options",
+    "memberof": "src/http/AbstractHttpService.js~AbstractHttpService",
+    "static": false,
+    "longname": "src/http/AbstractHttpService.js~AbstractHttpService#options",
+    "access": "public",
+    "description": "The default options for the HTTP requests. ",
+    "lineNumber": 28,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 81,
+    "kind": "member",
+    "name": "_debug",
+    "memberof": "src/http/AbstractHttpService.js~AbstractHttpService",
+    "static": false,
+    "longname": "src/http/AbstractHttpService.js~AbstractHttpService#_debug",
+    "access": "private",
+    "description": "The debug function for extra output. ",
+    "lineNumber": 34,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/http/AbstractHttpService.js~AbstractHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/AbstractHttpService.js~AbstractHttpService#constructor",
+    "access": "public",
+    "description": "Create a new Request object.",
+    "lineNumber": 41,
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "baseUrl",
+        "description": "The base url of the website to scrape."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "options",
+        "description": "The default options for the HTTP requests."
+      }
+    ]
+  },
+  {
+    "__docId__": 86,
+    "kind": "method",
+    "name": "get",
+    "memberof": "src/http/AbstractHttpService.js~AbstractHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/AbstractHttpService.js~AbstractHttpService#get",
+    "access": "public",
+    "description": "Make a GET request.  ",
+    "lineNumber": 70,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Object, Error>} - Promise with the HTML loaded in\ncheerio.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "''",
+        "defaultRaw": "''",
+        "name": "endpoint",
+        "description": "The endpoint to make the GET request to."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "opts",
+        "description": "The options for the HTTP GET\nrequest."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "raw",
+        "description": "Return json object."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Object, Error>"
+      ],
+      "spread": false,
+      "description": "Promise with the HTML loaded in\ncheerio."
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "method",
+    "name": "post",
+    "memberof": "src/http/AbstractHttpService.js~AbstractHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/AbstractHttpService.js~AbstractHttpService#post",
+    "access": "public",
+    "description": "Make a POST request.  ",
+    "lineNumber": 86,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Object, Error>} - Promise with the HTML loaded in\ncheerio.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "endpoint",
+        "description": "The endpoint to make the POST request to."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "opts",
+        "description": "The options for the HTTP POST\nrequest."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Object, Error>"
+      ],
+      "spread": false,
+      "description": "Promise with the HTML loaded in\ncheerio."
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "method",
+    "name": "put",
+    "memberof": "src/http/AbstractHttpService.js~AbstractHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/AbstractHttpService.js~AbstractHttpService#put",
+    "access": "public",
+    "description": "Make a PUT request.  ",
+    "lineNumber": 101,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Object, Error>} - Promise with the HTML loaded in\ncheerio.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "endpoint",
+        "description": "The endpoint to make the PUT request to."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "opts",
+        "description": "The options for the HTTP PUT\nrequest."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Object, Error>"
+      ],
+      "spread": false,
+      "description": "Promise with the HTML loaded in\ncheerio."
+    }
+  },
+  {
+    "__docId__": 89,
+    "kind": "method",
+    "name": "delete",
+    "memberof": "src/http/AbstractHttpService.js~AbstractHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/AbstractHttpService.js~AbstractHttpService#delete",
+    "access": "public",
+    "description": "Make a DELETE request.  ",
+    "lineNumber": 116,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Object, Error>} - Promise with the HTML loaded in\ncheerio.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "endpoint",
+        "description": "The endpoint to make the DELETE request to."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "opts",
+        "description": "The options for the HTTP DELETE\nrequest."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Object, Error>"
+      ],
+      "spread": false,
+      "description": "Promise with the HTML loaded in\ncheerio."
+    }
+  },
+  {
+    "__docId__": 90,
+    "kind": "method",
+    "name": "handleBody",
+    "memberof": "src/http/AbstractHttpService.js~AbstractHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/AbstractHttpService.js~AbstractHttpService#handleBody",
+    "access": "public",
+    "description": "Handle the body response string.  ",
+    "lineNumber": 130,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Function|string} -  The raw body or the body parsed by\ncheerio.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "body",
+        "description": "The body to parse."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "raw",
+        "description": "Return the raw body."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function",
+        "string"
+      ],
+      "spread": false,
+      "description": "The raw body or the body parsed by\ncheerio."
+    }
+  },
+  {
+    "__docId__": 91,
+    "kind": "method",
+    "name": "printDebug",
+    "memberof": "src/http/AbstractHttpService.js~AbstractHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/AbstractHttpService.js~AbstractHttpService#printDebug",
+    "access": "public",
+    "description": "Print the debug message.  ",
+    "lineNumber": 145,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{undefined}  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "method",
+        "description": "The method of the HTTP request."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "uri",
+        "description": "The uri of the HTTP request."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "this._opts",
+        "defaultRaw": "this._opts",
+        "name": "opts",
+        "description": "The options for the HTTP request."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "undefined"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 92,
+    "kind": "file",
+    "name": "src/http/HttpService.js",
+    "content": "// Import the necessary modules.\n// @flow\nimport got from 'got'\nimport { URL } from 'url'\nimport {\n  createWriteStream,\n  unlinkSync\n} from 'fs'\n\nimport AbstractHttpService from './AbstractHttpService'\n\n/**\n * Class for making HTTP calls with the got library.\n * @extends {AbstractHttpService}\n * @type {HttpService}\n */\nexport default class HttpService extends AbstractHttpService {\n\n  /**\n   * Make a HTTP request.\n   * @param {!string} method - The method of the HTTP request.\n   * @param {!string} [endpoint] - The endpoint to make the HTTP request to.\n   * @param {?Object} [opts] - The options for the HTTP request.\n   * @param {?boolean} [raw] - Return the raw body.\n   * @returns {Promise<Object, Error>} - Promise with the HTML loaded in\n   * cheerio.\n   */\n  request(\n    method: string,\n    endpoint: string,\n    opts?: Object,\n    raw?: boolean\n  ): Promise<any | Error> {\n    const { href } = new URL(endpoint, this.baseUrl)\n\n    const options = {\n      ...this.options,\n      ...opts,\n      method\n    }\n    this.printDebug(method, href, options)\n\n    return got(href, options)\n      .then(({ body }) => this.handleBody(body, raw))\n  }\n\n  /**\n   * Request to download an item.\n   * @param {!string} endpoint - The uri to the item.\n   * @param {!string} filePath - The name of the file to save the item.\n   * @returns {Promise<string, Error>} - Message when it's finally\n   * downloaded.\n   */\n  download(endpoint: string, filePath: string): Promise<string | Error> {\n    const { href } = new URL(endpoint, this.baseUrl)\n    this.printDebug('GET', href)\n\n    return new Promise((resolve, reject) => {\n      const stream = createWriteStream(filePath)\n      const req = got.stream(href, this.options)\n\n      req.on('error', err => {\n        req.end()\n\n        stream.end(() => unlinkSync(filePath))\n\n        const error = new Error(\n          `Error on: '${filePath}', uri: '${href}', ${err}`\n        )\n        return reject(error)\n      })\n\n      req.on('response', function () {\n        this.pipe(stream)\n        stream.on('finish', () => resolve(filePath))\n      })\n    })\n  }\n\n}\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/src/http/HttpService.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 93,
+    "kind": "class",
+    "name": "HttpService",
+    "memberof": "src/http/HttpService.js",
+    "static": true,
+    "longname": "src/http/HttpService.js~HttpService",
+    "access": "public",
+    "export": true,
+    "importPath": "pop-api-scraper/src/http/HttpService.js",
+    "importStyle": "HttpService",
+    "description": "Class for making HTTP calls with the got library.",
+    "lineNumber": 17,
+    "type": {
+      "nullable": null,
+      "types": [
+        "HttpService"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "interface": false,
+    "extends": [
+      "AbstractHttpService"
+    ]
+  },
+  {
+    "__docId__": 94,
+    "kind": "method",
+    "name": "request",
+    "memberof": "src/http/HttpService.js~HttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/HttpService.js~HttpService#request",
+    "access": "public",
+    "description": "Make a HTTP request.  ",
+    "lineNumber": 28,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Object, Error>} - Promise with the HTML loaded in\ncheerio.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "method",
+        "description": "The method of the HTTP request."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "endpoint",
+        "description": "The endpoint to make the HTTP request to."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "opts",
+        "description": "The options for the HTTP request."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "raw",
+        "description": "Return the raw body."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Object, Error>"
+      ],
+      "spread": false,
+      "description": "Promise with the HTML loaded in\ncheerio."
+    }
+  },
+  {
+    "__docId__": 95,
+    "kind": "method",
+    "name": "download",
+    "memberof": "src/http/HttpService.js~HttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/HttpService.js~HttpService#download",
+    "access": "public",
+    "description": "Request to download an item.  ",
+    "lineNumber": 54,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<string, Error>} - Message when it's finally\ndownloaded.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "endpoint",
+        "description": "The uri to the item."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "filePath",
+        "description": "The name of the file to save the item."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<string, Error>"
+      ],
+      "spread": false,
+      "description": "Message when it's finally\ndownloaded."
+    }
+  },
+  {
+    "__docId__": 96,
+    "kind": "file",
+    "name": "src/http/IHttpService.js",
+    "content": "// @flow\n\n/**\n * Interface to send HTTP requests.\n * @interface\n * @type {IHttpService}\n */\nexport default class IHttpService {\n\n  /**\n   * Make a GET request.\n   * @param {!string} [endpoint] - The endpoint to make the GET request to.\n   * @param {?Object} [opts={}] - The options for the HTTP GET\n   * request.\n   * @param {?boolean} [raw=false] - Return json object.\n   * @throws {Error} - Using default method: 'get'\n   * @returns {Promise<Object, Error>} - Promise with the HTML loaded in\n   * cheerio.\n   */\n  get(\n    endpoint: string,\n    opts?: Object = {},\n    raw?: boolean = false\n  ): Promise<any | Error> {\n    throw new Error('Using default method: \\'get\\'')\n  }\n\n  /**\n   * Make a POST request.\n   * @param {!string} [endpoint] - The endpoint to make the POST request to.\n   * @param {?Object} [opts={}] - The options for the HTTP POST\n   * request.\n   * @throws {Error} - Using default method: 'post'\n   * @returns {Promise<Object, Error>} - Promise with the HTML loaded in\n   * cheerio.\n   */\n  post(\n    endpoint: string,\n    opts?: Object = {}\n  ): Promise<any | Error> {\n    throw new Error('Using default method: \\'post\\'')\n  }\n\n  /**\n   * Make a PUT request.\n   * @param {!string} [endpoint] - The endpoint to make the PUT request to.\n   * @param {?Object} [opts={}] - The options for the HTTP PUT\n   * request.\n   * @throws {Error} - Using default method: 'put'\n   * @returns {Promise<Object, Error>} - Promise with the HTML loaded in\n   * cheerio.\n   */\n  put(\n    endpoint: string,\n    opts?: Object = {}\n  ): Promise<any | Error> {\n    throw new Error('Using default method: \\'put\\'')\n  }\n\n  /**\n   * Make a DELETE request.\n   * @param {!string} [endpoint] - The endpoint to make the DELETE request to.\n   * @param {?Object} [opts={}] - The options for the HTTP DELETE\n   * request.\n   * @throws {Error} - Using default method: 'delete'\n   * @returns {Promise<Object, Error>} - Promise with the HTML loaded in\n   * cheerio.\n   */\n  delete(\n    endpoint: string,\n    opts?: Object = {}\n  ): Promise<any | Error> {\n    throw new Error('Using default method: \\'delete\\'')\n  }\n\n  /**\n   * Request to download an item.\n   * @param {!string} endpoint - The uri to the item.\n   * @param {!string} filePath - The name of the file to save the item.\n   * @throws {Error} - Using default method: 'download'\n   * @returns {Promise<string, Error>} - Message when it's finally downloaded.\n   */\n  download(endpoint: string, filePath: string): Promise<string | Error> {\n    throw new Error('Using default method: \\'download\\'')\n  }\n\n  /**\n   * Print the debug message.\n   * @param {!string} method - The method of the HTTP request.\n   * @param {!string} uri - The uri of the HTTP request.\n   * @param {?Object} opts=this._opts - The options for the HTTP request.\n   * @throws {Error} - Using default method: 'printDebug'\n   * @returns {undefined}\n   */\n  printDebug(method: string, uri: string, opts?: Object): void {\n    throw new Error('Using default method: \\'printDebug\\'')\n  }\n\n  /**\n   * Make a HTTP request.\n   * @param {!string} method - The method of the HTTP request.\n   * @param {!string} [endpoint] - The endpoint to make the HTTP request to.\n   * @param {?Object} [opts] - The options for the HTTP request.\n   * @param {?boolean} [raw] - Return the raw body.\n   * @throws {Error} - Using default method: 'request'\n   * @returns {Promise<Object, Error>} - Promise with the HTML loaded in\n   * cheerio.\n   */\n  request(\n    method: string,\n    endpoint: string,\n    opts?: Object,\n    raw?: boolean\n  ): Promise<any | Error> {\n    throw new Error('Using default method: \\'request\\'')\n  }\n\n}\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/src/http/IHttpService.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 97,
+    "kind": "class",
+    "name": "IHttpService",
+    "memberof": "src/http/IHttpService.js",
+    "static": true,
+    "longname": "src/http/IHttpService.js~IHttpService",
+    "access": "public",
+    "export": true,
+    "importPath": "pop-api-scraper/src/http/IHttpService.js",
+    "importStyle": "IHttpService",
+    "description": "Interface to send HTTP requests.",
+    "lineNumber": 8,
+    "type": {
+      "nullable": null,
+      "types": [
+        "IHttpService"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "interface": true
+  },
+  {
+    "__docId__": 98,
+    "kind": "method",
+    "name": "get",
+    "memberof": "src/http/IHttpService.js~IHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/IHttpService.js~IHttpService#get",
+    "access": "public",
+    "description": "Make a GET request.  ",
+    "lineNumber": 20,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Object, Error>} - Promise with the HTML loaded in\ncheerio.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "endpoint",
+        "description": "The endpoint to make the GET request to."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "opts",
+        "description": "The options for the HTTP GET\nrequest."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "raw",
+        "description": "Return json object."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Object, Error>"
+      ],
+      "spread": false,
+      "description": "Promise with the HTML loaded in\ncheerio."
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "Using default method: 'get'"
+      }
+    ]
+  },
+  {
+    "__docId__": 99,
+    "kind": "method",
+    "name": "post",
+    "memberof": "src/http/IHttpService.js~IHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/IHttpService.js~IHttpService#post",
+    "access": "public",
+    "description": "Make a POST request.  ",
+    "lineNumber": 37,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Object, Error>} - Promise with the HTML loaded in\ncheerio.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "endpoint",
+        "description": "The endpoint to make the POST request to."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "opts",
+        "description": "The options for the HTTP POST\nrequest."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Object, Error>"
+      ],
+      "spread": false,
+      "description": "Promise with the HTML loaded in\ncheerio."
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "Using default method: 'post'"
+      }
+    ]
+  },
+  {
+    "__docId__": 100,
+    "kind": "method",
+    "name": "put",
+    "memberof": "src/http/IHttpService.js~IHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/IHttpService.js~IHttpService#put",
+    "access": "public",
+    "description": "Make a PUT request.  ",
+    "lineNumber": 53,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Object, Error>} - Promise with the HTML loaded in\ncheerio.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "endpoint",
+        "description": "The endpoint to make the PUT request to."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "opts",
+        "description": "The options for the HTTP PUT\nrequest."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Object, Error>"
+      ],
+      "spread": false,
+      "description": "Promise with the HTML loaded in\ncheerio."
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "Using default method: 'put'"
+      }
+    ]
+  },
+  {
+    "__docId__": 101,
+    "kind": "method",
+    "name": "delete",
+    "memberof": "src/http/IHttpService.js~IHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/IHttpService.js~IHttpService#delete",
+    "access": "public",
+    "description": "Make a DELETE request.  ",
+    "lineNumber": 69,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Object, Error>} - Promise with the HTML loaded in\ncheerio.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "endpoint",
+        "description": "The endpoint to make the DELETE request to."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "opts",
+        "description": "The options for the HTTP DELETE\nrequest."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Object, Error>"
+      ],
+      "spread": false,
+      "description": "Promise with the HTML loaded in\ncheerio."
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "Using default method: 'delete'"
+      }
+    ]
+  },
+  {
+    "__docId__": 102,
+    "kind": "method",
+    "name": "download",
+    "memberof": "src/http/IHttpService.js~IHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/IHttpService.js~IHttpService#download",
+    "access": "public",
+    "description": "Request to download an item.  ",
+    "lineNumber": 83,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<string, Error>} - Message when it's finally downloaded.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "endpoint",
+        "description": "The uri to the item."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "filePath",
+        "description": "The name of the file to save the item."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<string, Error>"
+      ],
+      "spread": false,
+      "description": "Message when it's finally downloaded."
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "Using default method: 'download'"
+      }
+    ]
+  },
+  {
+    "__docId__": 103,
+    "kind": "method",
+    "name": "printDebug",
+    "memberof": "src/http/IHttpService.js~IHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/IHttpService.js~IHttpService#printDebug",
+    "access": "public",
+    "description": "Print the debug message.  ",
+    "lineNumber": 95,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{undefined}  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "method",
+        "description": "The method of the HTTP request."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "uri",
+        "description": "The uri of the HTTP request."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "defaultValue": "this._opts",
+        "defaultRaw": "this._opts",
+        "name": "opts",
+        "description": "The options for the HTTP request."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "undefined"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "Using default method: 'printDebug'"
+      }
+    ]
+  },
+  {
+    "__docId__": 104,
+    "kind": "method",
+    "name": "request",
+    "memberof": "src/http/IHttpService.js~IHttpService",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/http/IHttpService.js~IHttpService#request",
+    "access": "public",
+    "description": "Make a HTTP request.  ",
+    "lineNumber": 109,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Object, Error>} - Promise with the HTML loaded in\ncheerio.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "method",
+        "description": "The method of the HTTP request."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "endpoint",
+        "description": "The endpoint to make the HTTP request to."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "opts",
+        "description": "The options for the HTTP request."
+      },
+      {
+        "nullable": true,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "raw",
+        "description": "Return the raw body."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Object, Error>"
+      ],
+      "spread": false,
+      "description": "Promise with the HTML loaded in\ncheerio."
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "Using default method: 'request'"
+      }
+    ]
+  },
+  {
+    "__docId__": 105,
+    "kind": "file",
+    "name": "src/http/index.js",
+    "content": "// Export the neseccary modules.\nexport AbstractHttpService from './AbstractHttpService'\nexport HttpService from './HttpService'\nexport IHttpService from './IHttpService'\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/src/http/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 106,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "// Import the necessary modules.\nexport Context from './Context'\nexport Cron from './Cron'\nexport PopApiScraper from './PopApiScraper'\nexport * from './http'\nexport * from './providers'\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 107,
+    "kind": "file",
+    "name": "src/providers/AbstractProvider.js",
+    "content": "// Import the necessary.\n// @flow\nimport pMap from 'p-map'\n\nimport IProvider from './IProvider'\n\n/**\n * The abstract provider for the strategy pattern.\n * @implements {IProvider}\n * @type {AbstractProvider}\n */\nexport default class AbstractProvider extends IProvider {\n\n  /**\n   * The name of the abstract provider.\n   * @type {string}\n   */\n  name: string\n\n  /**\n   * The max allowed concurrent web requests.\n   * @type {number}\n   */\n  maxWebRequests: number\n\n  /**\n   * The configs fro the abstract provider.\n   * @type {Array<Object>}\n   */\n  configs: Array<Object>\n\n  /**\n   * Create a nwe AbstractProvider object.\n   * @param {!PopApiScraper} PopApiScraper - The PopApScraper instance.\n   * @param {!Object} options - The options for the AbstractProvider.\n   * @param {!string} name - The name of the AbstractProvider.\n   * @param {!Array<Object>} options.configs - The configurations of the\n   * provider.\n   * @param {!number} [maxWebRequests=2] - The max allowed concurrent web\n   * requests.\n   */\n  constructor(PopApiScraper: any, {\n    name,\n    configs,\n    maxWebRequests = 2\n  }: Object): void {\n    super()\n\n    /**\n     * The name of the abstract provider.\n     * @type {string}\n     */\n    this.name = name || this.constructor.name\n    /**\n     * The max allowed concurrent web requests.\n     * @type {number}\n     */\n    this.maxWebRequests = maxWebRequests\n    /**\n     * The configs for the abstract provider.\n     * @type {Array<Object>}\n     */\n    this.configs = configs\n  }\n\n  /**\n   * Get the contents for the configurations.\n   * @override\n   * @returns {Promise<Array<Object>, Error>} - The results of the scraped\n   * configurations.\n   */\n  scrapeConfigs(): Promise<Array<Object> | Error> {\n    return pMap(this.configs, config => {\n      return this.scrapeConfig(config)\n    }, {\n      concurrency: 1\n    })\n  }\n\n}\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/src/providers/AbstractProvider.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 108,
+    "kind": "class",
+    "name": "AbstractProvider",
+    "memberof": "src/providers/AbstractProvider.js",
+    "static": true,
+    "longname": "src/providers/AbstractProvider.js~AbstractProvider",
+    "access": "public",
+    "export": true,
+    "importPath": "pop-api-scraper/src/providers/AbstractProvider.js",
+    "importStyle": "AbstractProvider",
+    "description": "The abstract provider for the strategy pattern.",
+    "lineNumber": 12,
+    "type": {
+      "nullable": null,
+      "types": [
+        "AbstractProvider"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "interface": false,
+    "extends": [
+      "src/providers/IProvider.js~IProvider"
+    ],
+    "implements": [
+      "IProvider"
+    ]
+  },
+  {
+    "__docId__": 109,
+    "kind": "member",
+    "name": "name",
+    "memberof": "src/providers/AbstractProvider.js~AbstractProvider",
+    "static": false,
+    "longname": "src/providers/AbstractProvider.js~AbstractProvider#name",
+    "access": "public",
+    "description": "The name of the abstract provider. ",
+    "lineNumber": 18,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 110,
+    "kind": "member",
+    "name": "maxWebRequests",
+    "memberof": "src/providers/AbstractProvider.js~AbstractProvider",
+    "static": false,
+    "longname": "src/providers/AbstractProvider.js~AbstractProvider#maxWebRequests",
+    "access": "public",
+    "description": "The max allowed concurrent web requests. ",
+    "lineNumber": 24,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 111,
+    "kind": "member",
+    "name": "configs",
+    "memberof": "src/providers/AbstractProvider.js~AbstractProvider",
+    "static": false,
+    "longname": "src/providers/AbstractProvider.js~AbstractProvider#configs",
+    "access": "public",
+    "description": "The configs fro the abstract provider. ",
+    "lineNumber": 30,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Array"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 112,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/providers/AbstractProvider.js~AbstractProvider",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/providers/AbstractProvider.js~AbstractProvider#constructor",
+    "access": "public",
+    "description": "Create a nwe AbstractProvider object.",
+    "lineNumber": 42,
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "PopApiScraper"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "PopApiScraper",
+        "description": "The PopApScraper instance."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": "The options for the AbstractProvider."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "The name of the AbstractProvider."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "Array<Object>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.configs",
+        "description": "The configurations of the\nprovider."
+      },
+      {
+        "nullable": false,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "2",
+        "defaultRaw": 2,
+        "name": "maxWebRequests",
+        "description": "The max allowed concurrent web\nrequests."
+      }
+    ]
+  },
+  {
+    "__docId__": 116,
+    "kind": "method",
+    "name": "scrapeConfigs",
+    "memberof": "src/providers/AbstractProvider.js~AbstractProvider",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/providers/AbstractProvider.js~AbstractProvider#scrapeConfigs",
+    "access": "public",
+    "description": "Get the contents for the configurations.  ",
+    "lineNumber": 72,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Array<Object>, Error>} - The results of the scraped\nconfigurations.  "
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Array<Object>, Error>"
+      ],
+      "spread": false,
+      "description": "The results of the scraped\nconfigurations."
+    },
+    "override": true,
+    "params": []
+  },
+  {
+    "__docId__": 117,
+    "kind": "file",
+    "name": "src/providers/IProvider.js",
+    "content": "// @flow\n\n/**\n * Interface for scraping and content from various sources.\n * @interface\n * @type {IProvider}\n */\nexport default class IProvider {\n\n  /**\n   * Get the contents for a configuration.\n   * @param {!Object} config - The config to get content with.\n   * @abstract\n   * @throws {Error} - Using default method: '_scrapeConfig'\n   * @returns {Promise<Array<Object>, Error>} - The results of a configuration.\n   */\n  scrapeConfig(config: Object): Promise<Array<Object> | Error> {\n    throw new Error('Using default method: \\'scrapeConfig\\'')\n  }\n\n  /**\n   * Get the contents for the configurations.\n   * @abstract\n   * @throws {Error} - Using default method: 'scrapeConfigs'\n   * @returns {Promise<Array<Object>, Error>} - The results of the scrape\n   * configurations.\n   */\n  scrapeConfigs(): Promise<Array<Object> | Error> {\n    throw new Error('Using default method: \\'scrapeConfigs\\'')\n  }\n\n}\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/src/providers/IProvider.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 118,
+    "kind": "class",
+    "name": "IProvider",
+    "memberof": "src/providers/IProvider.js",
+    "static": true,
+    "longname": "src/providers/IProvider.js~IProvider",
+    "access": "public",
+    "export": true,
+    "importPath": "pop-api-scraper/src/providers/IProvider.js",
+    "importStyle": "IProvider",
+    "description": "Interface for scraping and content from various sources.",
+    "lineNumber": 8,
+    "type": {
+      "nullable": null,
+      "types": [
+        "IProvider"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "interface": true
+  },
+  {
+    "__docId__": 119,
+    "kind": "method",
+    "name": "scrapeConfig",
+    "memberof": "src/providers/IProvider.js~IProvider",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/providers/IProvider.js~IProvider#scrapeConfig",
+    "access": "public",
+    "description": "Get the contents for a configuration.  ",
+    "lineNumber": 17,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Array<Object>, Error>} - The results of a configuration.  "
+      }
+    ],
+    "params": [
+      {
+        "nullable": false,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "config",
+        "description": "The config to get content with."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Array<Object>, Error>"
+      ],
+      "spread": false,
+      "description": "The results of a configuration."
+    },
+    "abstract": true,
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "Using default method: '_scrapeConfig'"
+      }
+    ]
+  },
+  {
+    "__docId__": 120,
+    "kind": "method",
+    "name": "scrapeConfigs",
+    "memberof": "src/providers/IProvider.js~IProvider",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/providers/IProvider.js~IProvider#scrapeConfigs",
+    "access": "public",
+    "description": "Get the contents for the configurations.  ",
+    "lineNumber": 28,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Array<Object>, Error>} - The results of the scrape\nconfigurations.  "
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Array<Object>, Error>"
+      ],
+      "spread": false,
+      "description": "The results of the scrape\nconfigurations."
+    },
+    "abstract": true,
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "Using default method: 'scrapeConfigs'"
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 121,
+    "kind": "file",
+    "name": "src/providers/index.js",
+    "content": "// Export the neseccary modules.\nexport AbstractProvider from './AbstractProvider'\nexport IProvider from './IProvider'\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/src/providers/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "kind": "index",
+    "content": "# pop-api-scraper\n\n[![Build Status](https://travis-ci.org/popcorn-official/pop-api-scraper.svg?branch=master)](https://travis-ci.org/popcorn-official/pop-api-scraper)\n[![Windows Build](https://img.shields.io/appveyor/ci/ChrisAlderson/pop-api-scraper/master.svg?label=windows)](https://ci.appveyor.com/project/ChrisAlderson/pop-api-scraper)\n[![Coverage Status](https://coveralls.io/repos/github/popcorn-official/pop-api-scraper/badge.svg?branch=master)](https://coveralls.io/github/popcorn-official/pop-api-scraper?branch=master)\n[![Dependency Status](https://david-dm.org/popcorn-official/pop-api-scraper.svg)](https://david-dm.org/popcorn-official/pop-api-scraper)\n[![devDependencies Status](https://david-dm.org/popcorn-official/pop-api-scraper/dev-status.svg)](https://david-dm.org/popcorn-official/pop-api-scraper?type=dev)\n\n## Features\n\nThe pop-api-scraper project aims to provide the core modules for the\n[`popcorn-api`](https://github.com/popcorn-official/popcorn-api) scraper, but\ncan also be used for other purposes by using middleware.\n - Strategy pattern with providers\n - Cronjobs\n - Scraper wrapper class\n - HttpService with [`got`](https://github.com/sindresorhus/got)\n\n## Installation\n\n```\n $ npm install --save pop-api-scraper pop-api\n```\n\n## Documentation\n\n - [General documentation](https://popcorn-official.github.io/pop-api-scraper/manual/index.html)\n - [Api docs](https://popcorn-official.github.io/pop-api-scraper/identifiers.html)\n - [Usage](https://popcorn-official.github.io/pop-api-scraper/manual/usage.html)\n - [Middleware](https://popcorn-official.github.io/pop-api-scraper/manual/middleware.html)\n\n## Usage\n\nFor the basic setup you need to create a `Provider` (strategy) the\n`PopApiScraper` instance can use. The `PopApiScraper` implements the strategy\npattern, where the providers are the strategies.\n\nThe example below makes a HTTP GET request to a web service or website. from\nthere on you are free to implement how and what data you want to get from it.\n\n```js\n// ./ExampleProvider.js\nimport { AbstractProvider, HttpService } from 'pop-api-scraper'\n\n// Extend from the internal AbstractProvider.\nexport default class ExampleProvider extends AbstractProvider {\n\n  constructor(PopApiScraper, {name, configs, maxWebRequests = 2}) {\n    super(PopApiScraper, {name, configs, maxWebRequests})\n  }\n\n  // Override the `scrapeConfig` method to get the content from one\n  // configuration.\n  scrapeConfig(config) {\n    // A HTTP service to send HTTP requests.\n    this.httpService = new HttpService({\n      baseUrl: config.baseUrl\n    })\n\n    // HTTP  GET request to: https://jsonplaceholder.typicode.com/posts?foo=bar\n    return this.httpService.get('/posts', config.httpOptions)\n      .then(res => res.data)\n  }\n\n}\n```\n\nBundle it all up together with\n[`pop-api`](https://github.com/popcorn-official/pop-api):\n\n```js\n// ./index.js\nimport os from 'os'\nimport { PopApi } from 'pop-api'\nimport { join } from 'path'\nimport { Cron, PopApiScraper } from 'pop-api-scraper'\n\nimport ExampleProvider from './ExampleProvider'\n\n(async () => {\n  try {\n    // Let the PopApiScraper use the ExampleProvider o scrape data.\n    PopApiScraper.use(ExampleProvider, {\n      name: 'example-provider',\n      configs: [{\n        baseUrl: 'https://jsonplaceholder.typicode.com',\n        httpOptions: {\n          query: {\n            foo: 'bar'\n          }\n        }\n      }],\n      maxWebRequests: 2\n    })\n\n    // Register the PopApiScraper middleware to the pop-api instance.\n    PopApi.use(PopApiScraper, {\n      statusPath: join(...[os.tmpdir(), 'status.json']),\n      updatedPath: join(...[os.tmpdir(), 'updated.json'])\n    })\n    // Optionally you can use the Cron middleware to scrape for content on a\n    // regulat basis.\n    PopApi.use(Cron, {\n      cronTime: '0 0 */6 * * *',\n      start: false\n    })\n\n    // PopApi now has a `scraper` instance.\n    const res = await PopApi.scraper.scrape()\n    console.info(res[0])\n  } catch (err) {\n    console.error(err)\n  }\n})()\n```\n\n## License\n\nMIT License\n",
+    "longname": "/home/eosapien/Software/pop-api-scraper/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"pop-api-scraper\",\n  \"version\": \"0.1.0\",\n  \"description\": \"The base modules for the popcorn-api scraper\",\n  \"dependencies\": {\n    \"cheerio\": \"^1.0.0-rc.2\",\n    \"debug\": \"^3.1.0\",\n    \"fs-extra\": \"^5.0.0\",\n    \"got\": \"^8.0.1\",\n    \"node-cron\": \"^1.2.1\",\n    \"p-map\": \"^1.2.0\"\n  },\n  \"peerDependencies\": {\n    \"pop-api\": \"^0.6.0\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-plugin-external-helpers\": \"^6.22.0\",\n    \"babel-plugin-istanbul\": \"^4.1.5\",\n    \"babel-plugin-transform-class-properties\": \"^6.24.1\",\n    \"babel-plugin-transform-export-extensions\": \"^6.22.0\",\n    \"babel-plugin-transform-object-rest-spread\": \"^6.26.0\",\n    \"babel-plugin-transform-strict-mode\": \"^6.24.1\",\n    \"babel-preset-env\": \"^1.6.1\",\n    \"babel-preset-flow\": \"^6.23.0\",\n    \"babel-register\": \"^6.26.0\",\n    \"chai\": \"^4.1.2\",\n    \"coveralls\": \"^3.0.0\",\n    \"cross-env\": \"^5.1.3\",\n    \"del\": \"^3.0.0\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-flow-type-plugin\": \"^1.0.1\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.14.0\",\n    \"eslint-config-vixo\": \"^2.0.2\",\n    \"flow\": \"^0.2.3\",\n    \"flow-bin\": \"^0.61.0\",\n    \"flow-typed\": \"^2.2.3\",\n    \"husky\": \"^0.14.3\",\n    \"mkdirp\": \"^0.5.1\",\n    \"mocha\": \"^4.0.1\",\n    \"nyc\": \"^11.4.1\",\n    \"rollup\": \"^0.52.3\",\n    \"rollup-plugin-babel\": \"^3.0.3\",\n    \"rollup-plugin-json\": \"^2.3.0\",\n    \"rollup-plugin-node-resolve\": \"^3.0.0\",\n    \"rollup-plugin-uglify\": \"^2.0.1\",\n    \"sinon\": \"^4.1.3\",\n    \"standard-version\": \"^4.2.0\",\n    \"uglify-es\": \"^3.3.2\"\n  },\n  \"license\": \"MIT\",\n  \"scripts\": {\n    \"build\": \"cross-env NODE_ENV=production rollup -c\",\n    \"coveralls\": \"cat ./coverage/lcov.info | coveralls\",\n    \"debug\": \"npm run dev --inspect\",\n    \"dev\": \"cross-env DEBUG=pop-api-scraper* NODE_ENV=development node -r babel-register ./examples/exampleSetup.js\",\n    \"docs\": \"esdoc -c .esdoc.json\",\n    \"flow\": \"flow\",\n    \"flow-typed\": \"flow-typed install\",\n    \"lint\": \"eslint {example,src,test}/** *.js$\",\n    \"release\": \"git add ./docs/* && standard-version -a\",\n    \"precommit\": \"npm run lint && npm run flow\",\n    \"prerelease\": \"npm run build && npm run docs\",\n    \"prepush\": \"npm run test\",\n    \"test\": \"cross-env NODE_ENV=test nyc -r=lcov -r=text mocha --exit --recursive\"\n  },\n  \"engines\": {\n    \"node\": \">=7.10.1\"\n  },\n  \"keywords\": [\n    \"api\",\n    \"popcorn\",\n    \"middleware\",\n    \"scraper\"\n  ],\n  \"main\": \"./build/pop-api-scraper.js\",\n  \"module\": \"./build/pop-api-scraper.esm.js\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/popcorn-official/pop-api-scraper.git\"\n  },\n  \"files\": [\n    \"build/**/*\"\n  ]\n}\n",
+    "longname": "/home/eosapien/Software/pop-api-scraper/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manualIndex",
+    "globalIndex": false,
+    "content": "# pop-api-scraper\n\n[![Build Status](https://travis-ci.org/popcorn-official/pop-api-scraper.svg?branch=master)](https://travis-ci.org/popcorn-official/pop-api-scraper)\n[![Windows Build](https://img.shields.io/appveyor/ci/ChrisAlderson/pop-api-scraper/master.svg?label=windows)](https://ci.appveyor.com/project/ChrisAlderson/pop-api-scraper)\n[![Coverage Status](https://coveralls.io/repos/github/popcorn-official/pop-api-scraper/badge.svg?branch=master)](https://coveralls.io/github/popcorn-official/pop-api-scraper?branch=master)\n[![Dependency Status](https://david-dm.org/popcorn-official/pop-api-scraper.svg)](https://david-dm.org/popcorn-official/pop-api-scraper)\n[![devDependencies Status](https://david-dm.org/popcorn-official/pop-api-scraper/dev-status.svg)](https://david-dm.org/popcorn-official/pop-api-scraper?type=dev)\n\n## Features\n\nThe pop-api-scraper project aims to provide the core modules for the\n[`popcorn-api`](https://github.com/popcorn-official/popcorn-api) scraper, but\ncan also be used for other purposes by using middleware.\n - Strategy pattern with providers\n - Cronjobs\n - Scraper wrapper class\n - HttpService with [`got`](https://github.com/sindresorhus/got)\n\n## Installation\n\n```\n $ npm install --save pop-api-scraper pop-api\n```\n\n## Documentation\n\n - [General documentation](https://popcorn-official.github.io/pop-api-scraper/manual/index.html)\n - [Api docs](https://popcorn-official.github.io/pop-api-scraper/identifiers.html)\n - [Usage](https://popcorn-official.github.io/pop-api-scraper/manual/usage.html)\n - [Middleware](https://popcorn-official.github.io/pop-api-scraper/manual/middleware.html)\n\n## Usage\n\nFor the basic setup you need to create a `Provider` (strategy) the\n`PopApiScraper` instance can use. The `PopApiScraper` implements the strategy\npattern, where the providers are the strategies.\n\nThe example below makes a HTTP GET request to a web service or website. from\nthere on you are free to implement how and what data you want to get from it.\n\n```js\n// ./ExampleProvider.js\nimport { AbstractProvider, HttpService } from 'pop-api-scraper'\n\n// Extend from the internal AbstractProvider.\nexport default class ExampleProvider extends AbstractProvider {\n\n  constructor(PopApiScraper, {name, configs, maxWebRequests = 2}) {\n    super(PopApiScraper, {name, configs, maxWebRequests})\n  }\n\n  // Override the `scrapeConfig` method to get the content from one\n  // configuration.\n  scrapeConfig(config) {\n    // A HTTP service to send HTTP requests.\n    this.httpService = new HttpService({\n      baseUrl: config.baseUrl\n    })\n\n    // HTTP  GET request to: https://jsonplaceholder.typicode.com/posts?foo=bar\n    return this.httpService.get('/posts', config.httpOptions)\n      .then(res => res.data)\n  }\n\n}\n```\n\nBundle it all up together with\n[`pop-api`](https://github.com/popcorn-official/pop-api):\n\n```js\n// ./index.js\nimport os from 'os'\nimport { PopApi } from 'pop-api'\nimport { join } from 'path'\nimport { Cron, PopApiScraper } from 'pop-api-scraper'\n\nimport ExampleProvider from './ExampleProvider'\n\n(async () => {\n  try {\n    // Let the PopApiScraper use the ExampleProvider o scrape data.\n    PopApiScraper.use(ExampleProvider, {\n      name: 'example-provider',\n      configs: [{\n        baseUrl: 'https://jsonplaceholder.typicode.com',\n        httpOptions: {\n          query: {\n            foo: 'bar'\n          }\n        }\n      }],\n      maxWebRequests: 2\n    })\n\n    // Register the PopApiScraper middleware to the pop-api instance.\n    PopApi.use(PopApiScraper, {\n      statusPath: join(...[os.tmpdir(), 'status.json']),\n      updatedPath: join(...[os.tmpdir(), 'updated.json'])\n    })\n    // Optionally you can use the Cron middleware to scrape for content on a\n    // regulat basis.\n    PopApi.use(Cron, {\n      cronTime: '0 0 */6 * * *',\n      start: false\n    })\n\n    // PopApi now has a `scraper` instance.\n    const res = await PopApi.scraper.scrape()\n    console.info(res[0])\n  } catch (err) {\n    console.error(err)\n  }\n})()\n```\n\n## License\n\nMIT License\n",
+    "longname": "/home/eosapien/Software/pop-api-scraper/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/eosapien/Software/pop-api-scraper/manual/usage.md",
+    "name": "./manual/usage.md",
+    "content": "# Usage\n\nFor the basic setup you need to create a `Provider` (strategy) the\n`PopApiScraper` instance can use. The `PopApiScraper` implements the strategy\npattern, where the providers are the strategies.\n\nThe example below makes a HTTP GET request to a web service or website. from\nthere on you are free to implement how and what data you want to get from it.\n\n```js\n// ./ExampleProvider.js\nimport { AbstractProvider, HttpService } from 'pop-api-scraper'\n\n// Extend from the internal AbstractProvider.\nexport default class ExampleProvider extends AbstractProvider {\n\n  constructor(PopApiScraper, {name, configs, maxWebRequests = 2}) {\n    super(PopApiScraper, {name, configs, maxWebRequests})\n  }\n\n  // Override the `scrapeConfig` method to get the content from one\n  // configuration.\n  scrapeConfig(config) {\n    // A HTTP service to send HTTP requests.\n    this.httpService = new HttpService({\n      baseUrl: config.baseUrl\n    })\n\n    // HTTP  GET request to: https://jsonplaceholder.typicode.com/posts?foo=bar\n    return this.httpService.get('/posts', config.httpOptions)\n      .then(res => res.data)\n  }\n\n}\n```\n\nBundle it all up together with\n[`pop-api`](https://github.com/popcorn-official/pop-api):\n\n```js\n// ./index.js\nimport os from 'os'\nimport { PopApi } from 'pop-api'\nimport { join } from 'path'\nimport { Cron, PopApiScraper } from 'pop-api-scraper'\n\nimport ExampleProvider from './ExampleProvider'\n\n(async () => {\n  try {\n    // Let the PopApiScraper use the ExampleProvider o scrape data.\n    PopApiScraper.use(ExampleProvider, {\n      name: 'example-provider',\n      configs: [{\n        baseUrl: 'https://jsonplaceholder.typicode.com',\n        httpOptions: {\n          query: {\n            foo: 'bar'\n          }\n        }\n      }],\n      maxWebRequests: 2\n    })\n\n    // Register the PopApiScraper middleware to the pop-api instance.\n    PopApi.use(PopApiScraper, {\n      statusPath: join(...[os.tmpdir(), 'status.json']),\n      updatedPath: join(...[os.tmpdir(), 'updated.json'])\n    })\n    // Optionally you can use the Cron middleware to scrape for content on a\n    // regulat basis.\n    PopApi.use(Cron, {\n      cronTime: '0 0 */6 * * *',\n      start: false\n    })\n\n    // PopApi now has a `scraper` instance.\n    const res = await PopApi.scraper.scrape()\n    console.info(res[0])\n  } catch (err) {\n    console.error(err)\n  }\n})()\n```\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/eosapien/Software/pop-api-scraper/manual/middleware.md",
+    "name": "./manual/middleware.md",
+    "content": "# Middleware\n\n - [Scraper](#scraper)\n - [Cron](#cron)\n\n## Scraper\n\nThe `PopApiScraper` middleware implements a strategy pattern where you can\nuse your own `Providers` (strageties) for scraping content from the web.\n\n```js\nimport os from 'os'\nimport { PopApi } from 'pop-api'\nimport { PopApiScraper } from 'pop-api-scraper'\nimport { join } from 'path'\n\nimport ExampleProvider  from './ExampleProvider'\n\nconst providerOpts = {\n  name: 'example-provider',  // The name of the provider.\n  configs: [{                // The configurations to scrape with.\n    key: 'value'             // Put anything you like into the configuration.\n  }],\n  maxWebRequests: 2          // The maximum concurrent web requests at a time.\n}\nPopApiScraper.use(ExampleProvider, providerOpts)\n\n// Join paths for the scraper options.\nconst tmpDir = join(...[os.tmpdir(), name])\nconst statusPath = join(...[tmpDir, 'status.json'])\nconst updatedPath = join(...[tmpDir, 'updated.json'])\n\nconst scraperOpts = {\n  statusPath,  // The path to the status file where the scraper status is\n               // saved.\n  updatedPath  // The path to the updated file where the time of the scraping\n               // process is saved.\n}\nPopApi.use(PopApiScraper, scraperOpts)\n\n// Start the scraping process by calling the `scrape` method.\nPopApi.scraper.scrape()\n```\n\n## Cron\n\nThe `Cron` middleware allows for the scraping process to be started regularly.\n\n```js\nimport { PopApi } from 'pop-api'\nimport { Cron } from 'pop-api-scraper'\n\nconst cronOpts = {\n  cronTime: '0 0 */6 * * *',  // The ctron time for the cronjob.\n  start: false                // Start the cron job on creation.\n}\nPopApi.use(Cron, cronOpts)\n\n// PopApi.cron will be an instance of: https://github.com/merencia/node-cron\n```\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/eosapien/Software/pop-api-scraper/CHANGELOG.md",
+    "name": "./CHANGELOG.md",
+    "content": "",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/eosapien/Software/pop-api-scraper/CONTRIBUTING.md",
+    "name": "./CONTRIBUTING.md",
+    "content": "# Contributing\n\nSo you're interested in giving us a hand? That's awesome! We've put together\nsome brief guidelines that should help you get started quickly and easily.\n\nThere are lots and lots of ways to get involved, this document covers:\n - [Raising Issues](#raising-issues)\n   - [Report  A Bug](#report-a-bug)\n   - [Feature Requests](#feature-requests)\n   - [Pull Requests](#pull-requests)\n - [Commit Messages](#commit-messages)\n - [Styleguides](#styleguides)\n   - [JavaScript Styleguide](#javascript-styleguide)\n   - [Tests Styleguide](#tests-styleguide)\n   - [Documentation Styleguide](#documentation-styleguide)\n - [Setting up for development](#setting-up-for-development)\n   - [npm scripts](#npm-scripts)\n   - [Git hooks](#git-hooks)\n\n## Raising Issues\n\nIf you're about to raise an issue because you think that you've found a problem\nwith the application, or you'd like to make a request for a new feature in the\ncodebase, or any other reason… please read this first.\n\nThe GitHub issue tracker is the preferred channel for\n[bug reports](#report-a-bug), [feature requests](#feature-requests), and\n[pull requests](#pull-requests) but respect the following restrictions:\n\n* Please **do not** use the issue tracker for personal support requests.\n* Please **do not** derail or troll issues. Keep the discussion on topic and\nrespect the opinions of others.\n\n### Report A Bug\n\nA bug is a _demonstrable problem_ that is caused by the code in the repository.\nGood bug reports are extremely helpful - thank you!\n\nGuidelines for bug reports:\n1. **Use the GitHub issue search** &mdash; check if the issue has already been\nreported.\n2. **Check if the issue has been fixed** &mdash; try to reproduce it using the\nlatest `master` or look for [closed issues](https://github.com/popcorn-official/pop-api-scraper/issues?q=is%3Aissue+is%3Aclosed).\n3. **Include a screencast if relevant** - Is your issue about a design or front\nend feature or bug? The most helpful thing in the world is if we can *see* what\nyou're talking about. Just drop the picture after writing your issue, it'll be\nuploaded and shown to the developers.\n3. Use the Issue tab on GitHub to start [creating a bug report](https://github.com/popcorn-official/pop-api-scraper/issues/new).\nA good bug report shouldn't leave others needing to chase you up for more\ninformation. Be sure to include all the possible required details and the steps\nto take to reproduce the issue.\n\n### Feature Requests\n\nFeature requests are welcome. Before you submit one be sure to:\n1. **Use the [GitHub Issues search](https://github.com/popcorn-official/pop-api-scraper/issues)**\nand check the feature hasn't already been requested.\n2. Take a moment to think about whether your idea fits with the scope and aims\nof the project, or if it might better fit being an app/plugin.\n3. Remember, it's up to *you* to make a strong case to convince the project's\nleaders of the merits of this feature. Please provide as much detail and\ncontext as possible, this means explaining the use case and why it is likely to\nbe common.\n4. Clearly indicate whether this is a feature request for the application\nitself, or for packages like Providers, Metadatas, or other.\n\n### Pull Requests\n\nPull requests are awesome. If you're looking to raise a PR for something which\ndoesn't have an open issue, please think carefully about\n[raising an issue](#report-a-bug) which your PR can close, especially if you're\nfixing a bug. This makes it more likely that there will be enough information\navailable for your PR to be properly tested and merged. To make sure your PR is\naccepted as quickly as possible, you should be sure to have read all the\nguidelines on:\n\n* [Commit Messages](#commit-messages)\n* [Stylesguides](#styleguides)\n\n## Commit Messages\n\nThis project uses the [Conventional Commits](https://conventionalcommits.org/)\nconvention. If you are not familiar with this convention please read about it\nfirst before creating a commit message or a PR.\n\n## Styleguides\n\n### JavaScript Styleguide\n\nAll JavaScript must adhere to [JavaScript Standard Style](http://standardjs.com/).\n\n* Inline `export`s with expressions whenever possible\n  ```js\n  // Use this:\n  export default class ClassName {\n\n  }\n\n  // Instead of:\n  class ClassName {\n\n  }\n  export default ClassName\n  ```\n\n### Tests Styleguide\n\n- Include thoughtfully-worded, well-structured [Mocha](https://mochajs.org/) tests in the `./test` folder.\n- Treat `describe` as a noun or situation.\n- Treat `it` as a statement about state or how an operation changes state.\n\n### Documentation Styleguide\n\n * Use [Markdown](https://daringfireball.net/projects/markdown).\n * Reference methods and classes in markdown with the custom `{}` notation:\n   * Reference classes with `{ClassName}`\n   * Reference instance methods with `{ClassName.methodName}`\n   * Reference class methods with `{ClassName#methodName}`\n\n## Setting up for development\n\nTo setup your local machine to start working on the project you can follow these\nsteps:\n\n1. Install [NodeJS](https://nodejs.org/) (at least Node v7.10.1 or greater)\n2. Clone the repository with: `git clone https://github.com/popcorn-official/pop-api-scraper.git`\n3. Install dependencies `npm i`\n4. Install the flow-typed libraries with `npm run flow-typed`\n\n### npm scripts\n\nThe following [`npm-scripts`](https://docs.npmjs.com/misc/scripts) are available in order to help you with the\ndevelopment of the project.\n\n```\n $ npm run build    # Transform the code with 'babel'\n $ npm run docs     # Generate the documentation with 'esdoc'\n $ npm run debug    # Run the applicaiton in debug mode\n $ npm run dev      # Run the application in development mode\n $ npm run flow     # Check flow typings\n $ npm run lint     # Check javascript style\n $ npm run test     # Run unit tests\n```\n\n### Git hooks\n\nThe following `git` hooks are available to ensure the changes you are about to\nmake follow the [styleguides](#styleguides) and make sure your changes pass the\ntests.\n\n```\npre-commit          # npm run lint && npm run flow\npre-push            # npm run test\n```\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/eosapien/Software/pop-api-scraper/CODE_OF_CONDUCT.md",
+    "name": "./CODE_OF_CONDUCT.md",
+    "content": "# Contributor Covenant Code of Conduct\n\n - [Our Pledge](#our-pledge)\n - [Our Standards](#our-standards)\n - [Our Responsibilities](#our-responsibilities)\n - [Scope](#scope)\n - [Enforcement](#enforcement)\n - [Attribution](#attribution)\n\n## Our Pledge\n\nIn the interest of fostering an open and welcoming environment, we as\ncontributors and maintainers pledge to making participation in our project and\nour community a harassment-free experience for everyone, regardless of age,\nbody size, disability, ethnicity, gender identity and expression, level of\nexperience, nationality, personal appearance, race, religion, or sexual\nidentity and orientation.\n\n## Our Standards\n\nExamples of behavior that contributes to creating a positive environment\ninclude:\n - Using welcoming and inclusive language\n - Being respectful of differing viewpoints and experiences\n - Gracefully accepting constructive criticism\n - Focusing on what is best for the community\n - Showing empathy towards other community members\n\nExamples of unacceptable behavior by participants include:\n - The use of sexualized language or imagery and unwelcome sexual attention or advances\n - Trolling, insulting/derogatory comments, and personal or political attacks\n - Public or private harassment\n - Publishing others' private information, such as a physical or electronic address, without explicit permission\n - Other conduct which could reasonably be considered inappropriate in a professional setting\n\n## Our Responsibilities\n\nProject maintainers are responsible for clarifying the standards of acceptable\nbehavior and are expected to take appropriate and fair corrective action in\nresponse to any instances of unacceptable behavior.\n\nProject maintainers have the right and responsibility to remove, edit, or\nreject comments, commits, code, wiki edits, issues, and other contributions\nthat are not aligned to this Code of Conduct, or to ban temporarily or\npermanently any contributor for other behaviors that they deem inappropriate,\nthreatening, offensive, or harmful.\n\n## Scope\n\nThis Code of Conduct applies both within project spaces and in public spaces\nwhen an individual is representing the project or its community. Examples of\nrepresenting a project or community include using an official project e-mail\naddress, posting via an official social media account, or acting as an\nappointed representative at an online or offline event. Representation of a\nproject may be further defined and clarified by project maintainers.\n\n## Enforcement\n\nInstances of abusive, harassing, or otherwise unacceptable behavior may be\nreported by contacting the project team at `hello@popcorntime.sh`. The\nproject team will review and investigate all complaints, and will respond in a\nway that it deems appropriate to the circumstances. The project team is\nobligated to maintain confidentiality with regard to the reporter of an\nincident. Further details of specific enforcement policies may be posted\nseparately.\n\nProject maintainers who do not follow or enforce the Code of Conduct in good\nfaith may face temporary or permanent repercussions as determined by other\nmembers of the project's leadership.\n\n## Attribution\n\nThis Code of Conduct is adapted from the Contributor Covenant, version 1.4,\navailable at http://contributor-covenant.org/version/1/4\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "__docId__": 122,
+    "kind": "testFile",
+    "name": "test/Context.spec.js",
+    "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport { expect } from 'chai'\n\nimport {\n  Context,\n  IProvider\n} from '../src'\n\n/** @test {Context} */\ndescribe('Context', () => {\n  /**\n   * The context object to test\n   * @type {Context}\n   */\n  let context: Context\n\n  /**\n   * Hook for setting up the Context tests.\n   * @type {Function}\n   */\n  before(() => {\n    context = new Context()\n  })\n\n  /** @test {Context#execute} */\n  it('should throw an error when executing the default provider', () => {\n    expect(context.execute.bind(context)).to\n      .throw('Using default method: \\'scrapeConfigs\\'')\n  })\n\n  /** @test {Context#provider} */\n  it('should check if Context has a provider', () => {\n    const current = context.provider\n    const iProvider = new IProvider()\n    context.provider = iProvider\n\n    expect(context.provider).to.not.equal(current)\n    expect(context.provider).to.equal(iProvider)\n  })\n})\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/test/Context.spec.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 123,
+    "kind": "test",
+    "name": "describe0",
+    "testId": 0,
+    "memberof": "test/Context.spec.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/Context.spec.js~describe0",
+    "access": null,
+    "description": "Context",
+    "lineNumber": 12,
+    "testTargets": [
+      "Context"
+    ]
+  },
+  {
+    "__docId__": 124,
+    "kind": "test",
+    "name": "it1",
+    "testId": 1,
+    "memberof": "test/Context.spec.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/Context.spec.js~describe0.it1",
+    "access": null,
+    "description": "should throw an error when executing the default provider",
+    "lineNumber": 28,
+    "testTargets": [
+      "Context#execute"
+    ]
+  },
+  {
+    "__docId__": 125,
+    "kind": "test",
+    "name": "it2",
+    "testId": 2,
+    "memberof": "test/Context.spec.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/Context.spec.js~describe0.it2",
+    "access": null,
+    "description": "should check if Context has a provider",
+    "lineNumber": 34,
+    "testTargets": [
+      "Context#provider"
+    ]
+  },
+  {
+    "__docId__": 126,
+    "kind": "testFile",
+    "name": "test/Cron.spec.js",
+    "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport del from 'del'\nimport mkdirp from 'mkdirp'\nimport { join } from 'path'\nimport { expect } from 'chai'\nimport { PopApi } from 'pop-api'\n\nimport {\n  Cron,\n  PopApiScraper\n} from '../src/'\n\n/** @test {Cron} */\ndescribe('Cron', () => {\n  /**\n   * The Cron object to test.\n   * @type {Cron}\n   */\n  let cron: Cron\n\n  /**\n   * The temporary directory to store the status and updated files.\n   * @type {string}\n   */\n  let tempDir: string\n\n  /**\n   * Hook for setting up the Cron tests.\n   * @type {Function}\n   */\n  before(() => {\n    tempDir = join(...[\n      __dirname,\n      '..',\n      'tmp'\n    ])\n    del.sync([tempDir])\n    mkdirp.sync(tempDir)\n\n    PopApi.use(PopApiScraper, {\n      statusPath: join(...[tempDir, 'status.json']),\n      updatedPath: join(...[tempDir, 'updated.json'])\n    })\n    cron = new Cron(PopApi)\n  })\n\n  /** @test {Cron#constructor} */\n  it('should test the constructor with options.', () => {\n    new Cron(PopApi, { // eslint-disable-line no-new\n      cronTime: '0 0 */6 * * *'\n    })\n  })\n\n  /** @test {Cron#constructor} */\n  it('should check the attributes of the Cron', () => {\n    expect(cron.cronTime).to.exist\n    expect(cron.cronTime).to.be.a('string')\n  })\n\n  /** @test {Cron#getCron} */\n  it('should get the cron object', () => {\n    const res = cron.getCron(PopApi)\n    expect(res).to.be.an('object')\n  })\n\n  /**\n   * Hook for tearing down the Cron tests.\n   * @type {Function}\n   */\n  after(() => {\n    del.sync(tempDir)\n    PopApi._installedPlugins = new Map()\n  })\n})\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/test/Cron.spec.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 127,
+    "kind": "test",
+    "name": "describe3",
+    "testId": 3,
+    "memberof": "test/Cron.spec.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/Cron.spec.js~describe3",
+    "access": null,
+    "description": "Cron",
+    "lineNumber": 16,
+    "testTargets": [
+      "Cron"
+    ]
+  },
+  {
+    "__docId__": 128,
+    "kind": "test",
+    "name": "it4",
+    "testId": 4,
+    "memberof": "test/Cron.spec.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/Cron.spec.js~describe3.it4",
+    "access": null,
+    "description": "should test the constructor with options.",
+    "lineNumber": 50,
+    "testTargets": [
+      "Cron#constructor"
+    ]
+  },
+  {
+    "__docId__": 129,
+    "kind": "test",
+    "name": "it5",
+    "testId": 5,
+    "memberof": "test/Cron.spec.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/Cron.spec.js~describe3.it5",
+    "access": null,
+    "description": "should check the attributes of the Cron",
+    "lineNumber": 57,
+    "testTargets": [
+      "Cron#constructor"
+    ]
+  },
+  {
+    "__docId__": 130,
+    "kind": "test",
+    "name": "it6",
+    "testId": 6,
+    "memberof": "test/Cron.spec.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/Cron.spec.js~describe3.it6",
+    "access": null,
+    "description": "should get the cron object",
+    "lineNumber": 63,
+    "testTargets": [
+      "Cron#getCron"
+    ]
+  },
+  {
+    "__docId__": 131,
+    "kind": "testFile",
+    "name": "test/PopApiScraper.spec.js",
+    "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport del from 'del'\nimport mkdirp from 'mkdirp'\nimport { expect } from 'chai'\nimport { join } from 'path'\nimport { PopApi } from 'pop-api'\n\nimport ExampleProvider from '../examples/ExampleProvider'\nimport { PopApiScraper } from '../src'\n\n/** @test {PopApiScraper} */\ndescribe('PopApiScraper', () => {\n  /**\n   * The PopApiScraper to test with.\n   * @type {PopApiScraper}\n   */\n  let popApiScraper: PopApiScraper\n\n  /**\n   * The temporary directory to store the status and updated files.\n   * @type {string}\n   */\n  let tempDir: string\n\n  /**\n   * Hook for setting up the PopApiScraper tests.\n   * @type {Function}\n   */\n  before(() => {\n    tempDir = join(...[\n      __dirname,\n      '..',\n      'tmp'\n    ])\n    del.sync([tempDir])\n    mkdirp.sync(tempDir)\n\n    popApiScraper = new PopApiScraper(PopApi, {\n      statusPath: join(...[\n        tempDir,\n        'status.json'\n      ]),\n      updatedPath: join(...[\n        tempDir,\n        'updated.json'\n      ])\n    })\n  })\n\n  /** @test {PopApiScraper#constructor} */\n  it('should check the attributes of the PopApiScraper', () => {\n    expect(popApiScraper.context).to.exist\n    expect(popApiScraper.context).to.be.an('object')\n    expect(popApiScraper.statusPath).to.exist\n    expect(popApiScraper.statusPath).to.be.a('string')\n    expect(popApiScraper.updatedPath).to.exist\n    expect(popApiScraper.updatedPath).to.be.a('string')\n  })\n\n  /** @test {PopApiScraper#constructor} */\n  it('should throw an error if the required options are not given', () => {\n    try {\n      new PopApiScraper(PopApi, {}) // eslint-disable-line no-new\n      expect(true).to.be.false\n    } catch (err) {\n      expect(err).to.be.an('Error')\n      expect(err.message).to.equal(\n        '\\'statusPath\\' and \\'updatedPath\\' are required options for the PopApiScraper middleware!'\n      )\n    }\n  })\n\n  /** @test {PopApiScraper#setStatus} */\n  it('should set the status of the scraper', done => {\n    popApiScraper.setStatus('status').then(res => {\n      expect(res).to.be.undefined\n      done()\n    }).catch(done)\n  })\n\n  /** @test {PopApiScraper#getStatus} */\n  it('should get the status of the scraper', done => {\n    popApiScraper.getStatus().then(res => {\n      expect(res).to.be.a('string')\n      done()\n    }).catch(done)\n  })\n\n  /** @test {PopApiScraper#setUpdated} */\n  it('should set the updated status of the scraper', done => {\n    popApiScraper.setUpdated(123456789).then(res => {\n      expect(res).to.be.undefined\n      done()\n    }).catch(done)\n  })\n\n  /** @test {PopApiScraper#getUpdated} */\n  it('should get the updated status of the scraper', done => {\n    popApiScraper.getUpdated().then(res => {\n      expect(res).to.be.a('number')\n      done()\n    }).catch(done)\n  })\n\n  /**\n   * Helper function to test the `use` method.\n   * @param {!string} msg - The message to print for the test.\n   * @returns {undefined}\n   */\n  function testUse(msg: string): void {\n    /** @test {PopApiScraper.use} */\n    it(msg, () => {\n      PopApiScraper.use(ExampleProvider, {\n        name: 'exampleProvider',\n        configs: [{\n          baseUrl: 'https://jsonplaceholder.typicode.com/'\n        }]\n      })\n\n      expect(PopApiScraper._installedPlugins).to.be.a('Map')\n      expect(PopApiScraper._installedPlugins.size).to.equal(1)\n    })\n  }\n\n  // Execute the tests.\n  [\n    'should register a middleware plugin',\n    'should not register the same plugin twice'\n  ].map(testUse)\n\n  /** @test {PopApiScraper.use} */\n  it('should not register the plugin if it is not a class', () => {\n    PopApiScraper.use({})\n\n    expect(PopApiScraper._installedPlugins).to.be.a('Map')\n    expect(PopApiScraper._installedPlugins.size).to.equal(1)\n  })\n\n  /** @test {PopApiScraper#scrape} */\n  it('should call the scrape method', done => {\n    popApiScraper.scrape().then(res => {\n      expect(res).to.be.an('array')\n      done()\n    }).catch(done)\n  })\n\n  /**\n   * Hook for tearing down the PopApiScraper tests.\n   * @type {Function}\n   */\n  after(() => {\n    del.sync(tempDir)\n  })\n})\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/test/PopApiScraper.spec.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 132,
+    "kind": "test",
+    "name": "describe7",
+    "testId": 7,
+    "memberof": "test/PopApiScraper.spec.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/PopApiScraper.spec.js~describe7",
+    "access": null,
+    "description": "PopApiScraper",
+    "lineNumber": 14,
+    "testTargets": [
+      "PopApiScraper"
+    ]
+  },
+  {
+    "__docId__": 133,
+    "kind": "test",
+    "name": "it8",
+    "testId": 8,
+    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/PopApiScraper.spec.js~describe7.it8",
+    "access": null,
+    "description": "should check the attributes of the PopApiScraper",
+    "lineNumber": 53,
+    "testTargets": [
+      "PopApiScraper#constructor"
+    ]
+  },
+  {
+    "__docId__": 134,
+    "kind": "test",
+    "name": "it9",
+    "testId": 9,
+    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/PopApiScraper.spec.js~describe7.it9",
+    "access": null,
+    "description": "should throw an error if the required options are not given",
+    "lineNumber": 63,
+    "testTargets": [
+      "PopApiScraper#constructor"
+    ]
+  },
+  {
+    "__docId__": 135,
+    "kind": "test",
+    "name": "it10",
+    "testId": 10,
+    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/PopApiScraper.spec.js~describe7.it10",
+    "access": null,
+    "description": "should set the status of the scraper",
+    "lineNumber": 76,
+    "testTargets": [
+      "PopApiScraper#setStatus"
+    ]
+  },
+  {
+    "__docId__": 136,
+    "kind": "test",
+    "name": "it11",
+    "testId": 11,
+    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/PopApiScraper.spec.js~describe7.it11",
+    "access": null,
+    "description": "should get the status of the scraper",
+    "lineNumber": 84,
+    "testTargets": [
+      "PopApiScraper#getStatus"
+    ]
+  },
+  {
+    "__docId__": 137,
+    "kind": "test",
+    "name": "it12",
+    "testId": 12,
+    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/PopApiScraper.spec.js~describe7.it12",
+    "access": null,
+    "description": "should set the updated status of the scraper",
+    "lineNumber": 92,
+    "testTargets": [
+      "PopApiScraper#setUpdated"
+    ]
+  },
+  {
+    "__docId__": 138,
+    "kind": "test",
+    "name": "it13",
+    "testId": 13,
+    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/PopApiScraper.spec.js~describe7.it13",
+    "access": null,
+    "description": "should get the updated status of the scraper",
+    "lineNumber": 100,
+    "testTargets": [
+      "PopApiScraper#getUpdated"
+    ]
+  },
+  {
+    "__docId__": 139,
+    "kind": "test",
+    "name": "it14",
+    "testId": 14,
+    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/PopApiScraper.spec.js~describe7.it14",
+    "access": null,
+    "lineNumber": 114,
+    "testTargets": [
+      "PopApiScraper.use"
+    ]
+  },
+  {
+    "__docId__": 140,
+    "kind": "test",
+    "name": "it15",
+    "testId": 15,
+    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/PopApiScraper.spec.js~describe7.it15",
+    "access": null,
+    "description": "should not register the plugin if it is not a class",
+    "lineNumber": 134,
+    "testTargets": [
+      "PopApiScraper.use"
+    ]
+  },
+  {
+    "__docId__": 141,
+    "kind": "test",
+    "name": "it16",
+    "testId": 16,
+    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/PopApiScraper.spec.js~describe7.it16",
+    "access": null,
+    "description": "should call the scrape method",
+    "lineNumber": 142,
+    "testTargets": [
+      "PopApiScraper#scrape"
+    ]
+  },
+  {
+    "__docId__": 142,
+    "kind": "testFile",
+    "name": "test/http/AbstractHttpService.spec.js",
+    "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport { expect } from 'chai'\n\nimport { AbstractHttpService } from '../../src'\n\n/** @test {AbstractHttpService} */\ndescribe('AbstractHttpService', () => {\n  /**\n   * The AbstractHttpService object to be tested.\n   * @type {AbstractHttpService}\n   */\n  let abstractHttpService: AbstractHttpService\n\n  /**\n   * Hook for setting up the AbstractHttpService tests.\n   * @type {Function}\n   */\n  before(() => {\n    abstractHttpService = new AbstractHttpService({\n      baseUrl: 'https://jsonplaceholder.typicode.com/'\n    })\n  })\n\n  /** @test {HttpService#constructor} */\n  it('should throw an error when calling the get method', () => {\n    abstractHttpService = new AbstractHttpService({\n      baseUrl: 'https://jsonplaceholder.typicode.com',\n      options: {}\n    })\n  })\n\n  /** @test {AbstractHttpService#get} */\n  it('should throw an error when calling the get method', () => {\n    expect(abstractHttpService.get.bind(abstractHttpService)).to\n      .throw('Using default method: \\'request\\'')\n  })\n\n  /** @test {AbstractHttpService#post} */\n  it('should throw an error when calling the post method', () => {\n    expect(abstractHttpService.post.bind(abstractHttpService)).to\n      .throw('Using default method: \\'request\\'')\n  })\n\n  /** @test {AbstractHttpService#put} */\n  it('should throw an error when calling the put method', () => {\n    expect(abstractHttpService.put.bind(abstractHttpService)).to\n      .throw('Using default method: \\'request\\'')\n  })\n\n  /** @test {AbstractHttpService#delete} */\n  it('should throw an error when calling the delete method', () => {\n    expect(abstractHttpService.delete.bind(abstractHttpService)).to\n      .throw('Using default method: \\'request\\'')\n  })\n\n  /** @test {AbstractHttpService#download} */\n  it('should throw an error when calling the download method', () => {\n    expect(abstractHttpService.download.bind(abstractHttpService)).to\n      .throw('Using default method: \\'download\\'')\n  })\n\n  /** @test {AbstractHttpService#handleBody} */\n  it('should get the raw body of a request', () => {\n    const body = '<html><head><title>Test</title></head></html>'\n    const res = abstractHttpService.handleBody(body, true)\n    expect(res).to.equal(body)\n  })\n\n  /** @test {AbstractHttpService#handleBody} */\n  it('should get the body wrapped in cheerio', () => {\n    const body = '<html><head><title>Test</title></head></html>'\n    const res = abstractHttpService.handleBody(body, false)\n    expect(res).to.be.a('function')\n  })\n\n  /** @test {AbstractHttpService#request} */\n  it('should throw an error when calling the _request method', () => {\n    expect(abstractHttpService.request.bind(abstractHttpService)).to\n      .throw('Using default method: \\'request\\'')\n  })\n\n  /** @test {AbstractHttpService#printDebug} */\n  it('should throw an error when calling the _printDebug method', () => {\n    const url = 'https://jsonplaceholder.typicode.com'\n    const toStringify = {\n      key: 'value'\n    }\n\n    let res = abstractHttpService.printDebug('GET', url, {\n      body: toStringify\n    })\n    expect(res).to.be.undefined\n\n    res = abstractHttpService.printDebug('GET', url, {\n      query: toStringify\n    })\n    expect(res).to.be.undefined\n\n    res = abstractHttpService.printDebug('GET', url, {\n      form: toStringify\n    })\n    expect(res).to.be.undefined\n\n    res = abstractHttpService.printDebug('GET', url, {})\n    expect(res).to.be.undefined\n\n    res = abstractHttpService.printDebug('GET', url)\n    expect(res).to.be.undefined\n  })\n})\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/test/http/AbstractHttpService.spec.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 143,
+    "kind": "test",
+    "name": "describe17",
+    "testId": 17,
+    "memberof": "test/http/AbstractHttpService.spec.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/http/AbstractHttpService.spec.js~describe17",
+    "access": null,
+    "description": "AbstractHttpService",
+    "lineNumber": 9,
+    "testTargets": [
+      "AbstractHttpService"
+    ]
+  },
+  {
+    "__docId__": 144,
+    "kind": "test",
+    "name": "it18",
+    "testId": 18,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/AbstractHttpService.spec.js~describe17.it18",
+    "access": null,
+    "description": "should throw an error when calling the get method",
+    "lineNumber": 27,
+    "testTargets": [
+      "HttpService#constructor"
+    ]
+  },
+  {
+    "__docId__": 145,
+    "kind": "test",
+    "name": "it19",
+    "testId": 19,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/AbstractHttpService.spec.js~describe17.it19",
+    "access": null,
+    "description": "should throw an error when calling the get method",
+    "lineNumber": 35,
+    "testTargets": [
+      "AbstractHttpService#get"
+    ]
+  },
+  {
+    "__docId__": 146,
+    "kind": "test",
+    "name": "it20",
+    "testId": 20,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/AbstractHttpService.spec.js~describe17.it20",
+    "access": null,
+    "description": "should throw an error when calling the post method",
+    "lineNumber": 41,
+    "testTargets": [
+      "AbstractHttpService#post"
+    ]
+  },
+  {
+    "__docId__": 147,
+    "kind": "test",
+    "name": "it21",
+    "testId": 21,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/AbstractHttpService.spec.js~describe17.it21",
+    "access": null,
+    "description": "should throw an error when calling the put method",
+    "lineNumber": 47,
+    "testTargets": [
+      "AbstractHttpService#put"
+    ]
+  },
+  {
+    "__docId__": 148,
+    "kind": "test",
+    "name": "it22",
+    "testId": 22,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/AbstractHttpService.spec.js~describe17.it22",
+    "access": null,
+    "description": "should throw an error when calling the delete method",
+    "lineNumber": 53,
+    "testTargets": [
+      "AbstractHttpService#delete"
+    ]
+  },
+  {
+    "__docId__": 149,
+    "kind": "test",
+    "name": "it23",
+    "testId": 23,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/AbstractHttpService.spec.js~describe17.it23",
+    "access": null,
+    "description": "should throw an error when calling the download method",
+    "lineNumber": 59,
+    "testTargets": [
+      "AbstractHttpService#download"
+    ]
+  },
+  {
+    "__docId__": 150,
+    "kind": "test",
+    "name": "it24",
+    "testId": 24,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/AbstractHttpService.spec.js~describe17.it24",
+    "access": null,
+    "description": "should get the raw body of a request",
+    "lineNumber": 65,
+    "testTargets": [
+      "AbstractHttpService#handleBody"
+    ]
+  },
+  {
+    "__docId__": 151,
+    "kind": "test",
+    "name": "it25",
+    "testId": 25,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/AbstractHttpService.spec.js~describe17.it25",
+    "access": null,
+    "description": "should get the body wrapped in cheerio",
+    "lineNumber": 72,
+    "testTargets": [
+      "AbstractHttpService#handleBody"
+    ]
+  },
+  {
+    "__docId__": 152,
+    "kind": "test",
+    "name": "it26",
+    "testId": 26,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/AbstractHttpService.spec.js~describe17.it26",
+    "access": null,
+    "description": "should throw an error when calling the _request method",
+    "lineNumber": 79,
+    "testTargets": [
+      "AbstractHttpService#request"
+    ]
+  },
+  {
+    "__docId__": 153,
+    "kind": "test",
+    "name": "it27",
+    "testId": 27,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/AbstractHttpService.spec.js~describe17.it27",
+    "access": null,
+    "description": "should throw an error when calling the _printDebug method",
+    "lineNumber": 85,
+    "testTargets": [
+      "AbstractHttpService#printDebug"
+    ]
+  },
+  {
+    "__docId__": 154,
+    "kind": "testFile",
+    "name": "test/http/HttpService.spec.js",
+    "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport del from 'del'\nimport mkdirp from 'mkdirp'\nimport { expect } from 'chai'\nimport { existsSync } from 'fs'\nimport { join } from 'path'\n\nimport { HttpService } from '../../src'\n\n/** @test {HttpService} */\ndescribe('HttpService', () => {\n  /**\n   * The HttpService object to be tested.\n   * @type {HttpService}\n   */\n  let httpService: HttpService\n\n  /**\n   * The temporary directory to store the status and updated files.\n   * @type {string}\n   */\n  let tempDir: string\n\n  /**\n   * Hook for setting up the HttpService tests.\n   * @type {Function}\n   */\n  before(() => {\n    tempDir = join(...[\n      __dirname,\n      '..',\n      '..',\n      'tmp'\n    ])\n    del.sync([tempDir])\n    mkdirp.sync(tempDir)\n\n    httpService = new HttpService({\n      baseUrl: 'https://jsonplaceholder.typicode.com/'\n    })\n  })\n\n  /** @test {HttpService#request} */\n  it('should make a successful HTTP request', done => {\n    httpService.request('GET', 'posts/1', {\n      json: true\n    }, true).then(res => {\n      expect(res).to.be.an('object')\n      done()\n    }).catch(done)\n  })\n\n  /** @test {HttpService#download} */\n  it('should fail to download a given link', done => {\n    const fileName = 'file.json'\n    const filePath = join(...[tempDir, fileName])\n    const endpoint = '/faulty/1'\n\n    expect(existsSync(filePath)).to.be.false\n\n    httpService.download(endpoint, fileName)\n      .then(done)\n      .catch(() => {\n        expect(existsSync(filePath)).to.be.false\n        done()\n      })\n  })\n\n  /** @test {HttpService#download} */\n  it('should successfully download a given link', done => {\n    const fileName = 'file.json'\n    const filePath = join(...[tempDir, fileName])\n    const endpoint = '/posts/1'\n\n    expect(existsSync(filePath)).to.be.false\n\n    httpService.download(endpoint, filePath).then(res => {\n      expect(res).to.be.a('string')\n      expect(existsSync(filePath)).to.be.true\n\n      done()\n    }).catch(done)\n  })\n\n  /**\n   * Hook for tearing down the HttpService tests.\n   * @type {Function}\n   */\n  after(() => {\n    del.sync(tempDir)\n  })\n})\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/test/http/HttpService.spec.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 155,
+    "kind": "test",
+    "name": "describe28",
+    "testId": 28,
+    "memberof": "test/http/HttpService.spec.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/http/HttpService.spec.js~describe28",
+    "access": null,
+    "description": "HttpService",
+    "lineNumber": 13,
+    "testTargets": [
+      "HttpService"
+    ]
+  },
+  {
+    "__docId__": 156,
+    "kind": "test",
+    "name": "it29",
+    "testId": 29,
+    "memberof": "test/http/HttpService.spec.js~describe28",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/HttpService.spec.js~describe28.it29",
+    "access": null,
+    "description": "should make a successful HTTP request",
+    "lineNumber": 46,
+    "testTargets": [
+      "HttpService#request"
+    ]
+  },
+  {
+    "__docId__": 157,
+    "kind": "test",
+    "name": "it30",
+    "testId": 30,
+    "memberof": "test/http/HttpService.spec.js~describe28",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/HttpService.spec.js~describe28.it30",
+    "access": null,
+    "description": "should fail to download a given link",
+    "lineNumber": 56,
+    "testTargets": [
+      "HttpService#download"
+    ]
+  },
+  {
+    "__docId__": 158,
+    "kind": "test",
+    "name": "it31",
+    "testId": 31,
+    "memberof": "test/http/HttpService.spec.js~describe28",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/HttpService.spec.js~describe28.it31",
+    "access": null,
+    "description": "should successfully download a given link",
+    "lineNumber": 72,
+    "testTargets": [
+      "HttpService#download"
+    ]
+  },
+  {
+    "__docId__": 159,
+    "kind": "testFile",
+    "name": "test/http/IHttpService.spec.js",
+    "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport { expect } from 'chai'\n\nimport { IHttpService } from '../../src'\n\n/** @test {IHttpService} */\ndescribe('IHttpService', () => {\n  /**\n   * The IHttpService object to be tested.\n   * @type {IHttpService}\n   */\n  let iHttpService: IHttpService\n\n  /**\n   * Hook for setting up the IHttpService tests.\n   * @type {Function}\n   */\n  before(() => {\n    iHttpService = new IHttpService()\n  })\n\n  /** @test {IHttpService#get} */\n  it('should throw an error when calling the get method', () => {\n    expect(iHttpService.get).to\n      .throw('Using default method: \\'get\\'')\n  })\n\n  /** @test {IHttpService#post} */\n  it('should throw an error when calling the post method', () => {\n    expect(iHttpService.post).to\n      .throw('Using default method: \\'post\\'')\n  })\n  /** @test {IHttpService#put} */\n  it('should throw an error when calling the put method', () => {\n    expect(iHttpService.put).to\n      .throw('Using default method: \\'put\\'')\n  })\n  /** @test {IHttpService#delete} */\n  it('should throw an error when calling the delete method', () => {\n    expect(iHttpService.delete).to\n      .throw('Using default method: \\'delete\\'')\n  })\n\n  /** @test {IHttpService#printDebug} */\n  it('should throw an error when calling the printDebug method', () => {\n    expect(iHttpService.printDebug).to\n      .throw('Using default method: \\'printDebug\\'')\n  })\n\n  /** @test {IHttpService#request} */\n  it('should throw an error when calling the request method', () => {\n    expect(iHttpService.request).to\n      .throw('Using default method: \\'request\\'')\n  })\n})\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/test/http/IHttpService.spec.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 160,
+    "kind": "test",
+    "name": "describe32",
+    "testId": 32,
+    "memberof": "test/http/IHttpService.spec.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/http/IHttpService.spec.js~describe32",
+    "access": null,
+    "description": "IHttpService",
+    "lineNumber": 9,
+    "testTargets": [
+      "IHttpService"
+    ]
+  },
+  {
+    "__docId__": 161,
+    "kind": "test",
+    "name": "it33",
+    "testId": 33,
+    "memberof": "test/http/IHttpService.spec.js~describe32",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/IHttpService.spec.js~describe32.it33",
+    "access": null,
+    "description": "should throw an error when calling the get method",
+    "lineNumber": 25,
+    "testTargets": [
+      "IHttpService#get"
+    ]
+  },
+  {
+    "__docId__": 162,
+    "kind": "test",
+    "name": "it34",
+    "testId": 34,
+    "memberof": "test/http/IHttpService.spec.js~describe32",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/IHttpService.spec.js~describe32.it34",
+    "access": null,
+    "description": "should throw an error when calling the post method",
+    "lineNumber": 31,
+    "testTargets": [
+      "IHttpService#post"
+    ]
+  },
+  {
+    "__docId__": 163,
+    "kind": "test",
+    "name": "it35",
+    "testId": 35,
+    "memberof": "test/http/IHttpService.spec.js~describe32",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/IHttpService.spec.js~describe32.it35",
+    "access": null,
+    "description": "should throw an error when calling the put method",
+    "lineNumber": 36,
+    "testTargets": [
+      "IHttpService#put"
+    ]
+  },
+  {
+    "__docId__": 164,
+    "kind": "test",
+    "name": "it36",
+    "testId": 36,
+    "memberof": "test/http/IHttpService.spec.js~describe32",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/IHttpService.spec.js~describe32.it36",
+    "access": null,
+    "description": "should throw an error when calling the delete method",
+    "lineNumber": 41,
+    "testTargets": [
+      "IHttpService#delete"
+    ]
+  },
+  {
+    "__docId__": 165,
+    "kind": "test",
+    "name": "it37",
+    "testId": 37,
+    "memberof": "test/http/IHttpService.spec.js~describe32",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/IHttpService.spec.js~describe32.it37",
+    "access": null,
+    "description": "should throw an error when calling the printDebug method",
+    "lineNumber": 47,
+    "testTargets": [
+      "IHttpService#printDebug"
+    ]
+  },
+  {
+    "__docId__": 166,
+    "kind": "test",
+    "name": "it38",
+    "testId": 38,
+    "memberof": "test/http/IHttpService.spec.js~describe32",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/http/IHttpService.spec.js~describe32.it38",
+    "access": null,
+    "description": "should throw an error when calling the request method",
+    "lineNumber": 53,
+    "testTargets": [
+      "IHttpService#request"
+    ]
+  },
+  {
+    "__docId__": 167,
+    "kind": "testFile",
+    "name": "test/providers/AbstractProvider.spec.js",
+    "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport { expect } from 'chai'\n\nimport { AbstractProvider } from '../../src'\n\n/** @test {AbstractProvider} */\ndescribe('AbstractProvider', () => {\n  /** @test {AbstractProvider#scrapeConfigs} */\n  it('should throw an error when calling the scrapeConfigs method', done => {\n    const abstractProvider = new AbstractProvider({}, {\n      baseUrl: 'https://jsonplaceholder.typicode.com/',\n      configs: [{}]\n    })\n\n    abstractProvider.scrapeConfigs()\n      .then(done)\n      .catch(err => {\n        expect(err).to.be.an('Error')\n        done()\n      })\n  })\n})\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/test/providers/AbstractProvider.spec.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 168,
+    "kind": "test",
+    "name": "describe39",
+    "testId": 39,
+    "memberof": "test/providers/AbstractProvider.spec.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/providers/AbstractProvider.spec.js~describe39",
+    "access": null,
+    "description": "AbstractProvider",
+    "lineNumber": 9,
+    "testTargets": [
+      "AbstractProvider"
+    ]
+  },
+  {
+    "__docId__": 169,
+    "kind": "test",
+    "name": "it40",
+    "testId": 40,
+    "memberof": "test/providers/AbstractProvider.spec.js~describe39",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/providers/AbstractProvider.spec.js~describe39.it40",
+    "access": null,
+    "description": "should throw an error when calling the scrapeConfigs method",
+    "lineNumber": 11,
+    "testTargets": [
+      "AbstractProvider#scrapeConfigs"
+    ]
+  },
+  {
+    "__docId__": 170,
+    "kind": "testFile",
+    "name": "test/providers/IProvider.spec.js",
+    "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport { expect } from 'chai'\n\nimport { IProvider } from '../../src'\n\n/** @test {IProvider} */\ndescribe('IProvider', () => {\n  /**\n   * The IProvider object to be tested.\n   * @type {IProvider}\n   */\n  let iProvider: IProvider\n\n  /**\n   * Hook for setting up the IProvider tests.\n   * @type {Function}\n   */\n  before(() => {\n    iProvider = new IProvider()\n  })\n\n  /** @test {IProvider#scrapeConfig} */\n  it('should throw an error when calling the scrapeConfig method', () => {\n    expect(iProvider.scrapeConfig).to\n      .throw('Using default method: \\'scrapeConfig\\'')\n  })\n\n  /** @test {IProvider#scrapeConfigs} */\n  it('should throw an error when calling the scrapeConfigs method', () => {\n    expect(iProvider.scrapeConfigs).to\n      .throw('Using default method: \\'scrapeConfigs\\'')\n  })\n})\n",
+    "static": true,
+    "longname": "/home/eosapien/Software/pop-api-scraper/test/providers/IProvider.spec.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 171,
+    "kind": "test",
+    "name": "describe41",
+    "testId": 41,
+    "memberof": "test/providers/IProvider.spec.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/providers/IProvider.spec.js~describe41",
+    "access": null,
+    "description": "IProvider",
+    "lineNumber": 9,
+    "testTargets": [
+      "IProvider"
+    ]
+  },
+  {
+    "__docId__": 172,
+    "kind": "test",
+    "name": "it42",
+    "testId": 42,
+    "memberof": "test/providers/IProvider.spec.js~describe41",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/providers/IProvider.spec.js~describe41.it42",
+    "access": null,
+    "description": "should throw an error when calling the scrapeConfig method",
+    "lineNumber": 25,
+    "testTargets": [
+      "IProvider#scrapeConfig"
+    ]
+  },
+  {
+    "__docId__": 173,
+    "kind": "test",
+    "name": "it43",
+    "testId": 43,
+    "memberof": "test/providers/IProvider.spec.js~describe41",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/providers/IProvider.spec.js~describe41.it43",
+    "access": null,
+    "description": "should throw an error when calling the scrapeConfigs method",
+    "lineNumber": 31,
+    "testTargets": [
+      "IProvider#scrapeConfigs"
+    ]
+  }
+]
