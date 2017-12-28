@@ -29,13 +29,19 @@ jobs:
     - npm run flow
   - stage: test
     node_js: '7'
+    before_script:
+    - npm i --no-save pop-api
     script: npm run test
   - stage: test
     node_js: '8'
+    before_script:
+    - npm i --no-save pop-api
     script: npm run test
     after_success: npm run coveralls
   - stage: test
     node_js: '9'
+    before_script:
+    - npm i --no-save pop-api
     script: npm run test
   - stage: build
     node_js: '9'
