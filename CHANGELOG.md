@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/popcorn-official/pop-api-scraper/compare/0.1.1...0.1.2) (2018-01-01)
+
+
+### Bug Fixes
+
+* Deprecate v0.1.1, not published correctly ([474d55a](https://github.com/popcorn-official/pop-api-scraper/commit/474d55a))
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/popcorn-official/pop-api-scraper/compare/v0.1.0...v0.1.1) (2018-01-01)
 
