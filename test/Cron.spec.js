@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-expressions */
 import del from 'del'
 import mkdirp from 'mkdirp'
+import sinon from 'sinon'
 import { join } from 'path'
 import { expect } from 'chai'
 import { PopApi } from 'pop-api'
@@ -63,6 +64,16 @@ describe('Cron', () => {
   it('should get the cron object', () => {
     const res = cron.getCron(PopApi)
     expect(res).to.be.an('object')
+  })
+
+  /** @test {Cron#getCron} */
+  it('should get the cron object and start the cronjob', () => {
+    const stub = sinon.stub(PopApi.scraper, 'scrape')
+
+    const res = cron.getCron(PopApi, true)
+    expect(res).to.be.an('object')
+
+    stub.restore()
   })
 
   /**
