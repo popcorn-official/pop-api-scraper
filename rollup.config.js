@@ -13,6 +13,7 @@ export default {
   input: './src/index.js',
   external: [
     ...Object.keys(dependencies),
+    'cluster',
     'fs',
     'path',
     'querystring',

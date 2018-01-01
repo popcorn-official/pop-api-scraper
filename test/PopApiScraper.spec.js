@@ -1,8 +1,10 @@
 // Import the necessary modules.
 // @flow
 /* eslint-disable no-unused-expressions */
+import cluster from 'cluster'
 import del from 'del'
 import mkdirp from 'mkdirp'
+import sinon from 'sinon'
 import { expect } from 'chai'
 import { join } from 'path'
 import { PopApi } from 'pop-api'
@@ -57,6 +59,25 @@ describe('PopApiScraper', () => {
     expect(popApiScraper.statusPath).to.be.a('string')
     expect(popApiScraper.updatedPath).to.exist
     expect(popApiScraper.updatedPath).to.be.a('string')
+  })
+
+  /** @test {PopApiScraper#constructor} */
+  it('should only create teh status files on the master node', () => {
+    const stub = sinon.stub(cluster, 'isMaster')
+    stub.value(false)
+
+    new PopApiScraper(PopApi, { // eslint-disable-line no-new
+      statusPath: join(...[
+        tempDir,
+        'status.json'
+      ]),
+      updatedPath: join(...[
+        tempDir,
+        'updated.json'
+      ])
+    })
+
+    stub.restore()
   })
 
   /** @test {PopApiScraper#constructor} */
