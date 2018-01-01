@@ -145,25 +145,31 @@ window.esdocSearchIndex = [
   ],
   [
     "cron src/cron.js~cron,cron",
-    "test-file/test/Cron.spec.js.html#lineNumber16",
+    "test-file/test/Cron.spec.js.html#lineNumber17",
     "Cron",
     "test"
   ],
   [
     "cron#constructor src/cron.js~cron#constructor,cron#constructor",
-    "test-file/test/Cron.spec.js.html#lineNumber57",
+    "test-file/test/Cron.spec.js.html#lineNumber58",
     "Cron should check the attributes of the Cron",
     "test"
   ],
   [
     "cron#getcron src/cron.js~cron#getcron,cron#getcron",
-    "test-file/test/Cron.spec.js.html#lineNumber63",
+    "test-file/test/Cron.spec.js.html#lineNumber64",
     "Cron should get the cron object",
     "test"
   ],
   [
+    "cron#getcron src/cron.js~cron#getcron,cron#getcron",
+    "test-file/test/Cron.spec.js.html#lineNumber70",
+    "Cron should get the cron object and start the cronjob",
+    "test"
+  ],
+  [
     "cron#constructor src/cron.js~cron#constructor,cron#constructor",
-    "test-file/test/Cron.spec.js.html#lineNumber50",
+    "test-file/test/Cron.spec.js.html#lineNumber51",
     "Cron should test the constructor with options.",
     "test"
   ],
@@ -253,61 +259,67 @@ window.esdocSearchIndex = [
   ],
   [
     "popapiscraper src/popapiscraper.js~popapiscraper,popapiscraper",
-    "test-file/test/PopApiScraper.spec.js.html#lineNumber14",
+    "test-file/test/PopApiScraper.spec.js.html#lineNumber16",
     "PopApiScraper",
     "test"
   ],
   [
     "popapiscraper.use src/popapiscraper.js~popapiscraper.use,popapiscraper.use",
-    "test-file/test/PopApiScraper.spec.js.html#lineNumber114",
+    "test-file/test/PopApiScraper.spec.js.html#lineNumber135",
     "PopApiScraper ",
     "test"
   ],
   [
     "popapiscraper#scrape src/popapiscraper.js~popapiscraper#scrape,popapiscraper#scrape",
-    "test-file/test/PopApiScraper.spec.js.html#lineNumber142",
+    "test-file/test/PopApiScraper.spec.js.html#lineNumber163",
     "PopApiScraper should call the scrape method",
     "test"
   ],
   [
     "popapiscraper#constructor src/popapiscraper.js~popapiscraper#constructor,popapiscraper#constructor",
-    "test-file/test/PopApiScraper.spec.js.html#lineNumber53",
+    "test-file/test/PopApiScraper.spec.js.html#lineNumber55",
     "PopApiScraper should check the attributes of the PopApiScraper",
     "test"
   ],
   [
     "popapiscraper#getstatus src/popapiscraper.js~popapiscraper#getstatus,popapiscraper#getstatus",
-    "test-file/test/PopApiScraper.spec.js.html#lineNumber84",
+    "test-file/test/PopApiScraper.spec.js.html#lineNumber105",
     "PopApiScraper should get the status of the scraper",
     "test"
   ],
   [
     "popapiscraper#getupdated src/popapiscraper.js~popapiscraper#getupdated,popapiscraper#getupdated",
-    "test-file/test/PopApiScraper.spec.js.html#lineNumber100",
+    "test-file/test/PopApiScraper.spec.js.html#lineNumber121",
     "PopApiScraper should get the updated status of the scraper",
     "test"
   ],
   [
     "popapiscraper.use src/popapiscraper.js~popapiscraper.use,popapiscraper.use",
-    "test-file/test/PopApiScraper.spec.js.html#lineNumber134",
+    "test-file/test/PopApiScraper.spec.js.html#lineNumber155",
     "PopApiScraper should not register the plugin if it is not a class",
     "test"
   ],
   [
+    "popapiscraper#constructor src/popapiscraper.js~popapiscraper#constructor,popapiscraper#constructor",
+    "test-file/test/PopApiScraper.spec.js.html#lineNumber65",
+    "PopApiScraper should only create teh status files on the master node",
+    "test"
+  ],
+  [
     "popapiscraper#setstatus src/popapiscraper.js~popapiscraper#setstatus,popapiscraper#setstatus",
-    "test-file/test/PopApiScraper.spec.js.html#lineNumber76",
+    "test-file/test/PopApiScraper.spec.js.html#lineNumber97",
     "PopApiScraper should set the status of the scraper",
     "test"
   ],
   [
     "popapiscraper#setupdated src/popapiscraper.js~popapiscraper#setupdated,popapiscraper#setupdated",
-    "test-file/test/PopApiScraper.spec.js.html#lineNumber92",
+    "test-file/test/PopApiScraper.spec.js.html#lineNumber113",
     "PopApiScraper should set the updated status of the scraper",
     "test"
   ],
   [
     "popapiscraper#constructor src/popapiscraper.js~popapiscraper#constructor,popapiscraper#constructor",
-    "test-file/test/PopApiScraper.spec.js.html#lineNumber63",
+    "test-file/test/PopApiScraper.spec.js.html#lineNumber84",
     "PopApiScraper should throw an error if the required options are not given",
     "test"
   ],

@@ -675,7 +675,7 @@
     "__docId__": 54,
     "kind": "file",
     "name": "src/Cron.js",
-    "content": "// Import the necessary modules.\n// @flow\nimport cron from 'node-cron'\n\n/**\n * Cron class for executing the scraper periodically.\n * @type {Cron}\n */\nexport default class Cron {\n\n  /**\n   * The cron time for scraping audios. Default is `0 0 *\\/6 * * *`.\n   * @type {string}\n   */\n  cronTime: string\n\n  /**\n   * Create a new Cron object.\n   * @param {!PopApi} PopApi - The PopApi instance.\n   * @param {!Object} [options={}] - The options for the Cron middleware.\n   * @param {!string} [options.cronTime=0 0 *\\/6 * * *] - The cron tab to\n   * execute the scraper.\n   * @param {?boolean} [options.start=false] - Start the cronjob on creation.\n   */\n  constructor(PopApi: any, {\n    cronTime = '0 0 */6 * * *',\n    start = false\n  }: Object = {}): void {\n    const { name } = this.constructor\n    PopApi.debug(`Registering ${name} with options: %o`, {\n      cronTime,\n      start\n    })\n\n    /**\n     * The cron time for scraping audios. Default is `0 0 *\\/6 * * *`.\n     * @type {string}\n     */\n    this.cronTime = cronTime\n    PopApi.cron = this.getCron(PopApi, start)\n  }\n\n  /**\n   * Get the cron job to run.\n   * @param {!PopApi} PopApi - The PopApi instance.\n   * @param {?boolean} [start] - Start the cron job.\n   * @returns {Object} - A configured cron job.\n   */\n  getCron(PopApi: any, start?: boolean): Object {\n    return cron.schedule(this.cronTime, PopApi.scraper.scrape, start)\n  }\n\n}\n",
+    "content": "// Import the necessary modules.\n// @flow\nimport cron from 'node-cron'\n\n/**\n * Cron class for executing the scraper periodically.\n * @type {Cron}\n */\nexport default class Cron {\n\n  /**\n   * The cron time for scraping audios. Default is `0 0 *\\/6 * * *`.\n   * @type {string}\n   */\n  cronTime: string\n\n  /**\n   * Create a new Cron object.\n   * @param {!PopApi} PopApi - The PopApi instance.\n   * @param {!Object} [options={}] - The options for the Cron middleware.\n   * @param {!string} [options.cronTime=0 0 *\\/6 * * *] - The cron tab to\n   * execute the scraper.\n   * @param {?boolean} [options.start=false] - Start the cronjob on creation.\n   */\n  constructor(PopApi: any, {\n    cronTime = '0 0 */6 * * *',\n    start = false\n  }: Object = {}): void {\n    const { name } = this.constructor\n    PopApi.debug(`Registering ${name} with options: %o`, {\n      cronTime,\n      start\n    })\n\n    /**\n     * The cron time for scraping audios. Default is `0 0 *\\/6 * * *`.\n     * @type {string}\n     */\n    this.cronTime = cronTime\n    PopApi.cron = this.getCron(PopApi, start)\n  }\n\n  /**\n   * Get the cron job to run.\n   * @param {!PopApi} PopApi - The PopApi instance.\n   * @param {?boolean} [start] - Start the cron job.\n   * @returns {Object} - A configured cron job.\n   */\n  getCron(PopApi: any, start?: boolean): Object {\n    if (start) {\n      PopApi.scraper.scrape()\n    }\n\n    return cron.schedule(this.cronTime, PopApi.scraper.scrape, start)\n  }\n\n}\n",
     "static": true,
     "longname": "/home/eosapien/Software/pop-api-scraper/src/Cron.js",
     "access": "public",
@@ -838,7 +838,7 @@
     "__docId__": 60,
     "kind": "file",
     "name": "src/PopApiScraper.js",
-    "content": "// Import the necessary modules.\n// @flow\nimport fs from 'fs-extra'\nimport pMap from 'p-map'\n\nimport Context from './Context'\n\n/** @external {PopApi} https://github.com/ChrisAlderson/pop-api */\n\n/**\n * Class for Initiating the scraping process.\n * @type {PopApiScraper}\n */\nexport default class PopApiScraper {\n\n  /**\n   * The context to execute the providers in.\n   * @type {Context}\n   */\n  context: Context\n\n  /**\n   * The path of the status file. Default is `./tmp/status.json`.\n   * @type {string}\n   */\n  statusPath: string\n\n  /**\n   * The path of the updated file. Default is `./tmp/updated.json`.\n   * @type {string}\n   */\n  updatedPath: string\n\n  /**\n   * A map of the installed plugins.\n   * @type {Map<any>}\n   */\n  static _installedPlugins: Map<string, any> = new Map()\n\n  /**\n   * Create a new BaseScraper object.\n   * The base modules for popcorn-api\n   * @param {!PopApi} PopApi - The PopApiScraper instance.\n   * @param {!Object} options - The options for the BaseScraper middleware.\n   * @param {!string} options.statusPath = - The path of the status file.\n   * @param {!string} options.updatedPath - The path of the updated file.\n   */\n  constructor(PopApi: any, {\n    statusPath,\n    updatedPath\n  }: Object): void {\n    const { name } = this.constructor\n    PopApi.debug(`Registering ${name} with options: %o`, {\n      statusPath,\n      updatedPath\n    })\n\n    if (!statusPath || !updatedPath) {\n      throw new TypeError('\\'statusPath\\' and \\'updatedPath\\' are required options for the PopApiScraper middleware!')\n    }\n\n    /**\n     * The context to execute the providers in.\n     * @type {Context}\n     */\n    this.context = new Context()\n    /**\n     * The path of the status file. Default is `./tmp/status.json`.\n     * @type {string}\n     */\n    this.statusPath = statusPath\n    /**\n     * The path of the updated file. Default is `./tmp/updated.json`.\n     * @type {string}\n     */\n    this.updatedPath = updatedPath\n\n    fs.createWriteStream(this.statusPath).end()\n    fs.createWriteStream(this.updatedPath).end()\n\n    PopApi.scraper = this\n  }\n\n  /**\n   * Get the status object.\n   * @returns {Promise<string, Error>} - The status of the scraping process.\n   */\n  getStatus(): Promise<string | Error> {\n    return fs.readFile(this.statusPath, 'utf8')\n  }\n\n  /**\n   * Updates the `status.json` file.\n   * @param {!string} status - The status which will be set to in the\n   * `status.json` file.\n   * @returns {Promise<undefined, Error>} - 'ok' if saved, or the error is there\n   * is one.\n   */\n  setStatus(status: string): Promise<string | Error> {\n    return fs.writeFile(this.statusPath, status, 'utf8')\n  }\n\n  /**\n   * Get the updated object.\n   * @returns {Promise<number, Error>} - The status of the scraping process.\n   */\n  getUpdated(): Promise<number | Error> {\n    return fs.readFile(this.updatedPath, 'utf8')\n      .then(res => Number(res))\n  }\n\n  /**\n   * Updates the `updated.json` file.\n   * @param {!number} updated - The epoch time when the API last started\n   * scraping.\n   * @returns {Promise<undefined, Error>} - 'ok' if saved, or the error is there\n   * is one.\n   */\n  setUpdated(updated: number): Promise<string | Error> {\n    return fs.writeFile(this.updatedPath, String(updated), 'utf8')\n  }\n\n  /**\n   * Register middleware for the PopApi framework.\n   * @param {!Function} Plugin - The plugin to use.\n   * @param {!Object} args - The arguments passed down to the constructor of\n   * the plugin.\n   * @returns {Promise<PopApiScraper>} - The PopApi instance with the installed\n   * plugins.\n   */\n  static use(Plugin: any, ...args: any): any {\n    if (PopApiScraper._installedPlugins.has(Plugin)) {\n      return this\n    }\n\n    const plugin = typeof Plugin === 'function'\n      ? new Plugin(this, ...args)\n      : null\n\n    if (plugin) {\n      PopApiScraper._installedPlugins.set(Plugin, plugin)\n    }\n\n    return this\n  }\n  /**\n   * Initiate the scraping.\n   * @param {!number} [concurrency=1] - How many providers to scrape\n   * concurrently.\n   * @returns {Promise<Array<Object>, Error>} - The array of the scraped\n   * content.\n   */\n  async scrape(concurrency?: number = 1): Promise<Array<Object> | Error> {\n    await this.setUpdated(Math.floor(new Date().getTime() / 1000))\n    const providers = PopApiScraper._installedPlugins.values()\n\n    const res = await pMap(providers, async provider => {\n      this.context.provider = provider\n      await this.setStatus(`Scraping: ${provider.name}`)\n\n      return this.context.execute()\n    }, { concurrency })\n    await this.setStatus('idle')\n\n    return res\n  }\n\n}\n",
+    "content": "// Import the necessary modules.\n// @flow\nimport fs from 'fs-extra'\nimport pMap from 'p-map'\nimport { isMaster } from 'cluster'\n\nimport Context from './Context'\n\n/** @external {PopApi} https://github.com/ChrisAlderson/pop-api */\n\n/**\n * Class for Initiating the scraping process.\n * @type {PopApiScraper}\n */\nexport default class PopApiScraper {\n\n  /**\n   * The context to execute the providers in.\n   * @type {Context}\n   */\n  context: Context\n\n  /**\n   * The path of the status file. Default is `./tmp/status.json`.\n   * @type {string}\n   */\n  statusPath: string\n\n  /**\n   * The path of the updated file. Default is `./tmp/updated.json`.\n   * @type {string}\n   */\n  updatedPath: string\n\n  /**\n   * A map of the installed plugins.\n   * @type {Map<any>}\n   */\n  static _installedPlugins: Map<string, any> = new Map()\n\n  /**\n   * Create a new BaseScraper object.\n   * The base modules for popcorn-api\n   * @param {!PopApi} PopApi - The PopApiScraper instance.\n   * @param {!Object} options - The options for the BaseScraper middleware.\n   * @param {!string} options.statusPath = - The path of the status file.\n   * @param {!string} options.updatedPath - The path of the updated file.\n   */\n  constructor(PopApi: any, {\n    statusPath,\n    updatedPath\n  }: Object): void {\n    const { name } = this.constructor\n    PopApi.debug(`Registering ${name} with options: %o`, {\n      statusPath,\n      updatedPath\n    })\n\n    if (!statusPath || !updatedPath) {\n      throw new TypeError('\\'statusPath\\' and \\'updatedPath\\' are required options for the PopApiScraper middleware!')\n    }\n\n    /**\n     * The context to execute the providers in.\n     * @type {Context}\n     */\n    this.context = new Context()\n    /**\n     * The path of the status file. Default is `./tmp/status.json`.\n     * @type {string}\n     */\n    this.statusPath = statusPath\n    /**\n     * The path of the updated file. Default is `./tmp/updated.json`.\n     * @type {string}\n     */\n    this.updatedPath = updatedPath\n\n    if (isMaster) {\n      fs.createWriteStream(this.statusPath).end()\n      fs.createWriteStream(this.updatedPath).end()\n    }\n\n    PopApi.scraper = this\n  }\n\n  /**\n   * Get the status object.\n   * @returns {Promise<string, Error>} - The status of the scraping process.\n   */\n  getStatus(): Promise<string | Error> {\n    return fs.readFile(this.statusPath, 'utf8')\n  }\n\n  /**\n   * Updates the `status.json` file.\n   * @param {!string} status - The status which will be set to in the\n   * `status.json` file.\n   * @returns {Promise<undefined, Error>} - 'ok' if saved, or the error is there\n   * is one.\n   */\n  setStatus(status: string): Promise<string | Error> {\n    return fs.writeFile(this.statusPath, status, 'utf8')\n  }\n\n  /**\n   * Get the updated object.\n   * @returns {Promise<number, Error>} - The status of the scraping process.\n   */\n  getUpdated(): Promise<number | Error> {\n    return fs.readFile(this.updatedPath, 'utf8')\n      .then(res => Number(res))\n  }\n\n  /**\n   * Updates the `updated.json` file.\n   * @param {!number} updated - The epoch time when the API last started\n   * scraping.\n   * @returns {Promise<undefined, Error>} - 'ok' if saved, or the error is there\n   * is one.\n   */\n  setUpdated(updated: number): Promise<string | Error> {\n    return fs.writeFile(this.updatedPath, String(updated), 'utf8')\n  }\n\n  /**\n   * Register middleware for the PopApi framework.\n   * @param {!Function} Plugin - The plugin to use.\n   * @param {!Object} args - The arguments passed down to the constructor of\n   * the plugin.\n   * @returns {Promise<PopApiScraper>} - The PopApi instance with the installed\n   * plugins.\n   */\n  static use(Plugin: any, ...args: any): any {\n    if (PopApiScraper._installedPlugins.has(Plugin)) {\n      return this\n    }\n\n    const plugin = typeof Plugin === 'function'\n      ? new Plugin(this, ...args)\n      : null\n\n    if (plugin) {\n      PopApiScraper._installedPlugins.set(Plugin, plugin)\n    }\n\n    return this\n  }\n  /**\n   * Initiate the scraping.\n   * @param {!number} [concurrency=1] - How many providers to scrape\n   * concurrently.\n   * @returns {Promise<Array<Object>, Error>} - The array of the scraped\n   * content.\n   */\n  async scrape(concurrency?: number = 1): Promise<Array<Object> | Error> {\n    await this.setUpdated(Math.floor(new Date().getTime() / 1000))\n    const providers = PopApiScraper._installedPlugins.values()\n\n    const res = await pMap(providers, async provider => {\n      this.context.provider = provider\n      await this.setStatus(`Scraping: ${provider.name}`)\n\n      return this.context.execute()\n    }, { concurrency })\n    await this.setStatus('idle')\n\n    return res\n  }\n\n}\n",
     "static": true,
     "longname": "/home/eosapien/Software/pop-api-scraper/src/PopApiScraper.js",
     "access": "public",
@@ -868,7 +868,7 @@
     "importPath": "pop-api-scraper/src/PopApiScraper.js",
     "importStyle": "PopApiScraper",
     "description": "Class for Initiating the scraping process.",
-    "lineNumber": 14,
+    "lineNumber": 15,
     "type": {
       "nullable": null,
       "types": [
@@ -888,7 +888,7 @@
     "longname": "src/PopApiScraper.js~PopApiScraper#context",
     "access": "public",
     "description": "The context to execute the providers in. ",
-    "lineNumber": 20,
+    "lineNumber": 21,
     "type": {
       "nullable": null,
       "types": [
@@ -907,7 +907,7 @@
     "longname": "src/PopApiScraper.js~PopApiScraper#statusPath",
     "access": "public",
     "description": "The path of the status file. Default is `./tmp/status.json`. ",
-    "lineNumber": 26,
+    "lineNumber": 27,
     "type": {
       "nullable": null,
       "types": [
@@ -926,7 +926,7 @@
     "longname": "src/PopApiScraper.js~PopApiScraper#updatedPath",
     "access": "public",
     "description": "The path of the updated file. Default is `./tmp/updated.json`. ",
-    "lineNumber": 32,
+    "lineNumber": 33,
     "type": {
       "nullable": null,
       "types": [
@@ -945,7 +945,7 @@
     "longname": "src/PopApiScraper.js~PopApiScraper._installedPlugins",
     "access": "private",
     "description": "A map of the installed plugins. ",
-    "lineNumber": 38,
+    "lineNumber": 39,
     "type": {
       "nullable": null,
       "types": [
@@ -966,7 +966,7 @@
     "longname": "src/PopApiScraper.js~PopApiScraper#constructor",
     "access": "public",
     "description": "Create a new BaseScraper object.\nThe base modules for popcorn-api",
-    "lineNumber": 48,
+    "lineNumber": 49,
     "params": [
       {
         "nullable": false,
@@ -1021,7 +1021,7 @@
     "longname": "src/PopApiScraper.js~PopApiScraper#getStatus",
     "access": "public",
     "description": "Get the status object.  ",
-    "lineNumber": 88,
+    "lineNumber": 91,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1049,7 +1049,7 @@
     "longname": "src/PopApiScraper.js~PopApiScraper#setStatus",
     "access": "public",
     "description": "Updates the `status.json` file.  ",
-    "lineNumber": 99,
+    "lineNumber": 102,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1088,7 +1088,7 @@
     "longname": "src/PopApiScraper.js~PopApiScraper#getUpdated",
     "access": "public",
     "description": "Get the updated object.  ",
-    "lineNumber": 107,
+    "lineNumber": 110,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1116,7 +1116,7 @@
     "longname": "src/PopApiScraper.js~PopApiScraper#setUpdated",
     "access": "public",
     "description": "Updates the `updated.json` file.  ",
-    "lineNumber": 119,
+    "lineNumber": 122,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1155,7 +1155,7 @@
     "longname": "src/PopApiScraper.js~PopApiScraper.use",
     "access": "public",
     "description": "Register middleware for the PopApi framework.  ",
-    "lineNumber": 131,
+    "lineNumber": 134,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1204,7 +1204,7 @@
     "longname": "src/PopApiScraper.js~PopApiScraper#scrape",
     "access": "public",
     "description": "Initiate the scraping.  ",
-    "lineNumber": 153,
+    "lineNumber": 156,
     "unknown": [
       {
         "tagName": "@returns",
@@ -2693,7 +2693,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"pop-api-scraper\",\n  \"version\": \"0.1.0\",\n  \"description\": \"The base modules for the popcorn-api scraper\",\n  \"dependencies\": {\n    \"cheerio\": \"^1.0.0-rc.2\",\n    \"debug\": \"^3.1.0\",\n    \"fs-extra\": \"^5.0.0\",\n    \"got\": \"^8.0.1\",\n    \"node-cron\": \"^1.2.1\",\n    \"p-map\": \"^1.2.0\"\n  },\n  \"peerDependencies\": {\n    \"pop-api\": \"^0.6.0\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-plugin-external-helpers\": \"^6.22.0\",\n    \"babel-plugin-istanbul\": \"^4.1.5\",\n    \"babel-plugin-transform-class-properties\": \"^6.24.1\",\n    \"babel-plugin-transform-export-extensions\": \"^6.22.0\",\n    \"babel-plugin-transform-object-rest-spread\": \"^6.26.0\",\n    \"babel-plugin-transform-strict-mode\": \"^6.24.1\",\n    \"babel-preset-env\": \"^1.6.1\",\n    \"babel-preset-flow\": \"^6.23.0\",\n    \"babel-register\": \"^6.26.0\",\n    \"chai\": \"^4.1.2\",\n    \"coveralls\": \"^3.0.0\",\n    \"cross-env\": \"^5.1.3\",\n    \"del\": \"^3.0.0\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-flow-type-plugin\": \"^1.0.1\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.14.0\",\n    \"eslint-config-vixo\": \"^2.0.2\",\n    \"flow\": \"^0.2.3\",\n    \"flow-bin\": \"^0.61.0\",\n    \"flow-typed\": \"^2.2.3\",\n    \"husky\": \"^0.14.3\",\n    \"mkdirp\": \"^0.5.1\",\n    \"mocha\": \"^4.0.1\",\n    \"nyc\": \"^11.4.1\",\n    \"rollup\": \"^0.52.3\",\n    \"rollup-plugin-babel\": \"^3.0.3\",\n    \"rollup-plugin-json\": \"^2.3.0\",\n    \"rollup-plugin-node-resolve\": \"^3.0.0\",\n    \"rollup-plugin-uglify\": \"^2.0.1\",\n    \"sinon\": \"^4.1.3\",\n    \"standard-version\": \"^4.2.0\",\n    \"uglify-es\": \"^3.3.2\"\n  },\n  \"license\": \"MIT\",\n  \"scripts\": {\n    \"build\": \"cross-env NODE_ENV=production rollup -c\",\n    \"coveralls\": \"cat ./coverage/lcov.info | coveralls\",\n    \"debug\": \"npm run dev --inspect\",\n    \"dev\": \"cross-env DEBUG=pop-api-scraper* NODE_ENV=development node -r babel-register ./examples/exampleSetup.js\",\n    \"docs\": \"esdoc -c .esdoc.json\",\n    \"flow\": \"flow\",\n    \"flow-typed\": \"flow-typed install\",\n    \"lint\": \"eslint {example,src,test}/** *.js$\",\n    \"release\": \"git add ./docs/* && standard-version -a\",\n    \"precommit\": \"npm run lint && npm run flow\",\n    \"prerelease\": \"npm run build && npm run docs\",\n    \"prepush\": \"npm run test\",\n    \"test\": \"cross-env NODE_ENV=test nyc -r=lcov -r=text mocha --exit --recursive\"\n  },\n  \"engines\": {\n    \"node\": \">=7.10.1\"\n  },\n  \"keywords\": [\n    \"api\",\n    \"popcorn\",\n    \"middleware\",\n    \"scraper\"\n  ],\n  \"main\": \"./build/pop-api-scraper.js\",\n  \"module\": \"./build/pop-api-scraper.esm.js\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/popcorn-official/pop-api-scraper.git\"\n  },\n  \"files\": [\n    \"build/**/*\"\n  ]\n}\n",
+    "content": "{\n  \"name\": \"pop-api-scraper\",\n  \"version\": \"0.1.0\",\n  \"description\": \"The base modules for the popcorn-api scraper\",\n  \"dependencies\": {\n    \"cheerio\": \"^1.0.0-rc.2\",\n    \"debug\": \"^3.1.0\",\n    \"fs-extra\": \"^5.0.0\",\n    \"got\": \"^8.0.1\",\n    \"node-cron\": \"^1.2.1\",\n    \"p-map\": \"^1.2.0\"\n  },\n  \"peerDependencies\": {\n    \"pop-api\": \"^0.6.1\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-plugin-external-helpers\": \"^6.22.0\",\n    \"babel-plugin-istanbul\": \"^4.1.5\",\n    \"babel-plugin-transform-class-properties\": \"^6.24.1\",\n    \"babel-plugin-transform-export-extensions\": \"^6.22.0\",\n    \"babel-plugin-transform-object-rest-spread\": \"^6.26.0\",\n    \"babel-plugin-transform-strict-mode\": \"^6.24.1\",\n    \"babel-preset-env\": \"^1.6.1\",\n    \"babel-preset-flow\": \"^6.23.0\",\n    \"babel-register\": \"^6.26.0\",\n    \"chai\": \"^4.1.2\",\n    \"coveralls\": \"^3.0.0\",\n    \"cross-env\": \"^5.1.3\",\n    \"del\": \"^3.0.0\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-flow-type-plugin\": \"^1.0.1\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.14.0\",\n    \"eslint-config-vixo\": \"^2.0.2\",\n    \"flow\": \"^0.2.3\",\n    \"flow-bin\": \"^0.62.0\",\n    \"flow-typed\": \"^2.2.3\",\n    \"husky\": \"^0.14.3\",\n    \"mkdirp\": \"^0.5.1\",\n    \"mocha\": \"^4.1.0\",\n    \"nyc\": \"^11.4.1\",\n    \"rollup\": \"^0.53.2\",\n    \"rollup-plugin-babel\": \"^3.0.3\",\n    \"rollup-plugin-json\": \"^2.3.0\",\n    \"rollup-plugin-node-resolve\": \"^3.0.0\",\n    \"rollup-plugin-uglify\": \"^2.0.1\",\n    \"sinon\": \"^4.1.3\",\n    \"standard-version\": \"^4.2.0\",\n    \"uglify-es\": \"^3.3.4\"\n  },\n  \"license\": \"MIT\",\n  \"scripts\": {\n    \"build\": \"cross-env NODE_ENV=production rollup -c\",\n    \"coveralls\": \"cat ./coverage/lcov.info | coveralls\",\n    \"debug\": \"npm run dev --inspect\",\n    \"dev\": \"cross-env DEBUG=pop-api-scraper* NODE_ENV=development node -r babel-register ./examples/exampleSetup.js\",\n    \"docs\": \"esdoc -c .esdoc.json\",\n    \"flow\": \"flow\",\n    \"flow-typed\": \"flow-typed install\",\n    \"lint\": \"eslint {example,src,test}/** *.js$\",\n    \"release\": \"git add ./docs/* && standard-version -a\",\n    \"precommit\": \"npm run lint && npm run flow\",\n    \"prerelease\": \"npm run build && npm run docs\",\n    \"prepush\": \"npm run test\",\n    \"test\": \"cross-env NODE_ENV=test nyc -r=lcov -r=text mocha --exit --recursive\"\n  },\n  \"engines\": {\n    \"node\": \">=7.10.1\"\n  },\n  \"keywords\": [\n    \"api\",\n    \"popcorn\",\n    \"middleware\",\n    \"scraper\"\n  ],\n  \"main\": \"./build/pop-api-scraper.js\",\n  \"module\": \"./build/pop-api-scraper.esm.js\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/popcorn-official/pop-api-scraper.git\"\n  },\n  \"files\": [\n    \"build/**/*\"\n  ]\n}\n",
     "longname": "/home/eosapien/Software/pop-api-scraper/package.json",
     "name": "package.json",
     "static": true,
@@ -2728,7 +2728,7 @@
     "kind": "manual",
     "longname": "/home/eosapien/Software/pop-api-scraper/CHANGELOG.md",
     "name": "./CHANGELOG.md",
-    "content": "# Change Log\n\nAll notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.\n\n<a name=\"0.2.0\"></a>\n# 0.2.0 (2017-12-27)\n\n\n### Features\n\n* **initial-release:** Initial relase for npm registery ([e8deafd](https://github.com/popcorn-official/pop-api-scraper/commit/e8deafd))\n\n\n\n<a name=\"0.2.0\"></a>\n# 0.2.0 (2017-12-27)\n\n\n### Features\n\n* **initial-release:** Initial relase for npm registery ([e8deafd](https://github.com/popcorn-official/pop-api-scraper/commit/e8deafd))\n",
+    "content": "# Change Log\n\nAll notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.\n\n<a name=\"0.1.0\"></a>\n# 0.1.0 (2017-12-27)\n\n\n### Features\n\n* **initial-release:** Initial relase for npm registery ([e8deafd](https://github.com/popcorn-official/pop-api-scraper/commit/e8deafd))\n\n\n\n<a name=\"0.2.0\"></a>\n# 0.2.0 (2017-12-27)\n\n\n### Features\n\n* **initial-release:** Initial relase for npm registery ([e8deafd](https://github.com/popcorn-official/pop-api-scraper/commit/e8deafd))\n\n\n\n<a name=\"0.2.0\"></a>\n# 0.2.0 (2017-12-27)\n\n\n### Features\n\n* **initial-release:** Initial relase for npm registery ([e8deafd](https://github.com/popcorn-official/pop-api-scraper/commit/e8deafd))\n",
     "static": true,
     "access": "public"
   },
@@ -2811,7 +2811,7 @@
     "__docId__": 126,
     "kind": "testFile",
     "name": "test/Cron.spec.js",
-    "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport del from 'del'\nimport mkdirp from 'mkdirp'\nimport { join } from 'path'\nimport { expect } from 'chai'\nimport { PopApi } from 'pop-api'\n\nimport {\n  Cron,\n  PopApiScraper\n} from '../src/'\n\n/** @test {Cron} */\ndescribe('Cron', () => {\n  /**\n   * The Cron object to test.\n   * @type {Cron}\n   */\n  let cron: Cron\n\n  /**\n   * The temporary directory to store the status and updated files.\n   * @type {string}\n   */\n  let tempDir: string\n\n  /**\n   * Hook for setting up the Cron tests.\n   * @type {Function}\n   */\n  before(() => {\n    tempDir = join(...[\n      __dirname,\n      '..',\n      'tmp'\n    ])\n    del.sync([tempDir])\n    mkdirp.sync(tempDir)\n\n    PopApi.use(PopApiScraper, {\n      statusPath: join(...[tempDir, 'status.json']),\n      updatedPath: join(...[tempDir, 'updated.json'])\n    })\n    cron = new Cron(PopApi)\n  })\n\n  /** @test {Cron#constructor} */\n  it('should test the constructor with options.', () => {\n    new Cron(PopApi, { // eslint-disable-line no-new\n      cronTime: '0 0 */6 * * *'\n    })\n  })\n\n  /** @test {Cron#constructor} */\n  it('should check the attributes of the Cron', () => {\n    expect(cron.cronTime).to.exist\n    expect(cron.cronTime).to.be.a('string')\n  })\n\n  /** @test {Cron#getCron} */\n  it('should get the cron object', () => {\n    const res = cron.getCron(PopApi)\n    expect(res).to.be.an('object')\n  })\n\n  /**\n   * Hook for tearing down the Cron tests.\n   * @type {Function}\n   */\n  after(() => {\n    del.sync(tempDir)\n    PopApi._installedPlugins = new Map()\n  })\n})\n",
+    "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport del from 'del'\nimport mkdirp from 'mkdirp'\nimport sinon from 'sinon'\nimport { join } from 'path'\nimport { expect } from 'chai'\nimport { PopApi } from 'pop-api'\n\nimport {\n  Cron,\n  PopApiScraper\n} from '../src/'\n\n/** @test {Cron} */\ndescribe('Cron', () => {\n  /**\n   * The Cron object to test.\n   * @type {Cron}\n   */\n  let cron: Cron\n\n  /**\n   * The temporary directory to store the status and updated files.\n   * @type {string}\n   */\n  let tempDir: string\n\n  /**\n   * Hook for setting up the Cron tests.\n   * @type {Function}\n   */\n  before(() => {\n    tempDir = join(...[\n      __dirname,\n      '..',\n      'tmp'\n    ])\n    del.sync([tempDir])\n    mkdirp.sync(tempDir)\n\n    PopApi.use(PopApiScraper, {\n      statusPath: join(...[tempDir, 'status.json']),\n      updatedPath: join(...[tempDir, 'updated.json'])\n    })\n    cron = new Cron(PopApi)\n  })\n\n  /** @test {Cron#constructor} */\n  it('should test the constructor with options.', () => {\n    new Cron(PopApi, { // eslint-disable-line no-new\n      cronTime: '0 0 */6 * * *'\n    })\n  })\n\n  /** @test {Cron#constructor} */\n  it('should check the attributes of the Cron', () => {\n    expect(cron.cronTime).to.exist\n    expect(cron.cronTime).to.be.a('string')\n  })\n\n  /** @test {Cron#getCron} */\n  it('should get the cron object', () => {\n    const res = cron.getCron(PopApi)\n    expect(res).to.be.an('object')\n  })\n\n  /** @test {Cron#getCron} */\n  it('should get the cron object and start the cronjob', () => {\n    const stub = sinon.stub(PopApi.scraper, 'scrape')\n\n    const res = cron.getCron(PopApi, true)\n    expect(res).to.be.an('object')\n\n    stub.restore()\n  })\n\n  /**\n   * Hook for tearing down the Cron tests.\n   * @type {Function}\n   */\n  after(() => {\n    del.sync(tempDir)\n    PopApi._installedPlugins = new Map()\n  })\n})\n",
     "static": true,
     "longname": "/home/eosapien/Software/pop-api-scraper/test/Cron.spec.js",
     "access": null,
@@ -2829,7 +2829,7 @@
     "longname": "test/Cron.spec.js~describe3",
     "access": null,
     "description": "Cron",
-    "lineNumber": 16,
+    "lineNumber": 17,
     "testTargets": [
       "Cron"
     ]
@@ -2845,7 +2845,7 @@
     "longname": "test/Cron.spec.js~describe3.it4",
     "access": null,
     "description": "should test the constructor with options.",
-    "lineNumber": 50,
+    "lineNumber": 51,
     "testTargets": [
       "Cron#constructor"
     ]
@@ -2861,7 +2861,7 @@
     "longname": "test/Cron.spec.js~describe3.it5",
     "access": null,
     "description": "should check the attributes of the Cron",
-    "lineNumber": 57,
+    "lineNumber": 58,
     "testTargets": [
       "Cron#constructor"
     ]
@@ -2877,16 +2877,32 @@
     "longname": "test/Cron.spec.js~describe3.it6",
     "access": null,
     "description": "should get the cron object",
-    "lineNumber": 63,
+    "lineNumber": 64,
     "testTargets": [
       "Cron#getCron"
     ]
   },
   {
     "__docId__": 131,
+    "kind": "test",
+    "name": "it7",
+    "testId": 7,
+    "memberof": "test/Cron.spec.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/Cron.spec.js~describe3.it7",
+    "access": null,
+    "description": "should get the cron object and start the cronjob",
+    "lineNumber": 70,
+    "testTargets": [
+      "Cron#getCron"
+    ]
+  },
+  {
+    "__docId__": 132,
     "kind": "testFile",
     "name": "test/PopApiScraper.spec.js",
-    "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport del from 'del'\nimport mkdirp from 'mkdirp'\nimport { expect } from 'chai'\nimport { join } from 'path'\nimport { PopApi } from 'pop-api'\n\nimport ExampleProvider from '../examples/ExampleProvider'\nimport { PopApiScraper } from '../src'\n\n/** @test {PopApiScraper} */\ndescribe('PopApiScraper', () => {\n  /**\n   * The PopApiScraper to test with.\n   * @type {PopApiScraper}\n   */\n  let popApiScraper: PopApiScraper\n\n  /**\n   * The temporary directory to store the status and updated files.\n   * @type {string}\n   */\n  let tempDir: string\n\n  /**\n   * Hook for setting up the PopApiScraper tests.\n   * @type {Function}\n   */\n  before(() => {\n    tempDir = join(...[\n      __dirname,\n      '..',\n      'tmp'\n    ])\n    del.sync([tempDir])\n    mkdirp.sync(tempDir)\n\n    popApiScraper = new PopApiScraper(PopApi, {\n      statusPath: join(...[\n        tempDir,\n        'status.json'\n      ]),\n      updatedPath: join(...[\n        tempDir,\n        'updated.json'\n      ])\n    })\n  })\n\n  /** @test {PopApiScraper#constructor} */\n  it('should check the attributes of the PopApiScraper', () => {\n    expect(popApiScraper.context).to.exist\n    expect(popApiScraper.context).to.be.an('object')\n    expect(popApiScraper.statusPath).to.exist\n    expect(popApiScraper.statusPath).to.be.a('string')\n    expect(popApiScraper.updatedPath).to.exist\n    expect(popApiScraper.updatedPath).to.be.a('string')\n  })\n\n  /** @test {PopApiScraper#constructor} */\n  it('should throw an error if the required options are not given', () => {\n    try {\n      new PopApiScraper(PopApi, {}) // eslint-disable-line no-new\n      expect(true).to.be.false\n    } catch (err) {\n      expect(err).to.be.an('Error')\n      expect(err.message).to.equal(\n        '\\'statusPath\\' and \\'updatedPath\\' are required options for the PopApiScraper middleware!'\n      )\n    }\n  })\n\n  /** @test {PopApiScraper#setStatus} */\n  it('should set the status of the scraper', done => {\n    popApiScraper.setStatus('status').then(res => {\n      expect(res).to.be.undefined\n      done()\n    }).catch(done)\n  })\n\n  /** @test {PopApiScraper#getStatus} */\n  it('should get the status of the scraper', done => {\n    popApiScraper.getStatus().then(res => {\n      expect(res).to.be.a('string')\n      done()\n    }).catch(done)\n  })\n\n  /** @test {PopApiScraper#setUpdated} */\n  it('should set the updated status of the scraper', done => {\n    popApiScraper.setUpdated(123456789).then(res => {\n      expect(res).to.be.undefined\n      done()\n    }).catch(done)\n  })\n\n  /** @test {PopApiScraper#getUpdated} */\n  it('should get the updated status of the scraper', done => {\n    popApiScraper.getUpdated().then(res => {\n      expect(res).to.be.a('number')\n      done()\n    }).catch(done)\n  })\n\n  /**\n   * Helper function to test the `use` method.\n   * @param {!string} msg - The message to print for the test.\n   * @returns {undefined}\n   */\n  function testUse(msg: string): void {\n    /** @test {PopApiScraper.use} */\n    it(msg, () => {\n      PopApiScraper.use(ExampleProvider, {\n        name: 'exampleProvider',\n        configs: [{\n          baseUrl: 'https://jsonplaceholder.typicode.com/'\n        }]\n      })\n\n      expect(PopApiScraper._installedPlugins).to.be.a('Map')\n      expect(PopApiScraper._installedPlugins.size).to.equal(1)\n    })\n  }\n\n  // Execute the tests.\n  [\n    'should register a middleware plugin',\n    'should not register the same plugin twice'\n  ].map(testUse)\n\n  /** @test {PopApiScraper.use} */\n  it('should not register the plugin if it is not a class', () => {\n    PopApiScraper.use({})\n\n    expect(PopApiScraper._installedPlugins).to.be.a('Map')\n    expect(PopApiScraper._installedPlugins.size).to.equal(1)\n  })\n\n  /** @test {PopApiScraper#scrape} */\n  it('should call the scrape method', done => {\n    popApiScraper.scrape().then(res => {\n      expect(res).to.be.an('array')\n      done()\n    }).catch(done)\n  })\n\n  /**\n   * Hook for tearing down the PopApiScraper tests.\n   * @type {Function}\n   */\n  after(() => {\n    del.sync(tempDir)\n  })\n})\n",
+    "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport cluster from 'cluster'\nimport del from 'del'\nimport mkdirp from 'mkdirp'\nimport sinon from 'sinon'\nimport { expect } from 'chai'\nimport { join } from 'path'\nimport { PopApi } from 'pop-api'\n\nimport ExampleProvider from '../examples/ExampleProvider'\nimport { PopApiScraper } from '../src'\n\n/** @test {PopApiScraper} */\ndescribe('PopApiScraper', () => {\n  /**\n   * The PopApiScraper to test with.\n   * @type {PopApiScraper}\n   */\n  let popApiScraper: PopApiScraper\n\n  /**\n   * The temporary directory to store the status and updated files.\n   * @type {string}\n   */\n  let tempDir: string\n\n  /**\n   * Hook for setting up the PopApiScraper tests.\n   * @type {Function}\n   */\n  before(() => {\n    tempDir = join(...[\n      __dirname,\n      '..',\n      'tmp'\n    ])\n    del.sync([tempDir])\n    mkdirp.sync(tempDir)\n\n    popApiScraper = new PopApiScraper(PopApi, {\n      statusPath: join(...[\n        tempDir,\n        'status.json'\n      ]),\n      updatedPath: join(...[\n        tempDir,\n        'updated.json'\n      ])\n    })\n  })\n\n  /** @test {PopApiScraper#constructor} */\n  it('should check the attributes of the PopApiScraper', () => {\n    expect(popApiScraper.context).to.exist\n    expect(popApiScraper.context).to.be.an('object')\n    expect(popApiScraper.statusPath).to.exist\n    expect(popApiScraper.statusPath).to.be.a('string')\n    expect(popApiScraper.updatedPath).to.exist\n    expect(popApiScraper.updatedPath).to.be.a('string')\n  })\n\n  /** @test {PopApiScraper#constructor} */\n  it('should only create teh status files on the master node', () => {\n    const stub = sinon.stub(cluster, 'isMaster')\n    stub.value(false)\n\n    new PopApiScraper(PopApi, { // eslint-disable-line no-new\n      statusPath: join(...[\n        tempDir,\n        'status.json'\n      ]),\n      updatedPath: join(...[\n        tempDir,\n        'updated.json'\n      ])\n    })\n\n    stub.restore()\n  })\n\n  /** @test {PopApiScraper#constructor} */\n  it('should throw an error if the required options are not given', () => {\n    try {\n      new PopApiScraper(PopApi, {}) // eslint-disable-line no-new\n      expect(true).to.be.false\n    } catch (err) {\n      expect(err).to.be.an('Error')\n      expect(err.message).to.equal(\n        '\\'statusPath\\' and \\'updatedPath\\' are required options for the PopApiScraper middleware!'\n      )\n    }\n  })\n\n  /** @test {PopApiScraper#setStatus} */\n  it('should set the status of the scraper', done => {\n    popApiScraper.setStatus('status').then(res => {\n      expect(res).to.be.undefined\n      done()\n    }).catch(done)\n  })\n\n  /** @test {PopApiScraper#getStatus} */\n  it('should get the status of the scraper', done => {\n    popApiScraper.getStatus().then(res => {\n      expect(res).to.be.a('string')\n      done()\n    }).catch(done)\n  })\n\n  /** @test {PopApiScraper#setUpdated} */\n  it('should set the updated status of the scraper', done => {\n    popApiScraper.setUpdated(123456789).then(res => {\n      expect(res).to.be.undefined\n      done()\n    }).catch(done)\n  })\n\n  /** @test {PopApiScraper#getUpdated} */\n  it('should get the updated status of the scraper', done => {\n    popApiScraper.getUpdated().then(res => {\n      expect(res).to.be.a('number')\n      done()\n    }).catch(done)\n  })\n\n  /**\n   * Helper function to test the `use` method.\n   * @param {!string} msg - The message to print for the test.\n   * @returns {undefined}\n   */\n  function testUse(msg: string): void {\n    /** @test {PopApiScraper.use} */\n    it(msg, () => {\n      PopApiScraper.use(ExampleProvider, {\n        name: 'exampleProvider',\n        configs: [{\n          baseUrl: 'https://jsonplaceholder.typicode.com/'\n        }]\n      })\n\n      expect(PopApiScraper._installedPlugins).to.be.a('Map')\n      expect(PopApiScraper._installedPlugins.size).to.equal(1)\n    })\n  }\n\n  // Execute the tests.\n  [\n    'should register a middleware plugin',\n    'should not register the same plugin twice'\n  ].map(testUse)\n\n  /** @test {PopApiScraper.use} */\n  it('should not register the plugin if it is not a class', () => {\n    PopApiScraper.use({})\n\n    expect(PopApiScraper._installedPlugins).to.be.a('Map')\n    expect(PopApiScraper._installedPlugins.size).to.equal(1)\n  })\n\n  /** @test {PopApiScraper#scrape} */\n  it('should call the scrape method', done => {\n    popApiScraper.scrape().then(res => {\n      expect(res).to.be.an('array')\n      done()\n    }).catch(done)\n  })\n\n  /**\n   * Hook for tearing down the PopApiScraper tests.\n   * @type {Function}\n   */\n  after(() => {\n    del.sync(tempDir)\n  })\n})\n",
     "static": true,
     "longname": "/home/eosapien/Software/pop-api-scraper/test/PopApiScraper.spec.js",
     "access": null,
@@ -2894,35 +2910,19 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 132,
+    "__docId__": 133,
     "kind": "test",
-    "name": "describe7",
-    "testId": 7,
+    "name": "describe8",
+    "testId": 8,
     "memberof": "test/PopApiScraper.spec.js",
     "testDepth": 0,
     "static": true,
-    "longname": "test/PopApiScraper.spec.js~describe7",
+    "longname": "test/PopApiScraper.spec.js~describe8",
     "access": null,
     "description": "PopApiScraper",
-    "lineNumber": 14,
+    "lineNumber": 16,
     "testTargets": [
       "PopApiScraper"
-    ]
-  },
-  {
-    "__docId__": 133,
-    "kind": "test",
-    "name": "it8",
-    "testId": 8,
-    "memberof": "test/PopApiScraper.spec.js~describe7",
-    "testDepth": 1,
-    "static": true,
-    "longname": "test/PopApiScraper.spec.js~describe7.it8",
-    "access": null,
-    "description": "should check the attributes of the PopApiScraper",
-    "lineNumber": 53,
-    "testTargets": [
-      "PopApiScraper#constructor"
     ]
   },
   {
@@ -2930,13 +2930,13 @@
     "kind": "test",
     "name": "it9",
     "testId": 9,
-    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "memberof": "test/PopApiScraper.spec.js~describe8",
     "testDepth": 1,
     "static": true,
-    "longname": "test/PopApiScraper.spec.js~describe7.it9",
+    "longname": "test/PopApiScraper.spec.js~describe8.it9",
     "access": null,
-    "description": "should throw an error if the required options are not given",
-    "lineNumber": 63,
+    "description": "should check the attributes of the PopApiScraper",
+    "lineNumber": 55,
     "testTargets": [
       "PopApiScraper#constructor"
     ]
@@ -2946,15 +2946,15 @@
     "kind": "test",
     "name": "it10",
     "testId": 10,
-    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "memberof": "test/PopApiScraper.spec.js~describe8",
     "testDepth": 1,
     "static": true,
-    "longname": "test/PopApiScraper.spec.js~describe7.it10",
+    "longname": "test/PopApiScraper.spec.js~describe8.it10",
     "access": null,
-    "description": "should set the status of the scraper",
-    "lineNumber": 76,
+    "description": "should only create teh status files on the master node",
+    "lineNumber": 65,
     "testTargets": [
-      "PopApiScraper#setStatus"
+      "PopApiScraper#constructor"
     ]
   },
   {
@@ -2962,15 +2962,15 @@
     "kind": "test",
     "name": "it11",
     "testId": 11,
-    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "memberof": "test/PopApiScraper.spec.js~describe8",
     "testDepth": 1,
     "static": true,
-    "longname": "test/PopApiScraper.spec.js~describe7.it11",
+    "longname": "test/PopApiScraper.spec.js~describe8.it11",
     "access": null,
-    "description": "should get the status of the scraper",
+    "description": "should throw an error if the required options are not given",
     "lineNumber": 84,
     "testTargets": [
-      "PopApiScraper#getStatus"
+      "PopApiScraper#constructor"
     ]
   },
   {
@@ -2978,15 +2978,15 @@
     "kind": "test",
     "name": "it12",
     "testId": 12,
-    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "memberof": "test/PopApiScraper.spec.js~describe8",
     "testDepth": 1,
     "static": true,
-    "longname": "test/PopApiScraper.spec.js~describe7.it12",
+    "longname": "test/PopApiScraper.spec.js~describe8.it12",
     "access": null,
-    "description": "should set the updated status of the scraper",
-    "lineNumber": 92,
+    "description": "should set the status of the scraper",
+    "lineNumber": 97,
     "testTargets": [
-      "PopApiScraper#setUpdated"
+      "PopApiScraper#setStatus"
     ]
   },
   {
@@ -2994,15 +2994,15 @@
     "kind": "test",
     "name": "it13",
     "testId": 13,
-    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "memberof": "test/PopApiScraper.spec.js~describe8",
     "testDepth": 1,
     "static": true,
-    "longname": "test/PopApiScraper.spec.js~describe7.it13",
+    "longname": "test/PopApiScraper.spec.js~describe8.it13",
     "access": null,
-    "description": "should get the updated status of the scraper",
-    "lineNumber": 100,
+    "description": "should get the status of the scraper",
+    "lineNumber": 105,
     "testTargets": [
-      "PopApiScraper#getUpdated"
+      "PopApiScraper#getStatus"
     ]
   },
   {
@@ -3010,14 +3010,15 @@
     "kind": "test",
     "name": "it14",
     "testId": 14,
-    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "memberof": "test/PopApiScraper.spec.js~describe8",
     "testDepth": 1,
     "static": true,
-    "longname": "test/PopApiScraper.spec.js~describe7.it14",
+    "longname": "test/PopApiScraper.spec.js~describe8.it14",
     "access": null,
-    "lineNumber": 114,
+    "description": "should set the updated status of the scraper",
+    "lineNumber": 113,
     "testTargets": [
-      "PopApiScraper.use"
+      "PopApiScraper#setUpdated"
     ]
   },
   {
@@ -3025,15 +3026,15 @@
     "kind": "test",
     "name": "it15",
     "testId": 15,
-    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "memberof": "test/PopApiScraper.spec.js~describe8",
     "testDepth": 1,
     "static": true,
-    "longname": "test/PopApiScraper.spec.js~describe7.it15",
+    "longname": "test/PopApiScraper.spec.js~describe8.it15",
     "access": null,
-    "description": "should not register the plugin if it is not a class",
-    "lineNumber": 134,
+    "description": "should get the updated status of the scraper",
+    "lineNumber": 121,
     "testTargets": [
-      "PopApiScraper.use"
+      "PopApiScraper#getUpdated"
     ]
   },
   {
@@ -3041,19 +3042,50 @@
     "kind": "test",
     "name": "it16",
     "testId": 16,
-    "memberof": "test/PopApiScraper.spec.js~describe7",
+    "memberof": "test/PopApiScraper.spec.js~describe8",
     "testDepth": 1,
     "static": true,
-    "longname": "test/PopApiScraper.spec.js~describe7.it16",
+    "longname": "test/PopApiScraper.spec.js~describe8.it16",
+    "access": null,
+    "lineNumber": 135,
+    "testTargets": [
+      "PopApiScraper.use"
+    ]
+  },
+  {
+    "__docId__": 142,
+    "kind": "test",
+    "name": "it17",
+    "testId": 17,
+    "memberof": "test/PopApiScraper.spec.js~describe8",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/PopApiScraper.spec.js~describe8.it17",
+    "access": null,
+    "description": "should not register the plugin if it is not a class",
+    "lineNumber": 155,
+    "testTargets": [
+      "PopApiScraper.use"
+    ]
+  },
+  {
+    "__docId__": 143,
+    "kind": "test",
+    "name": "it18",
+    "testId": 18,
+    "memberof": "test/PopApiScraper.spec.js~describe8",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/PopApiScraper.spec.js~describe8.it18",
     "access": null,
     "description": "should call the scrape method",
-    "lineNumber": 142,
+    "lineNumber": 163,
     "testTargets": [
       "PopApiScraper#scrape"
     ]
   },
   {
-    "__docId__": 142,
+    "__docId__": 144,
     "kind": "testFile",
     "name": "test/http/AbstractHttpService.spec.js",
     "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport { expect } from 'chai'\n\nimport { AbstractHttpService } from '../../src'\n\n/** @test {AbstractHttpService} */\ndescribe('AbstractHttpService', () => {\n  /**\n   * The AbstractHttpService object to be tested.\n   * @type {AbstractHttpService}\n   */\n  let abstractHttpService: AbstractHttpService\n\n  /**\n   * Hook for setting up the AbstractHttpService tests.\n   * @type {Function}\n   */\n  before(() => {\n    abstractHttpService = new AbstractHttpService({\n      baseUrl: 'https://jsonplaceholder.typicode.com/'\n    })\n  })\n\n  /** @test {HttpService#constructor} */\n  it('should throw an error when calling the get method', () => {\n    abstractHttpService = new AbstractHttpService({\n      baseUrl: 'https://jsonplaceholder.typicode.com',\n      options: {}\n    })\n  })\n\n  /** @test {AbstractHttpService#get} */\n  it('should throw an error when calling the get method', () => {\n    expect(abstractHttpService.get.bind(abstractHttpService)).to\n      .throw('Using default method: \\'request\\'')\n  })\n\n  /** @test {AbstractHttpService#post} */\n  it('should throw an error when calling the post method', () => {\n    expect(abstractHttpService.post.bind(abstractHttpService)).to\n      .throw('Using default method: \\'request\\'')\n  })\n\n  /** @test {AbstractHttpService#put} */\n  it('should throw an error when calling the put method', () => {\n    expect(abstractHttpService.put.bind(abstractHttpService)).to\n      .throw('Using default method: \\'request\\'')\n  })\n\n  /** @test {AbstractHttpService#delete} */\n  it('should throw an error when calling the delete method', () => {\n    expect(abstractHttpService.delete.bind(abstractHttpService)).to\n      .throw('Using default method: \\'request\\'')\n  })\n\n  /** @test {AbstractHttpService#download} */\n  it('should throw an error when calling the download method', () => {\n    expect(abstractHttpService.download.bind(abstractHttpService)).to\n      .throw('Using default method: \\'download\\'')\n  })\n\n  /** @test {AbstractHttpService#handleBody} */\n  it('should get the raw body of a request', () => {\n    const body = '<html><head><title>Test</title></head></html>'\n    const res = abstractHttpService.handleBody(body, true)\n    expect(res).to.equal(body)\n  })\n\n  /** @test {AbstractHttpService#handleBody} */\n  it('should get the body wrapped in cheerio', () => {\n    const body = '<html><head><title>Test</title></head></html>'\n    const res = abstractHttpService.handleBody(body, false)\n    expect(res).to.be.a('function')\n  })\n\n  /** @test {AbstractHttpService#request} */\n  it('should throw an error when calling the _request method', () => {\n    expect(abstractHttpService.request.bind(abstractHttpService)).to\n      .throw('Using default method: \\'request\\'')\n  })\n\n  /** @test {AbstractHttpService#printDebug} */\n  it('should throw an error when calling the _printDebug method', () => {\n    const url = 'https://jsonplaceholder.typicode.com'\n    const toStringify = {\n      key: 'value'\n    }\n\n    let res = abstractHttpService.printDebug('GET', url, {\n      body: toStringify\n    })\n    expect(res).to.be.undefined\n\n    res = abstractHttpService.printDebug('GET', url, {\n      query: toStringify\n    })\n    expect(res).to.be.undefined\n\n    res = abstractHttpService.printDebug('GET', url, {\n      form: toStringify\n    })\n    expect(res).to.be.undefined\n\n    res = abstractHttpService.printDebug('GET', url, {})\n    expect(res).to.be.undefined\n\n    res = abstractHttpService.printDebug('GET', url)\n    expect(res).to.be.undefined\n  })\n})\n",
@@ -3064,14 +3096,14 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 143,
+    "__docId__": 145,
     "kind": "test",
-    "name": "describe17",
-    "testId": 17,
+    "name": "describe19",
+    "testId": 19,
     "memberof": "test/http/AbstractHttpService.spec.js",
     "testDepth": 0,
     "static": true,
-    "longname": "test/http/AbstractHttpService.spec.js~describe17",
+    "longname": "test/http/AbstractHttpService.spec.js~describe19",
     "access": null,
     "description": "AbstractHttpService",
     "lineNumber": 9,
@@ -3080,14 +3112,14 @@
     ]
   },
   {
-    "__docId__": 144,
+    "__docId__": 146,
     "kind": "test",
-    "name": "it18",
-    "testId": 18,
-    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "name": "it20",
+    "testId": 20,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe19",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/AbstractHttpService.spec.js~describe17.it18",
+    "longname": "test/http/AbstractHttpService.spec.js~describe19.it20",
     "access": null,
     "description": "should throw an error when calling the get method",
     "lineNumber": 27,
@@ -3096,14 +3128,14 @@
     ]
   },
   {
-    "__docId__": 145,
+    "__docId__": 147,
     "kind": "test",
-    "name": "it19",
-    "testId": 19,
-    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "name": "it21",
+    "testId": 21,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe19",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/AbstractHttpService.spec.js~describe17.it19",
+    "longname": "test/http/AbstractHttpService.spec.js~describe19.it21",
     "access": null,
     "description": "should throw an error when calling the get method",
     "lineNumber": 35,
@@ -3112,14 +3144,14 @@
     ]
   },
   {
-    "__docId__": 146,
+    "__docId__": 148,
     "kind": "test",
-    "name": "it20",
-    "testId": 20,
-    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "name": "it22",
+    "testId": 22,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe19",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/AbstractHttpService.spec.js~describe17.it20",
+    "longname": "test/http/AbstractHttpService.spec.js~describe19.it22",
     "access": null,
     "description": "should throw an error when calling the post method",
     "lineNumber": 41,
@@ -3128,14 +3160,14 @@
     ]
   },
   {
-    "__docId__": 147,
+    "__docId__": 149,
     "kind": "test",
-    "name": "it21",
-    "testId": 21,
-    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "name": "it23",
+    "testId": 23,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe19",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/AbstractHttpService.spec.js~describe17.it21",
+    "longname": "test/http/AbstractHttpService.spec.js~describe19.it23",
     "access": null,
     "description": "should throw an error when calling the put method",
     "lineNumber": 47,
@@ -3144,14 +3176,14 @@
     ]
   },
   {
-    "__docId__": 148,
+    "__docId__": 150,
     "kind": "test",
-    "name": "it22",
-    "testId": 22,
-    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "name": "it24",
+    "testId": 24,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe19",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/AbstractHttpService.spec.js~describe17.it22",
+    "longname": "test/http/AbstractHttpService.spec.js~describe19.it24",
     "access": null,
     "description": "should throw an error when calling the delete method",
     "lineNumber": 53,
@@ -3160,14 +3192,14 @@
     ]
   },
   {
-    "__docId__": 149,
+    "__docId__": 151,
     "kind": "test",
-    "name": "it23",
-    "testId": 23,
-    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "name": "it25",
+    "testId": 25,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe19",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/AbstractHttpService.spec.js~describe17.it23",
+    "longname": "test/http/AbstractHttpService.spec.js~describe19.it25",
     "access": null,
     "description": "should throw an error when calling the download method",
     "lineNumber": 59,
@@ -3176,14 +3208,14 @@
     ]
   },
   {
-    "__docId__": 150,
+    "__docId__": 152,
     "kind": "test",
-    "name": "it24",
-    "testId": 24,
-    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "name": "it26",
+    "testId": 26,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe19",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/AbstractHttpService.spec.js~describe17.it24",
+    "longname": "test/http/AbstractHttpService.spec.js~describe19.it26",
     "access": null,
     "description": "should get the raw body of a request",
     "lineNumber": 65,
@@ -3192,14 +3224,14 @@
     ]
   },
   {
-    "__docId__": 151,
+    "__docId__": 153,
     "kind": "test",
-    "name": "it25",
-    "testId": 25,
-    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "name": "it27",
+    "testId": 27,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe19",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/AbstractHttpService.spec.js~describe17.it25",
+    "longname": "test/http/AbstractHttpService.spec.js~describe19.it27",
     "access": null,
     "description": "should get the body wrapped in cheerio",
     "lineNumber": 72,
@@ -3208,14 +3240,14 @@
     ]
   },
   {
-    "__docId__": 152,
+    "__docId__": 154,
     "kind": "test",
-    "name": "it26",
-    "testId": 26,
-    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "name": "it28",
+    "testId": 28,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe19",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/AbstractHttpService.spec.js~describe17.it26",
+    "longname": "test/http/AbstractHttpService.spec.js~describe19.it28",
     "access": null,
     "description": "should throw an error when calling the _request method",
     "lineNumber": 79,
@@ -3224,14 +3256,14 @@
     ]
   },
   {
-    "__docId__": 153,
+    "__docId__": 155,
     "kind": "test",
-    "name": "it27",
-    "testId": 27,
-    "memberof": "test/http/AbstractHttpService.spec.js~describe17",
+    "name": "it29",
+    "testId": 29,
+    "memberof": "test/http/AbstractHttpService.spec.js~describe19",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/AbstractHttpService.spec.js~describe17.it27",
+    "longname": "test/http/AbstractHttpService.spec.js~describe19.it29",
     "access": null,
     "description": "should throw an error when calling the _printDebug method",
     "lineNumber": 85,
@@ -3240,7 +3272,7 @@
     ]
   },
   {
-    "__docId__": 154,
+    "__docId__": 156,
     "kind": "testFile",
     "name": "test/http/HttpService.spec.js",
     "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport del from 'del'\nimport mkdirp from 'mkdirp'\nimport { expect } from 'chai'\nimport { existsSync } from 'fs'\nimport { join } from 'path'\n\nimport { HttpService } from '../../src'\n\n/** @test {HttpService} */\ndescribe('HttpService', () => {\n  /**\n   * The HttpService object to be tested.\n   * @type {HttpService}\n   */\n  let httpService: HttpService\n\n  /**\n   * The temporary directory to store the status and updated files.\n   * @type {string}\n   */\n  let tempDir: string\n\n  /**\n   * Hook for setting up the HttpService tests.\n   * @type {Function}\n   */\n  before(() => {\n    tempDir = join(...[\n      __dirname,\n      '..',\n      '..',\n      'tmp'\n    ])\n    del.sync([tempDir])\n    mkdirp.sync(tempDir)\n\n    httpService = new HttpService({\n      baseUrl: 'https://jsonplaceholder.typicode.com/'\n    })\n  })\n\n  /** @test {HttpService#request} */\n  it('should make a successful HTTP request', done => {\n    httpService.request('GET', 'posts/1', {\n      json: true\n    }, true).then(res => {\n      expect(res).to.be.an('object')\n      done()\n    }).catch(done)\n  })\n\n  /** @test {HttpService#download} */\n  it('should fail to download a given link', done => {\n    const fileName = 'file.json'\n    const filePath = join(...[tempDir, fileName])\n    const endpoint = '/faulty/1'\n\n    expect(existsSync(filePath)).to.be.false\n\n    httpService.download(endpoint, fileName)\n      .then(done)\n      .catch(() => {\n        expect(existsSync(filePath)).to.be.false\n        done()\n      })\n  })\n\n  /** @test {HttpService#download} */\n  it('should successfully download a given link', done => {\n    const fileName = 'file.json'\n    const filePath = join(...[tempDir, fileName])\n    const endpoint = '/posts/1'\n\n    expect(existsSync(filePath)).to.be.false\n\n    httpService.download(endpoint, filePath).then(res => {\n      expect(res).to.be.a('string')\n      expect(existsSync(filePath)).to.be.true\n\n      done()\n    }).catch(done)\n  })\n\n  /**\n   * Hook for tearing down the HttpService tests.\n   * @type {Function}\n   */\n  after(() => {\n    del.sync(tempDir)\n  })\n})\n",
@@ -3251,14 +3283,14 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 155,
+    "__docId__": 157,
     "kind": "test",
-    "name": "describe28",
-    "testId": 28,
+    "name": "describe30",
+    "testId": 30,
     "memberof": "test/http/HttpService.spec.js",
     "testDepth": 0,
     "static": true,
-    "longname": "test/http/HttpService.spec.js~describe28",
+    "longname": "test/http/HttpService.spec.js~describe30",
     "access": null,
     "description": "HttpService",
     "lineNumber": 13,
@@ -3267,14 +3299,14 @@
     ]
   },
   {
-    "__docId__": 156,
+    "__docId__": 158,
     "kind": "test",
-    "name": "it29",
-    "testId": 29,
-    "memberof": "test/http/HttpService.spec.js~describe28",
+    "name": "it31",
+    "testId": 31,
+    "memberof": "test/http/HttpService.spec.js~describe30",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/HttpService.spec.js~describe28.it29",
+    "longname": "test/http/HttpService.spec.js~describe30.it31",
     "access": null,
     "description": "should make a successful HTTP request",
     "lineNumber": 46,
@@ -3283,14 +3315,14 @@
     ]
   },
   {
-    "__docId__": 157,
+    "__docId__": 159,
     "kind": "test",
-    "name": "it30",
-    "testId": 30,
-    "memberof": "test/http/HttpService.spec.js~describe28",
+    "name": "it32",
+    "testId": 32,
+    "memberof": "test/http/HttpService.spec.js~describe30",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/HttpService.spec.js~describe28.it30",
+    "longname": "test/http/HttpService.spec.js~describe30.it32",
     "access": null,
     "description": "should fail to download a given link",
     "lineNumber": 56,
@@ -3299,14 +3331,14 @@
     ]
   },
   {
-    "__docId__": 158,
+    "__docId__": 160,
     "kind": "test",
-    "name": "it31",
-    "testId": 31,
-    "memberof": "test/http/HttpService.spec.js~describe28",
+    "name": "it33",
+    "testId": 33,
+    "memberof": "test/http/HttpService.spec.js~describe30",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/HttpService.spec.js~describe28.it31",
+    "longname": "test/http/HttpService.spec.js~describe30.it33",
     "access": null,
     "description": "should successfully download a given link",
     "lineNumber": 72,
@@ -3315,7 +3347,7 @@
     ]
   },
   {
-    "__docId__": 159,
+    "__docId__": 161,
     "kind": "testFile",
     "name": "test/http/IHttpService.spec.js",
     "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport { expect } from 'chai'\n\nimport { IHttpService } from '../../src'\n\n/** @test {IHttpService} */\ndescribe('IHttpService', () => {\n  /**\n   * The IHttpService object to be tested.\n   * @type {IHttpService}\n   */\n  let iHttpService: IHttpService\n\n  /**\n   * Hook for setting up the IHttpService tests.\n   * @type {Function}\n   */\n  before(() => {\n    iHttpService = new IHttpService()\n  })\n\n  /** @test {IHttpService#get} */\n  it('should throw an error when calling the get method', () => {\n    expect(iHttpService.get).to\n      .throw('Using default method: \\'get\\'')\n  })\n\n  /** @test {IHttpService#post} */\n  it('should throw an error when calling the post method', () => {\n    expect(iHttpService.post).to\n      .throw('Using default method: \\'post\\'')\n  })\n  /** @test {IHttpService#put} */\n  it('should throw an error when calling the put method', () => {\n    expect(iHttpService.put).to\n      .throw('Using default method: \\'put\\'')\n  })\n  /** @test {IHttpService#delete} */\n  it('should throw an error when calling the delete method', () => {\n    expect(iHttpService.delete).to\n      .throw('Using default method: \\'delete\\'')\n  })\n\n  /** @test {IHttpService#printDebug} */\n  it('should throw an error when calling the printDebug method', () => {\n    expect(iHttpService.printDebug).to\n      .throw('Using default method: \\'printDebug\\'')\n  })\n\n  /** @test {IHttpService#request} */\n  it('should throw an error when calling the request method', () => {\n    expect(iHttpService.request).to\n      .throw('Using default method: \\'request\\'')\n  })\n})\n",
@@ -3326,14 +3358,14 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 160,
+    "__docId__": 162,
     "kind": "test",
-    "name": "describe32",
-    "testId": 32,
+    "name": "describe34",
+    "testId": 34,
     "memberof": "test/http/IHttpService.spec.js",
     "testDepth": 0,
     "static": true,
-    "longname": "test/http/IHttpService.spec.js~describe32",
+    "longname": "test/http/IHttpService.spec.js~describe34",
     "access": null,
     "description": "IHttpService",
     "lineNumber": 9,
@@ -3342,14 +3374,14 @@
     ]
   },
   {
-    "__docId__": 161,
+    "__docId__": 163,
     "kind": "test",
-    "name": "it33",
-    "testId": 33,
-    "memberof": "test/http/IHttpService.spec.js~describe32",
+    "name": "it35",
+    "testId": 35,
+    "memberof": "test/http/IHttpService.spec.js~describe34",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/IHttpService.spec.js~describe32.it33",
+    "longname": "test/http/IHttpService.spec.js~describe34.it35",
     "access": null,
     "description": "should throw an error when calling the get method",
     "lineNumber": 25,
@@ -3358,14 +3390,14 @@
     ]
   },
   {
-    "__docId__": 162,
+    "__docId__": 164,
     "kind": "test",
-    "name": "it34",
-    "testId": 34,
-    "memberof": "test/http/IHttpService.spec.js~describe32",
+    "name": "it36",
+    "testId": 36,
+    "memberof": "test/http/IHttpService.spec.js~describe34",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/IHttpService.spec.js~describe32.it34",
+    "longname": "test/http/IHttpService.spec.js~describe34.it36",
     "access": null,
     "description": "should throw an error when calling the post method",
     "lineNumber": 31,
@@ -3374,14 +3406,14 @@
     ]
   },
   {
-    "__docId__": 163,
+    "__docId__": 165,
     "kind": "test",
-    "name": "it35",
-    "testId": 35,
-    "memberof": "test/http/IHttpService.spec.js~describe32",
+    "name": "it37",
+    "testId": 37,
+    "memberof": "test/http/IHttpService.spec.js~describe34",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/IHttpService.spec.js~describe32.it35",
+    "longname": "test/http/IHttpService.spec.js~describe34.it37",
     "access": null,
     "description": "should throw an error when calling the put method",
     "lineNumber": 36,
@@ -3390,14 +3422,14 @@
     ]
   },
   {
-    "__docId__": 164,
+    "__docId__": 166,
     "kind": "test",
-    "name": "it36",
-    "testId": 36,
-    "memberof": "test/http/IHttpService.spec.js~describe32",
+    "name": "it38",
+    "testId": 38,
+    "memberof": "test/http/IHttpService.spec.js~describe34",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/IHttpService.spec.js~describe32.it36",
+    "longname": "test/http/IHttpService.spec.js~describe34.it38",
     "access": null,
     "description": "should throw an error when calling the delete method",
     "lineNumber": 41,
@@ -3406,14 +3438,14 @@
     ]
   },
   {
-    "__docId__": 165,
+    "__docId__": 167,
     "kind": "test",
-    "name": "it37",
-    "testId": 37,
-    "memberof": "test/http/IHttpService.spec.js~describe32",
+    "name": "it39",
+    "testId": 39,
+    "memberof": "test/http/IHttpService.spec.js~describe34",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/IHttpService.spec.js~describe32.it37",
+    "longname": "test/http/IHttpService.spec.js~describe34.it39",
     "access": null,
     "description": "should throw an error when calling the printDebug method",
     "lineNumber": 47,
@@ -3422,14 +3454,14 @@
     ]
   },
   {
-    "__docId__": 166,
+    "__docId__": 168,
     "kind": "test",
-    "name": "it38",
-    "testId": 38,
-    "memberof": "test/http/IHttpService.spec.js~describe32",
+    "name": "it40",
+    "testId": 40,
+    "memberof": "test/http/IHttpService.spec.js~describe34",
     "testDepth": 1,
     "static": true,
-    "longname": "test/http/IHttpService.spec.js~describe32.it38",
+    "longname": "test/http/IHttpService.spec.js~describe34.it40",
     "access": null,
     "description": "should throw an error when calling the request method",
     "lineNumber": 53,
@@ -3438,7 +3470,7 @@
     ]
   },
   {
-    "__docId__": 167,
+    "__docId__": 169,
     "kind": "testFile",
     "name": "test/providers/AbstractProvider.spec.js",
     "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport { expect } from 'chai'\n\nimport { AbstractProvider } from '../../src'\n\n/** @test {AbstractProvider} */\ndescribe('AbstractProvider', () => {\n  /** @test {AbstractProvider#scrapeConfigs} */\n  it('should throw an error when calling the scrapeConfigs method', done => {\n    const abstractProvider = new AbstractProvider({}, {\n      baseUrl: 'https://jsonplaceholder.typicode.com/',\n      configs: [{}]\n    })\n\n    abstractProvider.scrapeConfigs()\n      .then(done)\n      .catch(err => {\n        expect(err).to.be.an('Error')\n        done()\n      })\n  })\n})\n",
@@ -3449,14 +3481,14 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 168,
+    "__docId__": 170,
     "kind": "test",
-    "name": "describe39",
-    "testId": 39,
+    "name": "describe41",
+    "testId": 41,
     "memberof": "test/providers/AbstractProvider.spec.js",
     "testDepth": 0,
     "static": true,
-    "longname": "test/providers/AbstractProvider.spec.js~describe39",
+    "longname": "test/providers/AbstractProvider.spec.js~describe41",
     "access": null,
     "description": "AbstractProvider",
     "lineNumber": 9,
@@ -3465,14 +3497,14 @@
     ]
   },
   {
-    "__docId__": 169,
+    "__docId__": 171,
     "kind": "test",
-    "name": "it40",
-    "testId": 40,
-    "memberof": "test/providers/AbstractProvider.spec.js~describe39",
+    "name": "it42",
+    "testId": 42,
+    "memberof": "test/providers/AbstractProvider.spec.js~describe41",
     "testDepth": 1,
     "static": true,
-    "longname": "test/providers/AbstractProvider.spec.js~describe39.it40",
+    "longname": "test/providers/AbstractProvider.spec.js~describe41.it42",
     "access": null,
     "description": "should throw an error when calling the scrapeConfigs method",
     "lineNumber": 11,
@@ -3481,7 +3513,7 @@
     ]
   },
   {
-    "__docId__": 170,
+    "__docId__": 172,
     "kind": "testFile",
     "name": "test/providers/IProvider.spec.js",
     "content": "// Import the necessary modules.\n// @flow\n/* eslint-disable no-unused-expressions */\nimport { expect } from 'chai'\n\nimport { IProvider } from '../../src'\n\n/** @test {IProvider} */\ndescribe('IProvider', () => {\n  /**\n   * The IProvider object to be tested.\n   * @type {IProvider}\n   */\n  let iProvider: IProvider\n\n  /**\n   * Hook for setting up the IProvider tests.\n   * @type {Function}\n   */\n  before(() => {\n    iProvider = new IProvider()\n  })\n\n  /** @test {IProvider#scrapeConfig} */\n  it('should throw an error when calling the scrapeConfig method', () => {\n    expect(iProvider.scrapeConfig).to\n      .throw('Using default method: \\'scrapeConfig\\'')\n  })\n\n  /** @test {IProvider#scrapeConfigs} */\n  it('should throw an error when calling the scrapeConfigs method', () => {\n    expect(iProvider.scrapeConfigs).to\n      .throw('Using default method: \\'scrapeConfigs\\'')\n  })\n})\n",
@@ -3492,14 +3524,14 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 171,
+    "__docId__": 173,
     "kind": "test",
-    "name": "describe41",
-    "testId": 41,
+    "name": "describe43",
+    "testId": 43,
     "memberof": "test/providers/IProvider.spec.js",
     "testDepth": 0,
     "static": true,
-    "longname": "test/providers/IProvider.spec.js~describe41",
+    "longname": "test/providers/IProvider.spec.js~describe43",
     "access": null,
     "description": "IProvider",
     "lineNumber": 9,
@@ -3508,14 +3540,14 @@
     ]
   },
   {
-    "__docId__": 172,
+    "__docId__": 174,
     "kind": "test",
-    "name": "it42",
-    "testId": 42,
-    "memberof": "test/providers/IProvider.spec.js~describe41",
+    "name": "it44",
+    "testId": 44,
+    "memberof": "test/providers/IProvider.spec.js~describe43",
     "testDepth": 1,
     "static": true,
-    "longname": "test/providers/IProvider.spec.js~describe41.it42",
+    "longname": "test/providers/IProvider.spec.js~describe43.it44",
     "access": null,
     "description": "should throw an error when calling the scrapeConfig method",
     "lineNumber": 25,
@@ -3524,14 +3556,14 @@
     ]
   },
   {
-    "__docId__": 173,
+    "__docId__": 175,
     "kind": "test",
-    "name": "it43",
-    "testId": 43,
-    "memberof": "test/providers/IProvider.spec.js~describe41",
+    "name": "it45",
+    "testId": 45,
+    "memberof": "test/providers/IProvider.spec.js~describe43",
     "testDepth": 1,
     "static": true,
-    "longname": "test/providers/IProvider.spec.js~describe41.it43",
+    "longname": "test/providers/IProvider.spec.js~describe43.it45",
     "access": null,
     "description": "should throw an error when calling the scrapeConfigs method",
     "lineNumber": 31,

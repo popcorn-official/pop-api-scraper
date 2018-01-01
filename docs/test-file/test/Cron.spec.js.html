@@ -48,6 +48,7 @@
 /* eslint-disable no-unused-expressions */
 import del from &apos;del&apos;
 import mkdirp from &apos;mkdirp&apos;
+import sinon from &apos;sinon&apos;
 import { join } from &apos;path&apos;
 import { expect } from &apos;chai&apos;
 import { PopApi } from &apos;pop-api&apos;
@@ -108,6 +109,16 @@ describe(&apos;Cron&apos;, () =&gt; {
   it(&apos;should get the cron object&apos;, () =&gt; {
     const res = cron.getCron(PopApi)
     expect(res).to.be.an(&apos;object&apos;)
+  })
+
+  /** @test {Cron#getCron} */
+  it(&apos;should get the cron object and start the cronjob&apos;, () =&gt; {
+    const stub = sinon.stub(PopApi.scraper, &apos;scrape&apos;)
+
+    const res = cron.getCron(PopApi, true)
+    expect(res).to.be.an(&apos;object&apos;)
+
+    stub.restore()
   })
 
   /**

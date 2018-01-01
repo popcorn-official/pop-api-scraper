@@ -46,8 +46,10 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// Import the necessary modules.
 // @flow
 /* eslint-disable no-unused-expressions */
+import cluster from &apos;cluster&apos;
 import del from &apos;del&apos;
 import mkdirp from &apos;mkdirp&apos;
+import sinon from &apos;sinon&apos;
 import { expect } from &apos;chai&apos;
 import { join } from &apos;path&apos;
 import { PopApi } from &apos;pop-api&apos;
@@ -102,6 +104,25 @@ describe(&apos;PopApiScraper&apos;, () =&gt; {
     expect(popApiScraper.statusPath).to.be.a(&apos;string&apos;)
     expect(popApiScraper.updatedPath).to.exist
     expect(popApiScraper.updatedPath).to.be.a(&apos;string&apos;)
+  })
+
+  /** @test {PopApiScraper#constructor} */
+  it(&apos;should only create teh status files on the master node&apos;, () =&gt; {
+    const stub = sinon.stub(cluster, &apos;isMaster&apos;)
+    stub.value(false)
+
+    new PopApiScraper(PopApi, { // eslint-disable-line no-new
+      statusPath: join(...[
+        tempDir,
+        &apos;status.json&apos;
+      ]),
+      updatedPath: join(...[
+        tempDir,
+        &apos;updated.json&apos;
+      ])
+    })
+
+    stub.restore()
   })
 
   /** @test {PopApiScraper#constructor} */
