@@ -2,6 +2,7 @@
 // @flow
 import fs from 'fs-extra'
 import pMap from 'p-map'
+import { isMaster } from 'cluster'
 
 import Context from './Context'
 
@@ -75,8 +76,10 @@ export default class PopApiScraper {
      */
     this.updatedPath = updatedPath
 
-    fs.createWriteStream(this.statusPath).end()
-    fs.createWriteStream(this.updatedPath).end()
+    if (isMaster) {
+      fs.createWriteStream(this.statusPath).end()
+      fs.createWriteStream(this.updatedPath).end()
+    }
 
     PopApi.scraper = this
   }
