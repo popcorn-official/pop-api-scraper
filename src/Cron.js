@@ -47,6 +47,10 @@ export default class Cron {
    * @returns {Object} - A configured cron job.
    */
   getCron(PopApi: any, start?: boolean): Object {
+    if (start) {
+      PopApi.scraper.scrape()
+    }
+
     return cron.schedule(this.cronTime, PopApi.scraper.scrape, start)
   }
 
