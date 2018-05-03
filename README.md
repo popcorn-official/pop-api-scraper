@@ -1,11 +1,21 @@
 # pop-api-scraper
 
-[![Build Status](https://travis-ci.org/popcorn-official/pop-api-scraper.svg?branch=master)](https://travis-ci.org/popcorn-official/pop-api-scraper)
-[![Windows Build](https://img.shields.io/appveyor/ci/ChrisAlderson/pop-api-scraper/master.svg?label=windows)](https://ci.appveyor.com/project/ChrisAlderson/pop-api-scraper)
-[![Coverage Status](https://coveralls.io/repos/github/popcorn-official/pop-api-scraper/badge.svg?branch=master)](https://coveralls.io/github/popcorn-official/pop-api-scraper?branch=master)
-[![Dependency Status](https://david-dm.org/popcorn-official/pop-api-scraper.svg)](https://david-dm.org/popcorn-official/pop-api-scraper)
-[![devDependencies Status](https://david-dm.org/popcorn-official/pop-api-scraper/dev-status.svg)](https://david-dm.org/popcorn-official/pop-api-scraper?type=dev)
+[![Build Status][travis-image]][travis-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
+[![Dependency Status][david-image]][david-url]
+[![devDependency Status][david-dev-image]][david-dev-url]
+[![Conventional Commits][commits-image]][commits-url]
 
+[travis-image]: https://travis-ci.org/popcorn-official/pop-api-scraper.svg?branch=master
+[travis-url]: https://travis-ci.org/popcorn-official/pop-api-scraper
+[coveralls-image]: https://coveralls.io/repos/github/popcorn-official/pop-api-scraper/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/popcorn-official/pop-api-scraper?branch=master
+[david-image]: https://david-dm.org/popcorn-official/pop-api-scraper.svg
+[david-url]: https://david-dm.org/popcorn-official/pop-api-scraper
+[david-dev-image]: https://david-dm.org/popcorn-official/pop-api-scraper/dev-status.svg
+[david-dev-url]: https://david-dm.org/popcorn-official/pop-api-scraper?type=dev
+[commits-image]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-green.svg
+[commits-url]: https://conventionalcommits.org
 ## Features
 
 The pop-api-scraper project aims to provide the core modules for the
