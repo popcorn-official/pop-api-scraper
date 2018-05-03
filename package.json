@@ -55,7 +55,7 @@
     "build": "cross-env NODE_ENV=production rollup -c",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "debug": "npm run dev --inspect",
-    "dev": "cross-env DEBUG=pop-api-scraper* NODE_ENV=development node -r babel-register ./examples/exampleSetup.js",
+    "dev": "cross-env DEBUG=pop-api-scraper* npm start --",
     "docs": "esdoc -c .esdoc.json",
     "flow": "flow",
     "flow-typed": "flow-typed install",
@@ -64,6 +64,8 @@
     "precommit": "npm run lint && npm run flow",
     "prerelease": "npm run build && npm run docs",
     "prepush": "npm run test",
+    "pretest": "npm run lint",
+    "start": "cross-env NODE_ENV=development node -r babel-register ./examples/exampleSetup.js",
     "test": "cross-env NODE_ENV=test nyc -r=lcov -r=text mocha --exit --recursive"
   },
   "engines": {
