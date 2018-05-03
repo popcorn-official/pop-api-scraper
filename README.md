@@ -4,6 +4,7 @@
 [![Coverage Status][coveralls-image]][coveralls-url]
 [![Dependency Status][david-image]][david-url]
 [![devDependency Status][david-dev-image]][david-dev-url]
+[![Conventional Commits][commits-image]][commits-url]
 
 [travis-image]: https://travis-ci.org/popcorn-official/pop-api-scraper.svg?branch=master
 [travis-url]: https://travis-ci.org/popcorn-official/pop-api-scraper
@@ -13,7 +14,8 @@
 [david-url]: https://david-dm.org/popcorn-official/pop-api-scraper
 [david-dev-image]: https://david-dm.org/popcorn-official/pop-api-scraper/dev-status.svg
 [david-dev-url]: https://david-dm.org/popcorn-official/pop-api-scraper?type=dev
-
+[commits-image]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-green.svg
+[commits-url]: https://conventionalcommits.org
 ## Features
 
 The pop-api-scraper project aims to provide the core modules for the
