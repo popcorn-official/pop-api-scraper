@@ -2,9 +2,12 @@
   "require": [
     "babel-register"
   ],
+  "exclude": [
+    "**/index.js"
+  ],
   "include": [
     "src"
-    ],
+  ],
   "sourceMap": false,
   "instrument": false
 }
