@@ -70,7 +70,7 @@
     "test": "cross-env NODE_ENV=test nyc -r=lcov -r=text mocha --exit --recursive"
   },
   "engines": {
-    "node": ">=7.10.1"
+    "node": ">=8.x.x"
   },
   "keywords": [
     "api",
