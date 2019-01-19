@@ -40,3 +40,6 @@ tmp
 
 # Transpiled code
 build
+
+# IDE
+.idea

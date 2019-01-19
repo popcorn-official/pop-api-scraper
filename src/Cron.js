@@ -51,7 +51,9 @@ export default class Cron {
       PopApi.scraper.scrape()
     }
 
-    return cron.schedule(this.cronTime, PopApi.scraper.scrape, start)
+    return cron.schedule(this.cronTime, PopApi.scraper.scrape, {
+      scheduled: start
+    })
   }
 
 }
