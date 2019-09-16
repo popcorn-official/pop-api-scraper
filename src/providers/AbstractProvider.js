@@ -1,4 +1,3 @@
-// Import the necessary.
 // @flow
 import pMap from 'p-map'
 

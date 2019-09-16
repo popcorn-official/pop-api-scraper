@@ -1,4 +1,3 @@
-// Import the necessary modules.
 // @flow
 import cron from 'node-cron'
 
@@ -24,12 +23,12 @@ export default class Cron {
    */
   constructor(PopApi: any, {
     cronTime = '0 0 */6 * * *',
-    start = false
+    start = false,
   }: Object = {}): void {
     const { name } = this.constructor
     PopApi.debug(`Registering ${name} with options: %o`, {
       cronTime,
-      start
+      start,
     })
 
     /**
@@ -51,9 +50,13 @@ export default class Cron {
       PopApi.scraper.scrape()
     }
 
-    return cron.schedule(this.cronTime, PopApi.scraper.scrape, {
-      scheduled: start
-    })
+    return cron.schedule(
+      this.cronTime,
+      PopApi.scraper.scrape,
+      {
+        scheduled: start,
+      },
+    )
   }
 
 }

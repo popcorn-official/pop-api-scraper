@@ -1,4 +1,3 @@
-// Import the necessary modules.
 // @flow
 import { IProvider } from './providers'
 

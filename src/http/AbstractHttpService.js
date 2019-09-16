@@ -1,4 +1,3 @@
-// Import the necessary modules.
 // @flow
 import cheerio from 'cheerio'
 import debug from 'debug'

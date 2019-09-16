@@ -1,48 +1,63 @@
 {
   "plugins": [
-    "transform-class-properties",
-    "transform-export-extensions",
-    ["transform-object-rest-spread", {
-      "useBuiltIns": true
-    }],
-    "transform-strict-mode"
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-export-namespace-from",
+    [
+      "@babel/plugin-proposal-object-rest-spread",
+      {
+        "useBuiltIns": true
+      }
+    ],
+    "@babel/plugin-transform-strict-mode"
   ],
-  "presets": ["flow"],
+  "presets": [
+    "@babel/preset-flow"
+  ],
   "env": {
     "development": {
       "presets": [
-        ["env", {
-          "targets": {
-            "node": "7.10.1"
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": "7.10.1"
+            }
           }
-        }]
+        ]
       ]
     },
     "production": {
       "plugins": [
-        "external-helpers",
-        "transform-class-properties"
+        "@babel/plugin-external-helpers",
+        "@babel/plugin-proposal-class-properties"
       ],
       "presets": [
-        ["env", {
-          "targets": {
-            "node": "7.10.1"
-          },
-          "modules": false
-        }]
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": "7.10.1"
+            },
+            "modules": false
+          }
+        ]
       ]
     },
     "test": {
       "plugins": [
         "istanbul",
-        "transform-class-properties"
+        "@babel/plugin-proposal-class-properties"
       ],
       "presets": [
-        ["env", {
-          "targets": {
-            "node": "7.10.1"
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": "7.10.1"
+            }
           }
-        }]
+        ]
       ]
     }
   }

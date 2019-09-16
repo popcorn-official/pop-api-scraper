@@ -1,11 +1,7 @@
-// Import the necessary modules.
 // @flow
 import got from 'got'
 import { URL } from 'url'
-import {
-  createWriteStream,
-  unlinkSync
-} from 'fs'
+import { createWriteStream, unlinkSync } from 'fs'
 
 import AbstractHttpService from './AbstractHttpService'
 

@@ -1,4 +1,3 @@
-// Import the necessary modules.
 // @flow
 import fs from 'fs-extra'
 import pMap from 'p-map'
@@ -155,6 +154,7 @@ export default class PopApiScraper {
    */
   async scrape(concurrency?: number = 1): Promise<Array<Object> | Error> {
     await this.setUpdated(Math.floor(new Date().getTime() / 1000))
+
     const providers = PopApiScraper._installedPlugins.values()
 
     const res = await pMap(providers, async provider => {
